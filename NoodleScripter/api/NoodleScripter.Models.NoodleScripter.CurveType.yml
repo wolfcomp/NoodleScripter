@@ -1,0 +1,106 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.CurveType
+  commentId: T:NoodleScripter.Models.NoodleScripter.CurveType
+  id: CurveType
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.CurveType.Bezier
+  - NoodleScripter.Models.NoodleScripter.CurveType.Linear
+  langs:
+  - csharp
+  - vb
+  name: CurveType
+  nameWithType: CurveType
+  fullName: NoodleScripter.Models.NoodleScripter.CurveType
+  type: Enum
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Curve.cs
+    id: CurveType
+    path: Models/NoodleScripter/Curve.cs
+    startLine: 61
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public enum CurveType
+    content.vb: Public Enum CurveType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NoodleScripter.Models.NoodleScripter.CurveType.Bezier
+  commentId: F:NoodleScripter.Models.NoodleScripter.CurveType.Bezier
+  id: Bezier
+  parent: NoodleScripter.Models.NoodleScripter.CurveType
+  langs:
+  - csharp
+  - vb
+  name: Bezier
+  nameWithType: CurveType.Bezier
+  fullName: NoodleScripter.Models.NoodleScripter.CurveType.Bezier
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Curve.cs
+    id: Bezier
+    path: Models/NoodleScripter/Curve.cs
+    startLine: 63
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Bezier = 0
+    return:
+      type: NoodleScripter.Models.NoodleScripter.CurveType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.CurveType.Linear
+  commentId: F:NoodleScripter.Models.NoodleScripter.CurveType.Linear
+  id: Linear
+  parent: NoodleScripter.Models.NoodleScripter.CurveType
+  langs:
+  - csharp
+  - vb
+  name: Linear
+  nameWithType: CurveType.Linear
+  fullName: NoodleScripter.Models.NoodleScripter.CurveType.Linear
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Curve.cs
+    id: Linear
+    path: Models/NoodleScripter/Curve.cs
+    startLine: 64
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Linear = 1
+    return:
+      type: NoodleScripter.Models.NoodleScripter.CurveType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: NoodleScripter.Models.NoodleScripter.CurveType
+  commentId: T:NoodleScripter.Models.NoodleScripter.CurveType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: CurveType
+  nameWithType: CurveType
+  fullName: NoodleScripter.Models.NoodleScripter.CurveType

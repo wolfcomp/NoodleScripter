@@ -1,0 +1,13 @@
+﻿apiRules:
+- include:
+      uidRegex: ^NoodleScripter\.Models\.NoodleScripter
+      type: Namespace
+- exclude:
+      uidRegex: ^NoodleScripter\.Models\.NoodleScripter
+      type: Method
+- exclude:
+      uidRegex: ^NoodleScripter
+      type: Namespace
+- exclude:
+      uidRegex: ^System\.Object
+      type: Type

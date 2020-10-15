@@ -1,0 +1,290 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.RandomRotation
+  commentId: T:NoodleScripter.Models.NoodleScripter.RandomRotation
+  id: RandomRotation
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.RandomRotation.LocalRotation
+  - NoodleScripter.Models.NoodleScripter.RandomRotation.Random
+  - NoodleScripter.Models.NoodleScripter.RandomRotation.Rotation
+  langs:
+  - csharp
+  - vb
+  name: RandomRotation
+  nameWithType: RandomRotation
+  fullName: NoodleScripter.Models.NoodleScripter.RandomRotation
+  type: Class
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: RandomRotation
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 121
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: 'public class RandomRotation : IRotationMode'
+    content.vb: >-
+      Public Class RandomRotation
+          Implements IRotationMode
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NoodleScripter.Models.NoodleScripter.RandomRotation.Rotation
+  commentId: P:NoodleScripter.Models.NoodleScripter.RandomRotation.Rotation
+  id: Rotation
+  parent: NoodleScripter.Models.NoodleScripter.RandomRotation
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: RandomRotation.Rotation
+  fullName: NoodleScripter.Models.NoodleScripter.RandomRotation.Rotation
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: Rotation
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 123
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Tuple<Vector3D, Vector3D> Rotation { get; set; }
+    parameters: []
+    return:
+      type: System.Tuple{System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D}
+    content.vb: Public Property Rotation As Tuple(Of Vector3D, Vector3D)
+  overload: NoodleScripter.Models.NoodleScripter.RandomRotation.Rotation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.RandomRotation.LocalRotation
+  commentId: P:NoodleScripter.Models.NoodleScripter.RandomRotation.LocalRotation
+  id: LocalRotation
+  parent: NoodleScripter.Models.NoodleScripter.RandomRotation
+  langs:
+  - csharp
+  - vb
+  name: LocalRotation
+  nameWithType: RandomRotation.LocalRotation
+  fullName: NoodleScripter.Models.NoodleScripter.RandomRotation.LocalRotation
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: LocalRotation
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 124
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Tuple<Vector3D, Vector3D> LocalRotation { get; set; }
+    parameters: []
+    return:
+      type: System.Tuple{System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D}
+    content.vb: Public Property LocalRotation As Tuple(Of Vector3D, Vector3D)
+  overload: NoodleScripter.Models.NoodleScripter.RandomRotation.LocalRotation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.RandomRotation.Random
+  commentId: P:NoodleScripter.Models.NoodleScripter.RandomRotation.Random
+  id: Random
+  parent: NoodleScripter.Models.NoodleScripter.RandomRotation
+  langs:
+  - csharp
+  - vb
+  name: Random
+  nameWithType: RandomRotation.Random
+  fullName: NoodleScripter.Models.NoodleScripter.RandomRotation.Random
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: Random
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 125
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Random Random { get; set; }
+    parameters: []
+    return:
+      type: System.Random
+    content.vb: Public Property Random As Random
+  overload: NoodleScripter.Models.NoodleScripter.RandomRotation.Random*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NoodleScripter.Models.NoodleScripter.RandomRotation.Rotation*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.RandomRotation.Rotation
+  name: Rotation
+  nameWithType: RandomRotation.Rotation
+  fullName: NoodleScripter.Models.NoodleScripter.RandomRotation.Rotation
+- uid: System.Tuple{System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D}
+  commentId: T:System.Tuple{System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D}
+  parent: System
+  definition: System.Tuple`2
+  name: Tuple<Vector3D, Vector3D>
+  nameWithType: Tuple<Vector3D, Vector3D>
+  fullName: System.Tuple<System.Windows.Media.Media3D.Vector3D, System.Windows.Media.Media3D.Vector3D>
+  nameWithType.vb: Tuple(Of Vector3D, Vector3D)
+  fullName.vb: System.Tuple(Of System.Windows.Media.Media3D.Vector3D, System.Windows.Media.Media3D.Vector3D)
+  name.vb: Tuple(Of Vector3D, Vector3D)
+  spec.csharp:
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Windows.Media.Media3D.Vector3D
+    name: Vector3D
+    nameWithType: Vector3D
+    fullName: System.Windows.Media.Media3D.Vector3D
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Windows.Media.Media3D.Vector3D
+    name: Vector3D
+    nameWithType: Vector3D
+    fullName: System.Windows.Media.Media3D.Vector3D
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Windows.Media.Media3D.Vector3D
+    name: Vector3D
+    nameWithType: Vector3D
+    fullName: System.Windows.Media.Media3D.Vector3D
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Windows.Media.Media3D.Vector3D
+    name: Vector3D
+    nameWithType: Vector3D
+    fullName: System.Windows.Media.Media3D.Vector3D
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Tuple`2
+  commentId: T:System.Tuple`2
+  isExternal: true
+  name: Tuple<T1, T2>
+  nameWithType: Tuple<T1, T2>
+  fullName: System.Tuple<T1, T2>
+  nameWithType.vb: Tuple(Of T1, T2)
+  fullName.vb: System.Tuple(Of T1, T2)
+  name.vb: Tuple(Of T1, T2)
+  spec.csharp:
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.RandomRotation.LocalRotation*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.RandomRotation.LocalRotation
+  name: LocalRotation
+  nameWithType: RandomRotation.LocalRotation
+  fullName: NoodleScripter.Models.NoodleScripter.RandomRotation.LocalRotation
+- uid: NoodleScripter.Models.NoodleScripter.RandomRotation.Random*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.RandomRotation.Random
+  name: Random
+  nameWithType: RandomRotation.Random
+  fullName: NoodleScripter.Models.NoodleScripter.RandomRotation.Random
+- uid: System.Random
+  commentId: T:System.Random
+  parent: System
+  isExternal: true
+  name: Random
+  nameWithType: Random
+  fullName: System.Random

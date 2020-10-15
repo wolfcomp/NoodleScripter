@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.EaseRotation
+  commentId: T:NoodleScripter.Models.NoodleScripter.EaseRotation
+  id: EaseRotation
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.EaseRotation.Easing
+  - NoodleScripter.Models.NoodleScripter.EaseRotation.LocalRotations
+  - NoodleScripter.Models.NoodleScripter.EaseRotation.Rotations
+  langs:
+  - csharp
+  - vb
+  name: EaseRotation
+  nameWithType: EaseRotation
+  fullName: NoodleScripter.Models.NoodleScripter.EaseRotation
+  type: Class
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseRotation
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 59
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: 'public class EaseRotation : IRotationMode'
+    content.vb: >-
+      Public Class EaseRotation
+          Implements IRotationMode
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NoodleScripter.Models.NoodleScripter.EaseRotation.Rotations
+  commentId: P:NoodleScripter.Models.NoodleScripter.EaseRotation.Rotations
+  id: Rotations
+  parent: NoodleScripter.Models.NoodleScripter.EaseRotation
+  langs:
+  - csharp
+  - vb
+  name: Rotations
+  nameWithType: EaseRotation.Rotations
+  fullName: NoodleScripter.Models.NoodleScripter.EaseRotation.Rotations
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: Rotations
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 61
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Tuple<Vector3D, double>[] Rotations { get; set; }
+    parameters: []
+    return:
+      type: System.Tuple{System.Windows.Media.Media3D.Vector3D,System.Double}[]
+    content.vb: Public Property Rotations As Tuple(Of Vector3D, Double)()
+  overload: NoodleScripter.Models.NoodleScripter.EaseRotation.Rotations*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EaseRotation.LocalRotations
+  commentId: P:NoodleScripter.Models.NoodleScripter.EaseRotation.LocalRotations
+  id: LocalRotations
+  parent: NoodleScripter.Models.NoodleScripter.EaseRotation
+  langs:
+  - csharp
+  - vb
+  name: LocalRotations
+  nameWithType: EaseRotation.LocalRotations
+  fullName: NoodleScripter.Models.NoodleScripter.EaseRotation.LocalRotations
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: LocalRotations
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 62
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Tuple<Vector3D, double>[] LocalRotations { get; set; }
+    parameters: []
+    return:
+      type: System.Tuple{System.Windows.Media.Media3D.Vector3D,System.Double}[]
+    content.vb: Public Property LocalRotations As Tuple(Of Vector3D, Double)()
+  overload: NoodleScripter.Models.NoodleScripter.EaseRotation.LocalRotations*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EaseRotation.Easing
+  commentId: P:NoodleScripter.Models.NoodleScripter.EaseRotation.Easing
+  id: Easing
+  parent: NoodleScripter.Models.NoodleScripter.EaseRotation
+  langs:
+  - csharp
+  - vb
+  name: Easing
+  nameWithType: EaseRotation.Easing
+  fullName: NoodleScripter.Models.NoodleScripter.EaseRotation.Easing
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: Easing
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 63
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Easings Easing { get; set; }
+    parameters: []
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+    content.vb: Public Property Easing As Easings
+  overload: NoodleScripter.Models.NoodleScripter.EaseRotation.Easing*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NoodleScripter.Models.NoodleScripter.EaseRotation.Rotations*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EaseRotation.Rotations
+  name: Rotations
+  nameWithType: EaseRotation.Rotations
+  fullName: NoodleScripter.Models.NoodleScripter.EaseRotation.Rotations
+- uid: System.Tuple{System.Windows.Media.Media3D.Vector3D,System.Double}[]
+  isExternal: true
+  name: Tuple<Vector3D, Double>[]
+  nameWithType: Tuple<Vector3D, Double>[]
+  fullName: System.Tuple<System.Windows.Media.Media3D.Vector3D, System.Double>[]
+  nameWithType.vb: Tuple(Of Vector3D, Double)()
+  fullName.vb: System.Tuple(Of System.Windows.Media.Media3D.Vector3D, System.Double)()
+  name.vb: Tuple(Of Vector3D, Double)()
+  spec.csharp:
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Windows.Media.Media3D.Vector3D
+    name: Vector3D
+    nameWithType: Vector3D
+    fullName: System.Windows.Media.Media3D.Vector3D
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Windows.Media.Media3D.Vector3D
+    name: Vector3D
+    nameWithType: Vector3D
+    fullName: System.Windows.Media.Media3D.Vector3D
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: NoodleScripter.Models.NoodleScripter.EaseRotation.LocalRotations*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EaseRotation.LocalRotations
+  name: LocalRotations
+  nameWithType: EaseRotation.LocalRotations
+  fullName: NoodleScripter.Models.NoodleScripter.EaseRotation.LocalRotations
+- uid: NoodleScripter.Models.NoodleScripter.EaseRotation.Easing*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EaseRotation.Easing
+  name: Easing
+  nameWithType: EaseRotation.Easing
+  fullName: NoodleScripter.Models.NoodleScripter.EaseRotation.Easing
+- uid: NoodleScripter.Models.NoodleScripter.Easings
+  commentId: T:NoodleScripter.Models.NoodleScripter.Easings
+  parent: NoodleScripter.Models.NoodleScripter
+  name: Easings
+  nameWithType: Easings
+  fullName: NoodleScripter.Models.NoodleScripter.Easings

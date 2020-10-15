@@ -1,0 +1,199 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.ColorType
+  commentId: T:NoodleScripter.Models.NoodleScripter.ColorType
+  id: ColorType
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.ColorType.Flash
+  - NoodleScripter.Models.NoodleScripter.ColorType.Gradient
+  - NoodleScripter.Models.NoodleScripter.ColorType.None
+  - NoodleScripter.Models.NoodleScripter.ColorType.Rainbow
+  - NoodleScripter.Models.NoodleScripter.ColorType.Single
+  langs:
+  - csharp
+  - vb
+  name: ColorType
+  nameWithType: ColorType
+  fullName: NoodleScripter.Models.NoodleScripter.ColorType
+  type: Enum
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+    id: ColorType
+    path: Models/NoodleScripter/Color.cs
+    startLine: 74
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public enum ColorType
+    content.vb: Public Enum ColorType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NoodleScripter.Models.NoodleScripter.ColorType.None
+  commentId: F:NoodleScripter.Models.NoodleScripter.ColorType.None
+  id: None
+  parent: NoodleScripter.Models.NoodleScripter.ColorType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: ColorType.None
+  fullName: NoodleScripter.Models.NoodleScripter.ColorType.None
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+    id: None
+    path: Models/NoodleScripter/Color.cs
+    startLine: 76
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: None = 0
+    return:
+      type: NoodleScripter.Models.NoodleScripter.ColorType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.ColorType.Single
+  commentId: F:NoodleScripter.Models.NoodleScripter.ColorType.Single
+  id: Single
+  parent: NoodleScripter.Models.NoodleScripter.ColorType
+  langs:
+  - csharp
+  - vb
+  name: Single
+  nameWithType: ColorType.Single
+  fullName: NoodleScripter.Models.NoodleScripter.ColorType.Single
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+    id: Single
+    path: Models/NoodleScripter/Color.cs
+    startLine: 77
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Single = 1
+    return:
+      type: NoodleScripter.Models.NoodleScripter.ColorType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.ColorType.Gradient
+  commentId: F:NoodleScripter.Models.NoodleScripter.ColorType.Gradient
+  id: Gradient
+  parent: NoodleScripter.Models.NoodleScripter.ColorType
+  langs:
+  - csharp
+  - vb
+  name: Gradient
+  nameWithType: ColorType.Gradient
+  fullName: NoodleScripter.Models.NoodleScripter.ColorType.Gradient
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+    id: Gradient
+    path: Models/NoodleScripter/Color.cs
+    startLine: 78
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Gradient = 2
+    return:
+      type: NoodleScripter.Models.NoodleScripter.ColorType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.ColorType.Flash
+  commentId: F:NoodleScripter.Models.NoodleScripter.ColorType.Flash
+  id: Flash
+  parent: NoodleScripter.Models.NoodleScripter.ColorType
+  langs:
+  - csharp
+  - vb
+  name: Flash
+  nameWithType: ColorType.Flash
+  fullName: NoodleScripter.Models.NoodleScripter.ColorType.Flash
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+    id: Flash
+    path: Models/NoodleScripter/Color.cs
+    startLine: 79
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Flash = 3
+    return:
+      type: NoodleScripter.Models.NoodleScripter.ColorType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.ColorType.Rainbow
+  commentId: F:NoodleScripter.Models.NoodleScripter.ColorType.Rainbow
+  id: Rainbow
+  parent: NoodleScripter.Models.NoodleScripter.ColorType
+  langs:
+  - csharp
+  - vb
+  name: Rainbow
+  nameWithType: ColorType.Rainbow
+  fullName: NoodleScripter.Models.NoodleScripter.ColorType.Rainbow
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+    id: Rainbow
+    path: Models/NoodleScripter/Color.cs
+    startLine: 80
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Rainbow = 4
+    return:
+      type: NoodleScripter.Models.NoodleScripter.ColorType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: NoodleScripter.Models.NoodleScripter.ColorType
+  commentId: T:NoodleScripter.Models.NoodleScripter.ColorType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: ColorType
+  nameWithType: ColorType
+  fullName: NoodleScripter.Models.NoodleScripter.ColorType

@@ -1,0 +1,748 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator
+  commentId: T:NoodleScripter.Models.NoodleScripter.WallGenerator
+  id: WallGenerator
+  parent: NoodleScripter.Models.NoodleScripter
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: WallGenerator
+  nameWithType: WallGenerator
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+  type: Class
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: WallGenerator
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 6
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: 'public class WallGenerator : WallGenerator<WallGenerator>'
+    content.vb: >-
+      Public Class WallGenerator
+          Inherits WallGenerator(Of WallGenerator)
+  inheritance:
+  - System.Object
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  derivedClasses:
+  - NoodleScripter.Models.NoodleScripter.Curve
+  - NoodleScripter.Models.NoodleScripter.Noise
+  inheritedMembers:
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Random
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Bomb
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Beat
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Color
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.RotationMode
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Mirror
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.MirrorType
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Reverse
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.NJS
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Offset
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Width
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Height
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.StartHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.StartRow
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Duration
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.StartTime
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleWidth
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleStartHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleStartRow
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleDuration
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleStartTime
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddWidth
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddStartHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddStartRow
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddDuration
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddStartTime
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitWidth
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitStartHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitStartRow
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitDuration
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitStartTime
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Scale
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Track
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  commentId: T:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  parent: NoodleScripter.Models.NoodleScripter
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  name: WallGenerator<WallGenerator>
+  nameWithType: WallGenerator<WallGenerator>
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>
+  nameWithType.vb: WallGenerator(Of WallGenerator)
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator)
+  name.vb: WallGenerator(Of WallGenerator)
+  spec.csharp:
+  - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+    name: WallGenerator
+    nameWithType: WallGenerator
+    fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NoodleScripter.Models.NoodleScripter.WallGenerator
+    name: WallGenerator
+    nameWithType: WallGenerator
+    fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+    name: WallGenerator
+    nameWithType: WallGenerator
+    fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NoodleScripter.Models.NoodleScripter.WallGenerator
+    name: WallGenerator
+    nameWithType: WallGenerator
+    fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Random
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Random
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
+  name: Random
+  nameWithType: WallGenerator<WallGenerator>.Random
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Random
+  nameWithType.vb: WallGenerator(Of WallGenerator).Random
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Random
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Bomb
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Bomb
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Bomb
+  name: Bomb
+  nameWithType: WallGenerator<WallGenerator>.Bomb
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Bomb
+  nameWithType.vb: WallGenerator(Of WallGenerator).Bomb
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Bomb
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Beat
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Beat
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Beat
+  name: Beat
+  nameWithType: WallGenerator<WallGenerator>.Beat
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Beat
+  nameWithType.vb: WallGenerator(Of WallGenerator).Beat
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Beat
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Color
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Color
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
+  name: Color
+  nameWithType: WallGenerator<WallGenerator>.Color
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Color
+  nameWithType.vb: WallGenerator(Of WallGenerator).Color
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Color
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.RotationMode
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.RotationMode
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
+  name: RotationMode
+  nameWithType: WallGenerator<WallGenerator>.RotationMode
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.RotationMode
+  nameWithType.vb: WallGenerator(Of WallGenerator).RotationMode
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).RotationMode
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Mirror
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Mirror
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Mirror
+  name: Mirror
+  nameWithType: WallGenerator<WallGenerator>.Mirror
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Mirror
+  nameWithType.vb: WallGenerator(Of WallGenerator).Mirror
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Mirror
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.MirrorType
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.MirrorType
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.MirrorType
+  name: MirrorType
+  nameWithType: WallGenerator<WallGenerator>.MirrorType
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.MirrorType
+  nameWithType.vb: WallGenerator(Of WallGenerator).MirrorType
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).MirrorType
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Reverse
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Reverse
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Reverse
+  name: Reverse
+  nameWithType: WallGenerator<WallGenerator>.Reverse
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Reverse
+  nameWithType.vb: WallGenerator(Of WallGenerator).Reverse
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Reverse
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.NJS
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.NJS
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.NJS
+  name: NJS
+  nameWithType: WallGenerator<WallGenerator>.NJS
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.NJS
+  nameWithType.vb: WallGenerator(Of WallGenerator).NJS
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).NJS
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Offset
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Offset
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Offset
+  name: Offset
+  nameWithType: WallGenerator<WallGenerator>.Offset
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Offset
+  nameWithType.vb: WallGenerator(Of WallGenerator).Offset
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Offset
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Width
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Width
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Width
+  name: Width
+  nameWithType: WallGenerator<WallGenerator>.Width
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Width
+  nameWithType.vb: WallGenerator(Of WallGenerator).Width
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Width
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Height
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Height
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Height
+  name: Height
+  nameWithType: WallGenerator<WallGenerator>.Height
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Height
+  nameWithType.vb: WallGenerator(Of WallGenerator).Height
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Height
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.StartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.StartHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartHeight
+  name: StartHeight
+  nameWithType: WallGenerator<WallGenerator>.StartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.StartHeight
+  nameWithType.vb: WallGenerator(Of WallGenerator).StartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).StartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.StartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.StartRow
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartRow
+  name: StartRow
+  nameWithType: WallGenerator<WallGenerator>.StartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.StartRow
+  nameWithType.vb: WallGenerator(Of WallGenerator).StartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).StartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Duration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Duration
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Duration
+  name: Duration
+  nameWithType: WallGenerator<WallGenerator>.Duration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Duration
+  nameWithType.vb: WallGenerator(Of WallGenerator).Duration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Duration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.StartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.StartTime
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartTime
+  name: StartTime
+  nameWithType: WallGenerator<WallGenerator>.StartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.StartTime
+  nameWithType.vb: WallGenerator(Of WallGenerator).StartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).StartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleWidth
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleWidth
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleWidth
+  name: ScaleWidth
+  nameWithType: WallGenerator<WallGenerator>.ScaleWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.ScaleWidth
+  nameWithType.vb: WallGenerator(Of WallGenerator).ScaleWidth
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).ScaleWidth
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleHeight
+  name: ScaleHeight
+  nameWithType: WallGenerator<WallGenerator>.ScaleHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.ScaleHeight
+  nameWithType.vb: WallGenerator(Of WallGenerator).ScaleHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).ScaleHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleStartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleStartHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartHeight
+  name: ScaleStartHeight
+  nameWithType: WallGenerator<WallGenerator>.ScaleStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.ScaleStartHeight
+  nameWithType.vb: WallGenerator(Of WallGenerator).ScaleStartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).ScaleStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleStartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleStartRow
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartRow
+  name: ScaleStartRow
+  nameWithType: WallGenerator<WallGenerator>.ScaleStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.ScaleStartRow
+  nameWithType.vb: WallGenerator(Of WallGenerator).ScaleStartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).ScaleStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleDuration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleDuration
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleDuration
+  name: ScaleDuration
+  nameWithType: WallGenerator<WallGenerator>.ScaleDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.ScaleDuration
+  nameWithType.vb: WallGenerator(Of WallGenerator).ScaleDuration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).ScaleDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleStartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ScaleStartTime
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartTime
+  name: ScaleStartTime
+  nameWithType: WallGenerator<WallGenerator>.ScaleStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.ScaleStartTime
+  nameWithType.vb: WallGenerator(Of WallGenerator).ScaleStartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).ScaleStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddWidth
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddWidth
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddWidth
+  name: AddWidth
+  nameWithType: WallGenerator<WallGenerator>.AddWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.AddWidth
+  nameWithType.vb: WallGenerator(Of WallGenerator).AddWidth
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).AddWidth
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddHeight
+  name: AddHeight
+  nameWithType: WallGenerator<WallGenerator>.AddHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.AddHeight
+  nameWithType.vb: WallGenerator(Of WallGenerator).AddHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).AddHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddStartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddStartHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartHeight
+  name: AddStartHeight
+  nameWithType: WallGenerator<WallGenerator>.AddStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.AddStartHeight
+  nameWithType.vb: WallGenerator(Of WallGenerator).AddStartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).AddStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddStartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddStartRow
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartRow
+  name: AddStartRow
+  nameWithType: WallGenerator<WallGenerator>.AddStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.AddStartRow
+  nameWithType.vb: WallGenerator(Of WallGenerator).AddStartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).AddStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddDuration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddDuration
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddDuration
+  name: AddDuration
+  nameWithType: WallGenerator<WallGenerator>.AddDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.AddDuration
+  nameWithType.vb: WallGenerator(Of WallGenerator).AddDuration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).AddDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddStartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.AddStartTime
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartTime
+  name: AddStartTime
+  nameWithType: WallGenerator<WallGenerator>.AddStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.AddStartTime
+  nameWithType.vb: WallGenerator(Of WallGenerator).AddStartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).AddStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitWidth
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitWidth
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitWidth
+  name: FitWidth
+  nameWithType: WallGenerator<WallGenerator>.FitWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.FitWidth
+  nameWithType.vb: WallGenerator(Of WallGenerator).FitWidth
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).FitWidth
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitHeight
+  name: FitHeight
+  nameWithType: WallGenerator<WallGenerator>.FitHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.FitHeight
+  nameWithType.vb: WallGenerator(Of WallGenerator).FitHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).FitHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitStartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitStartHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartHeight
+  name: FitStartHeight
+  nameWithType: WallGenerator<WallGenerator>.FitStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.FitStartHeight
+  nameWithType.vb: WallGenerator(Of WallGenerator).FitStartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).FitStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitStartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitStartRow
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartRow
+  name: FitStartRow
+  nameWithType: WallGenerator<WallGenerator>.FitStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.FitStartRow
+  nameWithType.vb: WallGenerator(Of WallGenerator).FitStartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).FitStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitDuration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitDuration
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitDuration
+  name: FitDuration
+  nameWithType: WallGenerator<WallGenerator>.FitDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.FitDuration
+  nameWithType.vb: WallGenerator(Of WallGenerator).FitDuration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).FitDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitStartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.FitStartTime
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartTime
+  name: FitStartTime
+  nameWithType: WallGenerator<WallGenerator>.FitStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.FitStartTime
+  nameWithType.vb: WallGenerator(Of WallGenerator).FitStartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).FitStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Scale
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Scale
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Scale
+  name: Scale
+  nameWithType: WallGenerator<WallGenerator>.Scale
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Scale
+  nameWithType.vb: WallGenerator(Of WallGenerator).Scale
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Scale
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Track
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Track
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Track
+  name: Track
+  nameWithType: WallGenerator<WallGenerator>.Track
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Track
+  nameWithType.vb: WallGenerator(Of WallGenerator).Track
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Track
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  commentId: T:NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  name: WallGenerator<T>
+  nameWithType: WallGenerator<T>
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>
+  nameWithType.vb: WallGenerator(Of T)
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T)
+  name.vb: WallGenerator(Of T)
+  spec.csharp:
+  - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+    name: WallGenerator
+    nameWithType: WallGenerator
+    fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+    name: WallGenerator
+    nameWithType: WallGenerator
+    fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
+  name: Random
+  nameWithType: WallGenerator<T>.Random
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Random
+  nameWithType.vb: WallGenerator(Of T).Random
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Random
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Bomb
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Bomb
+  name: Bomb
+  nameWithType: WallGenerator<T>.Bomb
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Bomb
+  nameWithType.vb: WallGenerator(Of T).Bomb
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Bomb
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Beat
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Beat
+  name: Beat
+  nameWithType: WallGenerator<T>.Beat
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Beat
+  nameWithType.vb: WallGenerator(Of T).Beat
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Beat
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
+  name: Color
+  nameWithType: WallGenerator<T>.Color
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Color
+  nameWithType.vb: WallGenerator(Of T).Color
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Color
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
+  name: RotationMode
+  nameWithType: WallGenerator<T>.RotationMode
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.RotationMode
+  nameWithType.vb: WallGenerator(Of T).RotationMode
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).RotationMode
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Mirror
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Mirror
+  name: Mirror
+  nameWithType: WallGenerator<T>.Mirror
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Mirror
+  nameWithType.vb: WallGenerator(Of T).Mirror
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Mirror
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.MirrorType
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.MirrorType
+  name: MirrorType
+  nameWithType: WallGenerator<T>.MirrorType
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.MirrorType
+  nameWithType.vb: WallGenerator(Of T).MirrorType
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).MirrorType
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Reverse
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Reverse
+  name: Reverse
+  nameWithType: WallGenerator<T>.Reverse
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Reverse
+  nameWithType.vb: WallGenerator(Of T).Reverse
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Reverse
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.NJS
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.NJS
+  name: NJS
+  nameWithType: WallGenerator<T>.NJS
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.NJS
+  nameWithType.vb: WallGenerator(Of T).NJS
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).NJS
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Offset
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Offset
+  name: Offset
+  nameWithType: WallGenerator<T>.Offset
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Offset
+  nameWithType.vb: WallGenerator(Of T).Offset
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Offset
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Width
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Width
+  name: Width
+  nameWithType: WallGenerator<T>.Width
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Width
+  nameWithType.vb: WallGenerator(Of T).Width
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Width
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Height
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Height
+  name: Height
+  nameWithType: WallGenerator<T>.Height
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Height
+  nameWithType.vb: WallGenerator(Of T).Height
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Height
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartHeight
+  name: StartHeight
+  nameWithType: WallGenerator<T>.StartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.StartHeight
+  nameWithType.vb: WallGenerator(Of T).StartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).StartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartRow
+  name: StartRow
+  nameWithType: WallGenerator<T>.StartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.StartRow
+  nameWithType.vb: WallGenerator(Of T).StartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).StartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Duration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Duration
+  name: Duration
+  nameWithType: WallGenerator<T>.Duration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Duration
+  nameWithType.vb: WallGenerator(Of T).Duration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Duration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartTime
+  name: StartTime
+  nameWithType: WallGenerator<T>.StartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.StartTime
+  nameWithType.vb: WallGenerator(Of T).StartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).StartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleWidth
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleWidth
+  name: ScaleWidth
+  nameWithType: WallGenerator<T>.ScaleWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleWidth
+  nameWithType.vb: WallGenerator(Of T).ScaleWidth
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleWidth
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleHeight
+  name: ScaleHeight
+  nameWithType: WallGenerator<T>.ScaleHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleHeight
+  nameWithType.vb: WallGenerator(Of T).ScaleHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartHeight
+  name: ScaleStartHeight
+  nameWithType: WallGenerator<T>.ScaleStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleStartHeight
+  nameWithType.vb: WallGenerator(Of T).ScaleStartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartRow
+  name: ScaleStartRow
+  nameWithType: WallGenerator<T>.ScaleStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleStartRow
+  nameWithType.vb: WallGenerator(Of T).ScaleStartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleDuration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleDuration
+  name: ScaleDuration
+  nameWithType: WallGenerator<T>.ScaleDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleDuration
+  nameWithType.vb: WallGenerator(Of T).ScaleDuration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartTime
+  name: ScaleStartTime
+  nameWithType: WallGenerator<T>.ScaleStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleStartTime
+  nameWithType.vb: WallGenerator(Of T).ScaleStartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddWidth
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddWidth
+  name: AddWidth
+  nameWithType: WallGenerator<T>.AddWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddWidth
+  nameWithType.vb: WallGenerator(Of T).AddWidth
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddWidth
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddHeight
+  name: AddHeight
+  nameWithType: WallGenerator<T>.AddHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddHeight
+  nameWithType.vb: WallGenerator(Of T).AddHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartHeight
+  name: AddStartHeight
+  nameWithType: WallGenerator<T>.AddStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddStartHeight
+  nameWithType.vb: WallGenerator(Of T).AddStartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartRow
+  name: AddStartRow
+  nameWithType: WallGenerator<T>.AddStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddStartRow
+  nameWithType.vb: WallGenerator(Of T).AddStartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddDuration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddDuration
+  name: AddDuration
+  nameWithType: WallGenerator<T>.AddDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddDuration
+  nameWithType.vb: WallGenerator(Of T).AddDuration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartTime
+  name: AddStartTime
+  nameWithType: WallGenerator<T>.AddStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddStartTime
+  nameWithType.vb: WallGenerator(Of T).AddStartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitWidth
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitWidth
+  name: FitWidth
+  nameWithType: WallGenerator<T>.FitWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitWidth
+  nameWithType.vb: WallGenerator(Of T).FitWidth
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitWidth
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitHeight
+  name: FitHeight
+  nameWithType: WallGenerator<T>.FitHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitHeight
+  nameWithType.vb: WallGenerator(Of T).FitHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartHeight
+  name: FitStartHeight
+  nameWithType: WallGenerator<T>.FitStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitStartHeight
+  nameWithType.vb: WallGenerator(Of T).FitStartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartRow
+  name: FitStartRow
+  nameWithType: WallGenerator<T>.FitStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitStartRow
+  nameWithType.vb: WallGenerator(Of T).FitStartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitDuration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitDuration
+  name: FitDuration
+  nameWithType: WallGenerator<T>.FitDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitDuration
+  nameWithType.vb: WallGenerator(Of T).FitDuration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartTime
+  name: FitStartTime
+  nameWithType: WallGenerator<T>.FitStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitStartTime
+  nameWithType.vb: WallGenerator(Of T).FitStartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Scale
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Scale
+  name: Scale
+  nameWithType: WallGenerator<T>.Scale
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Scale
+  nameWithType.vb: WallGenerator(Of T).Scale
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Scale
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Track
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Track
+  name: Track
+  nameWithType: WallGenerator<T>.Track
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Track
+  nameWithType.vb: WallGenerator(Of T).Track
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Track

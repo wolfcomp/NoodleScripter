@@ -1,0 +1,159 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.SwitchRotation
+  commentId: T:NoodleScripter.Models.NoodleScripter.SwitchRotation
+  id: SwitchRotation
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.SwitchRotation.LocalRotations
+  - NoodleScripter.Models.NoodleScripter.SwitchRotation.Rotations
+  langs:
+  - csharp
+  - vb
+  name: SwitchRotation
+  nameWithType: SwitchRotation
+  fullName: NoodleScripter.Models.NoodleScripter.SwitchRotation
+  type: Class
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: SwitchRotation
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 139
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: 'public class SwitchRotation : IRotationMode'
+    content.vb: >-
+      Public Class SwitchRotation
+          Implements IRotationMode
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NoodleScripter.Models.NoodleScripter.SwitchRotation.Rotations
+  commentId: P:NoodleScripter.Models.NoodleScripter.SwitchRotation.Rotations
+  id: Rotations
+  parent: NoodleScripter.Models.NoodleScripter.SwitchRotation
+  langs:
+  - csharp
+  - vb
+  name: Rotations
+  nameWithType: SwitchRotation.Rotations
+  fullName: NoodleScripter.Models.NoodleScripter.SwitchRotation.Rotations
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: Rotations
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 141
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Vector3D[] Rotations { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Media3D.Vector3D[]
+    content.vb: Public Property Rotations As Vector3D()
+  overload: NoodleScripter.Models.NoodleScripter.SwitchRotation.Rotations*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.SwitchRotation.LocalRotations
+  commentId: P:NoodleScripter.Models.NoodleScripter.SwitchRotation.LocalRotations
+  id: LocalRotations
+  parent: NoodleScripter.Models.NoodleScripter.SwitchRotation
+  langs:
+  - csharp
+  - vb
+  name: LocalRotations
+  nameWithType: SwitchRotation.LocalRotations
+  fullName: NoodleScripter.Models.NoodleScripter.SwitchRotation.LocalRotations
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: LocalRotations
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 142
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Vector3D[] LocalRotations { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Media3D.Vector3D[]
+    content.vb: Public Property LocalRotations As Vector3D()
+  overload: NoodleScripter.Models.NoodleScripter.SwitchRotation.LocalRotations*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NoodleScripter.Models.NoodleScripter.SwitchRotation.Rotations*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.SwitchRotation.Rotations
+  name: Rotations
+  nameWithType: SwitchRotation.Rotations
+  fullName: NoodleScripter.Models.NoodleScripter.SwitchRotation.Rotations
+- uid: System.Windows.Media.Media3D.Vector3D[]
+  isExternal: true
+  name: Vector3D[]
+  nameWithType: Vector3D[]
+  fullName: System.Windows.Media.Media3D.Vector3D[]
+  nameWithType.vb: Vector3D()
+  fullName.vb: System.Windows.Media.Media3D.Vector3D()
+  name.vb: Vector3D()
+  spec.csharp:
+  - uid: System.Windows.Media.Media3D.Vector3D
+    name: Vector3D
+    nameWithType: Vector3D
+    fullName: System.Windows.Media.Media3D.Vector3D
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Windows.Media.Media3D.Vector3D
+    name: Vector3D
+    nameWithType: Vector3D
+    fullName: System.Windows.Media.Media3D.Vector3D
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: NoodleScripter.Models.NoodleScripter.SwitchRotation.LocalRotations*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.SwitchRotation.LocalRotations
+  name: LocalRotations
+  nameWithType: SwitchRotation.LocalRotations
+  fullName: NoodleScripter.Models.NoodleScripter.SwitchRotation.LocalRotations

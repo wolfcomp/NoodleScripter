@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.MirrorType
+  commentId: T:NoodleScripter.Models.NoodleScripter.MirrorType
+  id: MirrorType
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.MirrorType.Add
+  - NoodleScripter.Models.NoodleScripter.MirrorType.None
+  langs:
+  - csharp
+  - vb
+  name: MirrorType
+  nameWithType: MirrorType
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorType
+  type: Enum
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: MirrorType
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 137
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MirrorType
+    content.vb: >-
+      <Flags>
+
+      Public Enum MirrorType
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NoodleScripter.Models.NoodleScripter.MirrorType.None
+  commentId: F:NoodleScripter.Models.NoodleScripter.MirrorType.None
+  id: None
+  parent: NoodleScripter.Models.NoodleScripter.MirrorType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: MirrorType.None
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorType.None
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: None
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 140
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: None = 0
+    return:
+      type: NoodleScripter.Models.NoodleScripter.MirrorType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.MirrorType.Add
+  commentId: F:NoodleScripter.Models.NoodleScripter.MirrorType.Add
+  id: Add
+  parent: NoodleScripter.Models.NoodleScripter.MirrorType
+  langs:
+  - csharp
+  - vb
+  name: Add
+  nameWithType: MirrorType.Add
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorType.Add
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Add
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 141
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Add = 1
+    return:
+      type: NoodleScripter.Models.NoodleScripter.MirrorType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: NoodleScripter.Models.NoodleScripter.MirrorType
+  commentId: T:NoodleScripter.Models.NoodleScripter.MirrorType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: MirrorType
+  nameWithType: MirrorType
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorType

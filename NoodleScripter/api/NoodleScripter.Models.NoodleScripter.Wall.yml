@@ -1,0 +1,721 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.Wall
+  commentId: T:NoodleScripter.Models.NoodleScripter.Wall
+  id: Wall
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.Wall.Bomb
+  - NoodleScripter.Models.NoodleScripter.Wall.Color
+  - NoodleScripter.Models.NoodleScripter.Wall.Duration
+  - NoodleScripter.Models.NoodleScripter.Wall.Height
+  - NoodleScripter.Models.NoodleScripter.Wall.LocalRotation
+  - NoodleScripter.Models.NoodleScripter.Wall.NJS
+  - NoodleScripter.Models.NoodleScripter.Wall.Offset
+  - NoodleScripter.Models.NoodleScripter.Wall.Rotation
+  - NoodleScripter.Models.NoodleScripter.Wall.StartHeight
+  - NoodleScripter.Models.NoodleScripter.Wall.StartRow
+  - NoodleScripter.Models.NoodleScripter.Wall.StartTime
+  - NoodleScripter.Models.NoodleScripter.Wall.Track
+  - NoodleScripter.Models.NoodleScripter.Wall.Width
+  langs:
+  - csharp
+  - vb
+  name: Wall
+  nameWithType: Wall
+  fullName: NoodleScripter.Models.NoodleScripter.Wall
+  type: Class
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: Wall
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 8
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public class Wall
+    content.vb: Public Class Wall
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Bomb
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.Bomb
+  id: Bomb
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: Bomb
+  nameWithType: Wall.Bomb
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Bomb
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: Bomb
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 10
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public bool Bomb { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Bomb As Boolean
+  overload: NoodleScripter.Models.NoodleScripter.Wall.Bomb*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Color
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.Color
+  id: Color
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Wall.Color
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Color
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: Color
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 11
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Vector3D? Color { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Windows.Media.Media3D.Vector3D}
+    content.vb: Public Property Color As Vector3D?
+  overload: NoodleScripter.Models.NoodleScripter.Wall.Color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Rotation
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.Rotation
+  id: Rotation
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: Wall.Rotation
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Rotation
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: Rotation
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 12
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Vector3D Rotation { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Media3D.Vector3D
+    content.vb: Public Property Rotation As Vector3D
+  overload: NoodleScripter.Models.NoodleScripter.Wall.Rotation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.LocalRotation
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.LocalRotation
+  id: LocalRotation
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: LocalRotation
+  nameWithType: Wall.LocalRotation
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.LocalRotation
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: LocalRotation
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 13
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Vector3D LocalRotation { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Media3D.Vector3D
+    content.vb: Public Property LocalRotation As Vector3D
+  overload: NoodleScripter.Models.NoodleScripter.Wall.LocalRotation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.NJS
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.NJS
+  id: NJS
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: NJS
+  nameWithType: Wall.NJS
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.NJS
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: NJS
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 14
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public float? NJS { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property NJS As Single?
+  overload: NoodleScripter.Models.NoodleScripter.Wall.NJS*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Offset
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.Offset
+  id: Offset
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: Offset
+  nameWithType: Wall.Offset
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Offset
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: Offset
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 15
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public float? Offset { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property Offset As Single?
+  overload: NoodleScripter.Models.NoodleScripter.Wall.Offset*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Width
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.Width
+  id: Width
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Wall.Width
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Width
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: Width
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 16
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double Width { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Width As Double
+  overload: NoodleScripter.Models.NoodleScripter.Wall.Width*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Height
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.Height
+  id: Height
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: Wall.Height
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Height
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: Height
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 17
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double Height { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Height As Double
+  overload: NoodleScripter.Models.NoodleScripter.Wall.Height*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.StartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.StartHeight
+  id: StartHeight
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: StartHeight
+  nameWithType: Wall.StartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.StartHeight
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: StartHeight
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 18
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double StartHeight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartHeight As Double
+  overload: NoodleScripter.Models.NoodleScripter.Wall.StartHeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.StartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.StartRow
+  id: StartRow
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: StartRow
+  nameWithType: Wall.StartRow
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.StartRow
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: StartRow
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 19
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double StartRow { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartRow As Double
+  overload: NoodleScripter.Models.NoodleScripter.Wall.StartRow*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Duration
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.Duration
+  id: Duration
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: Wall.Duration
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Duration
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: Duration
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 20
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double Duration { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Duration As Double
+  overload: NoodleScripter.Models.NoodleScripter.Wall.Duration*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.StartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.StartTime
+  id: StartTime
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: StartTime
+  nameWithType: Wall.StartTime
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.StartTime
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: StartTime
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 21
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double StartTime { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartTime As Double
+  overload: NoodleScripter.Models.NoodleScripter.Wall.StartTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Track
+  commentId: P:NoodleScripter.Models.NoodleScripter.Wall.Track
+  id: Track
+  parent: NoodleScripter.Models.NoodleScripter.Wall
+  langs:
+  - csharp
+  - vb
+  name: Track
+  nameWithType: Wall.Track
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Track
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+    id: Track
+    path: Models/NoodleScripter/Wall.cs
+    startLine: 22
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public string Track { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Track As String
+  overload: NoodleScripter.Models.NoodleScripter.Wall.Track*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Bomb*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.Bomb
+  name: Bomb
+  nameWithType: Wall.Bomb
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Bomb
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Color*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.Color
+  name: Color
+  nameWithType: Wall.Color
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Color
+- uid: System.Nullable{System.Windows.Media.Media3D.Vector3D}
+  commentId: T:System.Nullable{System.Windows.Media.Media3D.Vector3D}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Vector3D>
+  nameWithType: Nullable<Vector3D>
+  fullName: System.Nullable<System.Windows.Media.Media3D.Vector3D>
+  nameWithType.vb: Nullable(Of Vector3D)
+  fullName.vb: System.Nullable(Of System.Windows.Media.Media3D.Vector3D)
+  name.vb: Nullable(Of Vector3D)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Windows.Media.Media3D.Vector3D
+    name: Vector3D
+    nameWithType: Vector3D
+    fullName: System.Windows.Media.Media3D.Vector3D
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Windows.Media.Media3D.Vector3D
+    name: Vector3D
+    nameWithType: Vector3D
+    fullName: System.Windows.Media.Media3D.Vector3D
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Rotation*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.Rotation
+  name: Rotation
+  nameWithType: Wall.Rotation
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Rotation
+- uid: System.Windows.Media.Media3D.Vector3D
+  commentId: T:System.Windows.Media.Media3D.Vector3D
+  parent: System.Windows.Media.Media3D
+  isExternal: true
+  name: Vector3D
+  nameWithType: Vector3D
+  fullName: System.Windows.Media.Media3D.Vector3D
+- uid: System.Windows.Media.Media3D
+  commentId: N:System.Windows.Media.Media3D
+  isExternal: true
+  name: System.Windows.Media.Media3D
+  nameWithType: System.Windows.Media.Media3D
+  fullName: System.Windows.Media.Media3D
+- uid: NoodleScripter.Models.NoodleScripter.Wall.LocalRotation*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.LocalRotation
+  name: LocalRotation
+  nameWithType: Wall.LocalRotation
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.LocalRotation
+- uid: NoodleScripter.Models.NoodleScripter.Wall.NJS*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.NJS
+  name: NJS
+  nameWithType: Wall.NJS
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.NJS
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Single>
+  nameWithType: Nullable<Single>
+  fullName: System.Nullable<System.Single>
+  nameWithType.vb: Nullable(Of Single)
+  fullName.vb: System.Nullable(Of System.Single)
+  name.vb: Nullable(Of Single)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Offset*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.Offset
+  name: Offset
+  nameWithType: Wall.Offset
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Offset
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Width*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.Width
+  name: Width
+  nameWithType: Wall.Width
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Width
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Height*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.Height
+  name: Height
+  nameWithType: Wall.Height
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Height
+- uid: NoodleScripter.Models.NoodleScripter.Wall.StartHeight*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.StartHeight
+  name: StartHeight
+  nameWithType: Wall.StartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.StartHeight
+- uid: NoodleScripter.Models.NoodleScripter.Wall.StartRow*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.StartRow
+  name: StartRow
+  nameWithType: Wall.StartRow
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.StartRow
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Duration*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.Duration
+  name: Duration
+  nameWithType: Wall.Duration
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Duration
+- uid: NoodleScripter.Models.NoodleScripter.Wall.StartTime*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.StartTime
+  name: StartTime
+  nameWithType: Wall.StartTime
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.StartTime
+- uid: NoodleScripter.Models.NoodleScripter.Wall.Track*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.Wall.Track
+  name: Track
+  nameWithType: Wall.Track
+  fullName: NoodleScripter.Models.NoodleScripter.Wall.Track
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -1,0 +1,1807 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  commentId: T:NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  id: WallGenerator`1
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddDuration
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartRow
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartTime
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddWidth
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Beat
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Bomb
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Duration
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitDuration
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartRow
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartTime
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitWidth
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Height
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Mirror
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.MirrorType
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.NJS
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Offset
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Reverse
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Scale
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleDuration
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartRow
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartTime
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleWidth
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartHeight
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartRow
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartTime
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Track
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Width
+  langs:
+  - csharp
+  - vb
+  name: WallGenerator<T>
+  nameWithType: WallGenerator<T>
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>
+  type: Class
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: WallGenerator
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 31
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public abstract class WallGenerator<T>
+    typeParameters:
+    - id: T
+    content.vb: Public MustInherit Class WallGenerator(Of T)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - NoodleScripter.Models.NoodleScripter.WallGenerator
+  nameWithType.vb: WallGenerator(Of T)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T)
+  name.vb: WallGenerator(Of T)
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
+  id: Random
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Random
+  nameWithType: WallGenerator<T>.Random
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Random
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Random
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 33
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Random Random { get; set; }
+    parameters: []
+    return:
+      type: System.Random
+    content.vb: Public Property Random As Random
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random*
+  nameWithType.vb: WallGenerator(Of T).Random
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Random
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Bomb
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Bomb
+  id: Bomb
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Bomb
+  nameWithType: WallGenerator<T>.Bomb
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Bomb
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Bomb
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 34
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public bool Bomb { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Bomb As Boolean
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Bomb*
+  nameWithType.vb: WallGenerator(Of T).Bomb
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Bomb
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Beat
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Beat
+  id: Beat
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Beat
+  nameWithType: WallGenerator<T>.Beat
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Beat
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Beat
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 35
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public int Beat { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Beat As Integer
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Beat*
+  nameWithType.vb: WallGenerator(Of T).Beat
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Beat
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
+  id: Color
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: WallGenerator<T>.Color
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Color
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Color
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 36
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Color Color { get; set; }
+    parameters: []
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Color
+    content.vb: Public Property Color As Color
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color*
+  nameWithType.vb: WallGenerator(Of T).Color
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Color
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
+  id: RotationMode
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: RotationMode
+  nameWithType: WallGenerator<T>.RotationMode
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.RotationMode
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: RotationMode
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 37
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public IRotationMode RotationMode { get; set; }
+    parameters: []
+    return:
+      type: NoodleScripter.IRotationMode
+    content.vb: Public Property RotationMode As IRotationMode
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode*
+  nameWithType.vb: WallGenerator(Of T).RotationMode
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).RotationMode
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Mirror
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Mirror
+  id: Mirror
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Mirror
+  nameWithType: WallGenerator<T>.Mirror
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Mirror
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Mirror
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 38
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public MirrorPoint Mirror { get; set; }
+    parameters: []
+    return:
+      type: NoodleScripter.Models.NoodleScripter.MirrorPoint
+    content.vb: Public Property Mirror As MirrorPoint
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Mirror*
+  nameWithType.vb: WallGenerator(Of T).Mirror
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Mirror
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.MirrorType
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.MirrorType
+  id: MirrorType
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: MirrorType
+  nameWithType: WallGenerator<T>.MirrorType
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.MirrorType
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: MirrorType
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 39
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public MirrorType MirrorType { get; set; }
+    parameters: []
+    return:
+      type: NoodleScripter.Models.NoodleScripter.MirrorType
+    content.vb: Public Property MirrorType As MirrorType
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.MirrorType*
+  nameWithType.vb: WallGenerator(Of T).MirrorType
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).MirrorType
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Reverse
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Reverse
+  id: Reverse
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Reverse
+  nameWithType: WallGenerator<T>.Reverse
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Reverse
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Reverse
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 40
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Reverse Reverse { get; set; }
+    parameters: []
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Reverse
+    content.vb: Public Property Reverse As Reverse
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Reverse*
+  nameWithType.vb: WallGenerator(Of T).Reverse
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Reverse
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.NJS
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.NJS
+  id: NJS
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: NJS
+  nameWithType: WallGenerator<T>.NJS
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.NJS
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: NJS
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 41
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public float? NJS { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property NJS As Single?
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.NJS*
+  nameWithType.vb: WallGenerator(Of T).NJS
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).NJS
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Offset
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Offset
+  id: Offset
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Offset
+  nameWithType: WallGenerator<T>.Offset
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Offset
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Offset
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 42
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public float? Offset { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property Offset As Single?
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Offset*
+  nameWithType.vb: WallGenerator(Of T).Offset
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Offset
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Width
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Width
+  id: Width
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: WallGenerator<T>.Width
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Width
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Width
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 43
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double Width { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Width As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Width*
+  nameWithType.vb: WallGenerator(Of T).Width
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Width
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Height
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Height
+  id: Height
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: WallGenerator<T>.Height
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Height
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Height
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 44
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double Height { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Height As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Height*
+  nameWithType.vb: WallGenerator(Of T).Height
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Height
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartHeight
+  id: StartHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: StartHeight
+  nameWithType: WallGenerator<T>.StartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.StartHeight
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: StartHeight
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 45
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double StartHeight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartHeight As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartHeight*
+  nameWithType.vb: WallGenerator(Of T).StartHeight
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).StartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartRow
+  id: StartRow
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: StartRow
+  nameWithType: WallGenerator<T>.StartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.StartRow
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: StartRow
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 46
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double StartRow { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartRow As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartRow*
+  nameWithType.vb: WallGenerator(Of T).StartRow
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).StartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Duration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Duration
+  id: Duration
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: WallGenerator<T>.Duration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Duration
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Duration
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 47
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double Duration { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Duration As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Duration*
+  nameWithType.vb: WallGenerator(Of T).Duration
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Duration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartTime
+  id: StartTime
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: StartTime
+  nameWithType: WallGenerator<T>.StartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.StartTime
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: StartTime
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 48
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double StartTime { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartTime As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartTime*
+  nameWithType.vb: WallGenerator(Of T).StartTime
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).StartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleWidth
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleWidth
+  id: ScaleWidth
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: ScaleWidth
+  nameWithType: WallGenerator<T>.ScaleWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleWidth
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: ScaleWidth
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 49
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double ScaleWidth { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ScaleWidth As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleWidth*
+  nameWithType.vb: WallGenerator(Of T).ScaleWidth
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleWidth
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleHeight
+  id: ScaleHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: ScaleHeight
+  nameWithType: WallGenerator<T>.ScaleHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleHeight
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: ScaleHeight
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 50
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double ScaleHeight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ScaleHeight As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleHeight*
+  nameWithType.vb: WallGenerator(Of T).ScaleHeight
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartHeight
+  id: ScaleStartHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: ScaleStartHeight
+  nameWithType: WallGenerator<T>.ScaleStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleStartHeight
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: ScaleStartHeight
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 51
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double ScaleStartHeight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ScaleStartHeight As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartHeight*
+  nameWithType.vb: WallGenerator(Of T).ScaleStartHeight
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartRow
+  id: ScaleStartRow
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: ScaleStartRow
+  nameWithType: WallGenerator<T>.ScaleStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleStartRow
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: ScaleStartRow
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 52
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double ScaleStartRow { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ScaleStartRow As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartRow*
+  nameWithType.vb: WallGenerator(Of T).ScaleStartRow
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleDuration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleDuration
+  id: ScaleDuration
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: ScaleDuration
+  nameWithType: WallGenerator<T>.ScaleDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleDuration
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: ScaleDuration
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 53
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double ScaleDuration { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ScaleDuration As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleDuration*
+  nameWithType.vb: WallGenerator(Of T).ScaleDuration
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartTime
+  id: ScaleStartTime
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: ScaleStartTime
+  nameWithType: WallGenerator<T>.ScaleStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleStartTime
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: ScaleStartTime
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 54
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double ScaleStartTime { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ScaleStartTime As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartTime*
+  nameWithType.vb: WallGenerator(Of T).ScaleStartTime
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddWidth
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddWidth
+  id: AddWidth
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: AddWidth
+  nameWithType: WallGenerator<T>.AddWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddWidth
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: AddWidth
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 55
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double AddWidth { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property AddWidth As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddWidth*
+  nameWithType.vb: WallGenerator(Of T).AddWidth
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddWidth
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddHeight
+  id: AddHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: AddHeight
+  nameWithType: WallGenerator<T>.AddHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddHeight
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: AddHeight
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 56
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double AddHeight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property AddHeight As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddHeight*
+  nameWithType.vb: WallGenerator(Of T).AddHeight
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartHeight
+  id: AddStartHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: AddStartHeight
+  nameWithType: WallGenerator<T>.AddStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddStartHeight
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: AddStartHeight
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 57
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double AddStartHeight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property AddStartHeight As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartHeight*
+  nameWithType.vb: WallGenerator(Of T).AddStartHeight
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartRow
+  id: AddStartRow
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: AddStartRow
+  nameWithType: WallGenerator<T>.AddStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddStartRow
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: AddStartRow
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 58
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double AddStartRow { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property AddStartRow As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartRow*
+  nameWithType.vb: WallGenerator(Of T).AddStartRow
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddDuration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddDuration
+  id: AddDuration
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: AddDuration
+  nameWithType: WallGenerator<T>.AddDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddDuration
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: AddDuration
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 59
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double AddDuration { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property AddDuration As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddDuration*
+  nameWithType.vb: WallGenerator(Of T).AddDuration
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartTime
+  id: AddStartTime
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: AddStartTime
+  nameWithType: WallGenerator<T>.AddStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddStartTime
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: AddStartTime
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 60
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double AddStartTime { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property AddStartTime As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartTime*
+  nameWithType.vb: WallGenerator(Of T).AddStartTime
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitWidth
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitWidth
+  id: FitWidth
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: FitWidth
+  nameWithType: WallGenerator<T>.FitWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitWidth
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: FitWidth
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 61
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double? FitWidth { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property FitWidth As Double?
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitWidth*
+  nameWithType.vb: WallGenerator(Of T).FitWidth
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitWidth
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitHeight
+  id: FitHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: FitHeight
+  nameWithType: WallGenerator<T>.FitHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitHeight
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: FitHeight
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 62
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double? FitHeight { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property FitHeight As Double?
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitHeight*
+  nameWithType.vb: WallGenerator(Of T).FitHeight
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartHeight
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartHeight
+  id: FitStartHeight
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: FitStartHeight
+  nameWithType: WallGenerator<T>.FitStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitStartHeight
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: FitStartHeight
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 63
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double? FitStartHeight { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property FitStartHeight As Double?
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartHeight*
+  nameWithType.vb: WallGenerator(Of T).FitStartHeight
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartRow
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartRow
+  id: FitStartRow
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: FitStartRow
+  nameWithType: WallGenerator<T>.FitStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitStartRow
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: FitStartRow
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 64
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double? FitStartRow { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property FitStartRow As Double?
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartRow*
+  nameWithType.vb: WallGenerator(Of T).FitStartRow
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitDuration
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitDuration
+  id: FitDuration
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: FitDuration
+  nameWithType: WallGenerator<T>.FitDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitDuration
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: FitDuration
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 65
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double? FitDuration { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property FitDuration As Double?
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitDuration*
+  nameWithType.vb: WallGenerator(Of T).FitDuration
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartTime
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartTime
+  id: FitStartTime
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: FitStartTime
+  nameWithType: WallGenerator<T>.FitStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitStartTime
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: FitStartTime
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 66
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double? FitStartTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property FitStartTime As Double?
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartTime*
+  nameWithType.vb: WallGenerator(Of T).FitStartTime
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Scale
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Scale
+  id: Scale
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Scale
+  nameWithType: WallGenerator<T>.Scale
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Scale
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Scale
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 67
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double Scale { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Scale As Double
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Scale*
+  nameWithType.vb: WallGenerator(Of T).Scale
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Scale
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Track
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Track
+  id: Track
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Track
+  nameWithType: WallGenerator<T>.Track
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Track
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Track
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 68
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public string Track { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Track As String
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Track*
+  nameWithType.vb: WallGenerator(Of T).Track
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Track
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
+  name: Random
+  nameWithType: WallGenerator<T>.Random
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Random
+  nameWithType.vb: WallGenerator(Of T).Random
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Random
+- uid: System.Random
+  commentId: T:System.Random
+  parent: System
+  isExternal: true
+  name: Random
+  nameWithType: Random
+  fullName: System.Random
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Bomb*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Bomb
+  name: Bomb
+  nameWithType: WallGenerator<T>.Bomb
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Bomb
+  nameWithType.vb: WallGenerator(Of T).Bomb
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Bomb
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Beat*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Beat
+  name: Beat
+  nameWithType: WallGenerator<T>.Beat
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Beat
+  nameWithType.vb: WallGenerator(Of T).Beat
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Beat
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
+  name: Color
+  nameWithType: WallGenerator<T>.Color
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Color
+  nameWithType.vb: WallGenerator(Of T).Color
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Color
+- uid: NoodleScripter.Models.NoodleScripter.Color
+  commentId: T:NoodleScripter.Models.NoodleScripter.Color
+  parent: NoodleScripter.Models.NoodleScripter
+  name: Color
+  nameWithType: Color
+  fullName: NoodleScripter.Models.NoodleScripter.Color
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
+  name: RotationMode
+  nameWithType: WallGenerator<T>.RotationMode
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.RotationMode
+  nameWithType.vb: WallGenerator(Of T).RotationMode
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).RotationMode
+- uid: NoodleScripter.IRotationMode
+  commentId: T:NoodleScripter.IRotationMode
+  parent: NoodleScripter
+  name: IRotationMode
+  nameWithType: IRotationMode
+  fullName: NoodleScripter.IRotationMode
+- uid: NoodleScripter
+  commentId: N:NoodleScripter
+  name: NoodleScripter
+  nameWithType: NoodleScripter
+  fullName: NoodleScripter
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Mirror*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Mirror
+  name: Mirror
+  nameWithType: WallGenerator<T>.Mirror
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Mirror
+  nameWithType.vb: WallGenerator(Of T).Mirror
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Mirror
+- uid: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  commentId: T:NoodleScripter.Models.NoodleScripter.MirrorPoint
+  parent: NoodleScripter.Models.NoodleScripter
+  name: MirrorPoint
+  nameWithType: MirrorPoint
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorPoint
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.MirrorType*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.MirrorType
+  name: MirrorType
+  nameWithType: WallGenerator<T>.MirrorType
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.MirrorType
+  nameWithType.vb: WallGenerator(Of T).MirrorType
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).MirrorType
+- uid: NoodleScripter.Models.NoodleScripter.MirrorType
+  commentId: T:NoodleScripter.Models.NoodleScripter.MirrorType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: MirrorType
+  nameWithType: MirrorType
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorType
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Reverse*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Reverse
+  name: Reverse
+  nameWithType: WallGenerator<T>.Reverse
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Reverse
+  nameWithType.vb: WallGenerator(Of T).Reverse
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Reverse
+- uid: NoodleScripter.Models.NoodleScripter.Reverse
+  commentId: T:NoodleScripter.Models.NoodleScripter.Reverse
+  parent: NoodleScripter.Models.NoodleScripter
+  name: Reverse
+  nameWithType: Reverse
+  fullName: NoodleScripter.Models.NoodleScripter.Reverse
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.NJS*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.NJS
+  name: NJS
+  nameWithType: WallGenerator<T>.NJS
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.NJS
+  nameWithType.vb: WallGenerator(Of T).NJS
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).NJS
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Single>
+  nameWithType: Nullable<Single>
+  fullName: System.Nullable<System.Single>
+  nameWithType.vb: Nullable(Of Single)
+  fullName.vb: System.Nullable(Of System.Single)
+  name.vb: Nullable(Of Single)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Offset*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Offset
+  name: Offset
+  nameWithType: WallGenerator<T>.Offset
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Offset
+  nameWithType.vb: WallGenerator(Of T).Offset
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Offset
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Width*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Width
+  name: Width
+  nameWithType: WallGenerator<T>.Width
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Width
+  nameWithType.vb: WallGenerator(Of T).Width
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Width
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Height*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Height
+  name: Height
+  nameWithType: WallGenerator<T>.Height
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Height
+  nameWithType.vb: WallGenerator(Of T).Height
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Height
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartHeight*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartHeight
+  name: StartHeight
+  nameWithType: WallGenerator<T>.StartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.StartHeight
+  nameWithType.vb: WallGenerator(Of T).StartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).StartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartRow*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartRow
+  name: StartRow
+  nameWithType: WallGenerator<T>.StartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.StartRow
+  nameWithType.vb: WallGenerator(Of T).StartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).StartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Duration*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Duration
+  name: Duration
+  nameWithType: WallGenerator<T>.Duration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Duration
+  nameWithType.vb: WallGenerator(Of T).Duration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Duration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartTime*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartTime
+  name: StartTime
+  nameWithType: WallGenerator<T>.StartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.StartTime
+  nameWithType.vb: WallGenerator(Of T).StartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).StartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleWidth*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleWidth
+  name: ScaleWidth
+  nameWithType: WallGenerator<T>.ScaleWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleWidth
+  nameWithType.vb: WallGenerator(Of T).ScaleWidth
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleWidth
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleHeight*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleHeight
+  name: ScaleHeight
+  nameWithType: WallGenerator<T>.ScaleHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleHeight
+  nameWithType.vb: WallGenerator(Of T).ScaleHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartHeight*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartHeight
+  name: ScaleStartHeight
+  nameWithType: WallGenerator<T>.ScaleStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleStartHeight
+  nameWithType.vb: WallGenerator(Of T).ScaleStartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartRow*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartRow
+  name: ScaleStartRow
+  nameWithType: WallGenerator<T>.ScaleStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleStartRow
+  nameWithType.vb: WallGenerator(Of T).ScaleStartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleDuration*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleDuration
+  name: ScaleDuration
+  nameWithType: WallGenerator<T>.ScaleDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleDuration
+  nameWithType.vb: WallGenerator(Of T).ScaleDuration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartTime*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ScaleStartTime
+  name: ScaleStartTime
+  nameWithType: WallGenerator<T>.ScaleStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ScaleStartTime
+  nameWithType.vb: WallGenerator(Of T).ScaleStartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ScaleStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddWidth*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddWidth
+  name: AddWidth
+  nameWithType: WallGenerator<T>.AddWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddWidth
+  nameWithType.vb: WallGenerator(Of T).AddWidth
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddWidth
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddHeight*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddHeight
+  name: AddHeight
+  nameWithType: WallGenerator<T>.AddHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddHeight
+  nameWithType.vb: WallGenerator(Of T).AddHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartHeight*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartHeight
+  name: AddStartHeight
+  nameWithType: WallGenerator<T>.AddStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddStartHeight
+  nameWithType.vb: WallGenerator(Of T).AddStartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartRow*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartRow
+  name: AddStartRow
+  nameWithType: WallGenerator<T>.AddStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddStartRow
+  nameWithType.vb: WallGenerator(Of T).AddStartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddDuration*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddDuration
+  name: AddDuration
+  nameWithType: WallGenerator<T>.AddDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddDuration
+  nameWithType.vb: WallGenerator(Of T).AddDuration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartTime*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddStartTime
+  name: AddStartTime
+  nameWithType: WallGenerator<T>.AddStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.AddStartTime
+  nameWithType.vb: WallGenerator(Of T).AddStartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).AddStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitWidth*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitWidth
+  name: FitWidth
+  nameWithType: WallGenerator<T>.FitWidth
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitWidth
+  nameWithType.vb: WallGenerator(Of T).FitWidth
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitWidth
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Double>
+  nameWithType: Nullable<Double>
+  fullName: System.Nullable<System.Double>
+  nameWithType.vb: Nullable(Of Double)
+  fullName.vb: System.Nullable(Of System.Double)
+  name.vb: Nullable(Of Double)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitHeight*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitHeight
+  name: FitHeight
+  nameWithType: WallGenerator<T>.FitHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitHeight
+  nameWithType.vb: WallGenerator(Of T).FitHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartHeight*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartHeight
+  name: FitStartHeight
+  nameWithType: WallGenerator<T>.FitStartHeight
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitStartHeight
+  nameWithType.vb: WallGenerator(Of T).FitStartHeight
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitStartHeight
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartRow*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartRow
+  name: FitStartRow
+  nameWithType: WallGenerator<T>.FitStartRow
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitStartRow
+  nameWithType.vb: WallGenerator(Of T).FitStartRow
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitStartRow
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitDuration*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitDuration
+  name: FitDuration
+  nameWithType: WallGenerator<T>.FitDuration
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitDuration
+  nameWithType.vb: WallGenerator(Of T).FitDuration
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitDuration
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartTime*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitStartTime
+  name: FitStartTime
+  nameWithType: WallGenerator<T>.FitStartTime
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.FitStartTime
+  nameWithType.vb: WallGenerator(Of T).FitStartTime
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).FitStartTime
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Scale*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Scale
+  name: Scale
+  nameWithType: WallGenerator<T>.Scale
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Scale
+  nameWithType.vb: WallGenerator(Of T).Scale
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Scale
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Track*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Track
+  name: Track
+  nameWithType: WallGenerator<T>.Track
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Track
+  nameWithType.vb: WallGenerator(Of T).Track
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Track
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

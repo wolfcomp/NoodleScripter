@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  id: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.Color
+  - NoodleScripter.Models.NoodleScripter.ColorType
+  - NoodleScripter.Models.NoodleScripter.Curve
+  - NoodleScripter.Models.NoodleScripter.CurveType
+  - NoodleScripter.Models.NoodleScripter.EaseRotation
+  - NoodleScripter.Models.NoodleScripter.Easings
+  - NoodleScripter.Models.NoodleScripter.MirrorPoint
+  - NoodleScripter.Models.NoodleScripter.MirrorType
+  - NoodleScripter.Models.NoodleScripter.Noise
+  - NoodleScripter.Models.NoodleScripter.NoRotation
+  - NoodleScripter.Models.NoodleScripter.RandomRotation
+  - NoodleScripter.Models.NoodleScripter.Reverse
+  - NoodleScripter.Models.NoodleScripter.StaticRotation
+  - NoodleScripter.Models.NoodleScripter.SwitchRotation
+  - NoodleScripter.Models.NoodleScripter.Wall
+  - NoodleScripter.Models.NoodleScripter.WallGenerator
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+  type: Namespace
+  assemblies:
+  - NoodleScripter
+references:
+- uid: NoodleScripter.Models.NoodleScripter.Color
+  commentId: T:NoodleScripter.Models.NoodleScripter.Color
+  parent: NoodleScripter.Models.NoodleScripter
+  name: Color
+  nameWithType: Color
+  fullName: NoodleScripter.Models.NoodleScripter.Color
+- uid: NoodleScripter.Models.NoodleScripter.ColorType
+  commentId: T:NoodleScripter.Models.NoodleScripter.ColorType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: ColorType
+  nameWithType: ColorType
+  fullName: NoodleScripter.Models.NoodleScripter.ColorType
+- uid: NoodleScripter.Models.NoodleScripter.Curve
+  commentId: T:NoodleScripter.Models.NoodleScripter.Curve
+  name: Curve
+  nameWithType: Curve
+  fullName: NoodleScripter.Models.NoodleScripter.Curve
+- uid: NoodleScripter.Models.NoodleScripter.CurveType
+  commentId: T:NoodleScripter.Models.NoodleScripter.CurveType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: CurveType
+  nameWithType: CurveType
+  fullName: NoodleScripter.Models.NoodleScripter.CurveType
+- uid: NoodleScripter.Models.NoodleScripter.Noise
+  commentId: T:NoodleScripter.Models.NoodleScripter.Noise
+  name: Noise
+  nameWithType: Noise
+  fullName: NoodleScripter.Models.NoodleScripter.Noise
+- uid: NoodleScripter.Models.NoodleScripter.Easings
+  commentId: T:NoodleScripter.Models.NoodleScripter.Easings
+  parent: NoodleScripter.Models.NoodleScripter
+  name: Easings
+  nameWithType: Easings
+  fullName: NoodleScripter.Models.NoodleScripter.Easings
+- uid: NoodleScripter.Models.NoodleScripter.StaticRotation
+  commentId: T:NoodleScripter.Models.NoodleScripter.StaticRotation
+  name: StaticRotation
+  nameWithType: StaticRotation
+  fullName: NoodleScripter.Models.NoodleScripter.StaticRotation
+- uid: NoodleScripter.Models.NoodleScripter.EaseRotation
+  commentId: T:NoodleScripter.Models.NoodleScripter.EaseRotation
+  name: EaseRotation
+  nameWithType: EaseRotation
+  fullName: NoodleScripter.Models.NoodleScripter.EaseRotation
+- uid: NoodleScripter.Models.NoodleScripter.RandomRotation
+  commentId: T:NoodleScripter.Models.NoodleScripter.RandomRotation
+  name: RandomRotation
+  nameWithType: RandomRotation
+  fullName: NoodleScripter.Models.NoodleScripter.RandomRotation
+- uid: NoodleScripter.Models.NoodleScripter.SwitchRotation
+  commentId: T:NoodleScripter.Models.NoodleScripter.SwitchRotation
+  name: SwitchRotation
+  nameWithType: SwitchRotation
+  fullName: NoodleScripter.Models.NoodleScripter.SwitchRotation
+- uid: NoodleScripter.Models.NoodleScripter.NoRotation
+  commentId: T:NoodleScripter.Models.NoodleScripter.NoRotation
+  name: NoRotation
+  nameWithType: NoRotation
+  fullName: NoodleScripter.Models.NoodleScripter.NoRotation
+- uid: NoodleScripter.Models.NoodleScripter.Wall
+  commentId: T:NoodleScripter.Models.NoodleScripter.Wall
+  name: Wall
+  nameWithType: Wall
+  fullName: NoodleScripter.Models.NoodleScripter.Wall
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator
+  commentId: T:NoodleScripter.Models.NoodleScripter.WallGenerator
+  parent: NoodleScripter.Models.NoodleScripter
+  name: WallGenerator
+  nameWithType: WallGenerator
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  commentId: T:NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  name: WallGenerator<T>
+  nameWithType: WallGenerator<T>
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>
+  nameWithType.vb: WallGenerator(Of T)
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T)
+  name.vb: WallGenerator(Of T)
+  spec.csharp:
+  - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+    name: WallGenerator
+    nameWithType: WallGenerator
+    fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+    name: WallGenerator
+    nameWithType: WallGenerator
+    fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.MirrorType
+  commentId: T:NoodleScripter.Models.NoodleScripter.MirrorType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: MirrorType
+  nameWithType: MirrorType
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorType
+- uid: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  commentId: T:NoodleScripter.Models.NoodleScripter.MirrorPoint
+  parent: NoodleScripter.Models.NoodleScripter
+  name: MirrorPoint
+  nameWithType: MirrorPoint
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorPoint
+- uid: NoodleScripter.Models.NoodleScripter.Reverse
+  commentId: T:NoodleScripter.Models.NoodleScripter.Reverse
+  parent: NoodleScripter.Models.NoodleScripter
+  name: Reverse
+  nameWithType: Reverse
+  fullName: NoodleScripter.Models.NoodleScripter.Reverse
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter

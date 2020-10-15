@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.Reverse
+  commentId: T:NoodleScripter.Models.NoodleScripter.Reverse
+  id: Reverse
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.Reverse.None
+  - NoodleScripter.Models.NoodleScripter.Reverse.X
+  - NoodleScripter.Models.NoodleScripter.Reverse.Y
+  - NoodleScripter.Models.NoodleScripter.Reverse.Z
+  langs:
+  - csharp
+  - vb
+  name: Reverse
+  nameWithType: Reverse
+  fullName: NoodleScripter.Models.NoodleScripter.Reverse
+  type: Enum
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Reverse
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 153
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum Reverse
+    content.vb: >-
+      <Flags>
+
+      Public Enum Reverse
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NoodleScripter.Models.NoodleScripter.Reverse.None
+  commentId: F:NoodleScripter.Models.NoodleScripter.Reverse.None
+  id: None
+  parent: NoodleScripter.Models.NoodleScripter.Reverse
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: Reverse.None
+  fullName: NoodleScripter.Models.NoodleScripter.Reverse.None
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: None
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 156
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: None = 0
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Reverse
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Reverse.X
+  commentId: F:NoodleScripter.Models.NoodleScripter.Reverse.X
+  id: X
+  parent: NoodleScripter.Models.NoodleScripter.Reverse
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: Reverse.X
+  fullName: NoodleScripter.Models.NoodleScripter.Reverse.X
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: X
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 157
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: X = 1
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Reverse
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Reverse.Y
+  commentId: F:NoodleScripter.Models.NoodleScripter.Reverse.Y
+  id: Y
+  parent: NoodleScripter.Models.NoodleScripter.Reverse
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: Reverse.Y
+  fullName: NoodleScripter.Models.NoodleScripter.Reverse.Y
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Y
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 158
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Y = 2
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Reverse
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Reverse.Z
+  commentId: F:NoodleScripter.Models.NoodleScripter.Reverse.Z
+  id: Z
+  parent: NoodleScripter.Models.NoodleScripter.Reverse
+  langs:
+  - csharp
+  - vb
+  name: Z
+  nameWithType: Reverse.Z
+  fullName: NoodleScripter.Models.NoodleScripter.Reverse.Z
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Z
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 159
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Z = 4
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Reverse
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: NoodleScripter.Models.NoodleScripter.Reverse
+  commentId: T:NoodleScripter.Models.NoodleScripter.Reverse
+  parent: NoodleScripter.Models.NoodleScripter
+  name: Reverse
+  nameWithType: Reverse
+  fullName: NoodleScripter.Models.NoodleScripter.Reverse

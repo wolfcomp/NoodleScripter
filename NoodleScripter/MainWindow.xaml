@@ -1,0 +1,112 @@
+﻿<Window x:Class="NoodleScripter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:NoodleScripter="clr-namespace:NoodleScripter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#FF222222" Foreground="White">
+    <Window.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="SongInfosTemplate">
+                <StackPanel HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="32" Source="{Binding Cover}" Margin="0,0,10,0"/>
+                        <TextBlock Text="Song Name:" VerticalAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+                            <TextBlock Padding="2,0,10,0" Text="{Binding SongName}"/>
+                        </TextBlock>
+                        <TextBlock Text="Mapper:" VerticalAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+                            <TextBlock Padding="2,0,0,0" Text="{Binding Mapper}"/>
+                        </TextBlock>
+                    </StackPanel>
+                    <ListView HorizontalAlignment="Stretch" Margin="0,2,0,0" ItemTemplate="{DynamicResource BeatmapSetsTemplate}" ItemsSource="{Binding BeatmapSets}" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+                </StackPanel>
+            </DataTemplate>
+            <DataTemplate x:Key="BeatmapSetsTemplate">
+                <StackPanel HorizontalAlignment="Stretch">
+                    <TextBlock Text="{Binding CharacteristicString}"></TextBlock>
+                    <ListView HorizontalAlignment="Stretch" Margin="0,2,0,0" ItemTemplate="{DynamicResource BeatmapsTemplate}" ItemsSource="{Binding Beatmaps}" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+                </StackPanel>
+            </DataTemplate>
+            <DataTemplate x:Key="BeatmapsTemplate">
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding Difficulty}" HorizontalAlignment="Left"></TextBlock>
+                    <Button HorizontalAlignment="Right" IsEnabled="{Binding ScriptNotInitialized}" Margin="0" Click="Button_Initialize">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Content" Value="Initialize"></Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ScriptNotInitialized}" Value="False">
+                                        <Setter Property="Content" Value="Initialized"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button HorizontalAlignment="Right" Content="Run Script" Click="Button_RunScript">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Visibility" Value="Hidden"></Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ScriptNotInitialized}" Value="False">
+                                        <Setter Property="Visibility" Value="Visible"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.DataContext>
+        <NoodleScripter:Global></NoodleScripter:Global>
+    </Window.DataContext>
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,12,10,0" Text="Beat Saber Install Directory:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Stretch" Margin="162,11,120,0" Text="{Binding InstallPath}" TextWrapping="NoWrap" VerticalAlignment="Top" GotFocus="TextBox_GotFocus" Background="#FF121212" Foreground="White"/>
+        <Button x:Name="Button" Content="Refresh Song List" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Click="Button_Refresh"/>
+        <ListView VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,35,10,10" ItemsSource="{Binding SongInfos}" ItemTemplate="{StaticResource SongInfosTemplate}" Background="#00F2F2F2" ScrollViewer.CanContentScroll="False">
+            <ListBox.Resources>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListViewItem">
+                                <Border BorderThickness="{TemplateBinding Border.BorderThickness}" Padding="{TemplateBinding Control.Padding}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}" Name="Bd" SnapsToDevicePixels="True">
+                                    <ContentPresenter Content="{TemplateBinding ContentControl.Content}" ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}" HorizontalAlignment="Stretch" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Panel.Background" TargetName="Bd" Value="Transparent"/>
+                                        <Setter Property="Border.BorderBrush" TargetName="Bd" Value="Transparent"/>
+                                    </Trigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="Selector.IsSelectionActive" Value="False"/>
+                                            <Condition Property="Selector.IsSelected" Value="True"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Panel.Background" TargetName="Bd" Value="Transparent"/>
+                                        <Setter Property="Border.BorderBrush" TargetName="Bd" Value="Transparent"/>
+                                    </MultiTrigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="Selector.IsSelectionActive" Value="True"/>
+                                            <Condition Property="Selector.IsSelected" Value="True"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Panel.Background" TargetName="Bd" Value="Transparent"/>
+                                        <Setter Property="Border.BorderBrush" TargetName="Bd" Value="Transparent"/>
+                                    </MultiTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.Resources>
+        </ListView>
+    </Grid>
+</Window>

@@ -1,0 +1,912 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.Easings
+  commentId: T:NoodleScripter.Models.NoodleScripter.Easings
+  id: Easings
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInBack
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInBounce
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInCirc
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInCubic
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInElastic
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInOutBack
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInOutBounce
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInOutCirc
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInOutCubic
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInOutElastic
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuad
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuart
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuint
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInOutSine
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInQuad
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInQuart
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInQuint
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseInSine
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseOutBack
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseOutBounce
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseOutCirc
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseOutCubic
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseOutElastic
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuad
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuart
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuint
+  - NoodleScripter.Models.NoodleScripter.Easings.EaseOutSine
+  - NoodleScripter.Models.NoodleScripter.Easings.Linear
+  langs:
+  - csharp
+  - vb
+  name: Easings
+  nameWithType: Easings
+  fullName: NoodleScripter.Models.NoodleScripter.Easings
+  type: Enum
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: Easings
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 10
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public enum Easings
+    content.vb: Public Enum Easings
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NoodleScripter.Models.NoodleScripter.Easings.Linear
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.Linear
+  id: Linear
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: Linear
+  nameWithType: Easings.Linear
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.Linear
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: Linear
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 12
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Linear = 0
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInQuad
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInQuad
+  id: EaseInQuad
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInQuad
+  nameWithType: Easings.EaseInQuad
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInQuad
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInQuad
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 13
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInQuad = 1
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuad
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuad
+  id: EaseOutQuad
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseOutQuad
+  nameWithType: Easings.EaseOutQuad
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuad
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseOutQuad
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 14
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseOutQuad = 2
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuad
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuad
+  id: EaseInOutQuad
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInOutQuad
+  nameWithType: Easings.EaseInOutQuad
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuad
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInOutQuad
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 15
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInOutQuad = 3
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInCubic
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInCubic
+  id: EaseInCubic
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInCubic
+  nameWithType: Easings.EaseInCubic
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInCubic
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInCubic
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 16
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInCubic = 4
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseOutCubic
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseOutCubic
+  id: EaseOutCubic
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseOutCubic
+  nameWithType: Easings.EaseOutCubic
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseOutCubic
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseOutCubic
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 17
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseOutCubic = 5
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutCubic
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInOutCubic
+  id: EaseInOutCubic
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInOutCubic
+  nameWithType: Easings.EaseInOutCubic
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutCubic
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInOutCubic
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 18
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInOutCubic = 6
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInQuart
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInQuart
+  id: EaseInQuart
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInQuart
+  nameWithType: Easings.EaseInQuart
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInQuart
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInQuart
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 19
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInQuart = 7
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuart
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuart
+  id: EaseOutQuart
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseOutQuart
+  nameWithType: Easings.EaseOutQuart
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuart
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseOutQuart
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 20
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseOutQuart = 8
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuart
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuart
+  id: EaseInOutQuart
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInOutQuart
+  nameWithType: Easings.EaseInOutQuart
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuart
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInOutQuart
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 21
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInOutQuart = 9
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInQuint
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInQuint
+  id: EaseInQuint
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInQuint
+  nameWithType: Easings.EaseInQuint
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInQuint
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInQuint
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 22
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInQuint = 10
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuint
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuint
+  id: EaseOutQuint
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseOutQuint
+  nameWithType: Easings.EaseOutQuint
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseOutQuint
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseOutQuint
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 23
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseOutQuint = 11
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuint
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuint
+  id: EaseInOutQuint
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInOutQuint
+  nameWithType: Easings.EaseInOutQuint
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutQuint
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInOutQuint
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 24
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInOutQuint = 12
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInSine
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInSine
+  id: EaseInSine
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInSine
+  nameWithType: Easings.EaseInSine
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInSine
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInSine
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 25
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInSine = 13
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseOutSine
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseOutSine
+  id: EaseOutSine
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseOutSine
+  nameWithType: Easings.EaseOutSine
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseOutSine
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseOutSine
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 26
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseOutSine = 14
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutSine
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInOutSine
+  id: EaseInOutSine
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInOutSine
+  nameWithType: Easings.EaseInOutSine
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutSine
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInOutSine
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 27
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInOutSine = 15
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInCirc
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInCirc
+  id: EaseInCirc
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInCirc
+  nameWithType: Easings.EaseInCirc
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInCirc
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInCirc
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 28
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInCirc = 16
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseOutCirc
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseOutCirc
+  id: EaseOutCirc
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseOutCirc
+  nameWithType: Easings.EaseOutCirc
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseOutCirc
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseOutCirc
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 29
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseOutCirc = 17
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutCirc
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInOutCirc
+  id: EaseInOutCirc
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInOutCirc
+  nameWithType: Easings.EaseInOutCirc
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutCirc
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInOutCirc
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 30
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInOutCirc = 18
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInBack
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInBack
+  id: EaseInBack
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInBack
+  nameWithType: Easings.EaseInBack
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInBack
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInBack
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 31
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInBack = 19
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseOutBack
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseOutBack
+  id: EaseOutBack
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseOutBack
+  nameWithType: Easings.EaseOutBack
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseOutBack
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseOutBack
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 32
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseOutBack = 20
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutBack
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInOutBack
+  id: EaseInOutBack
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInOutBack
+  nameWithType: Easings.EaseInOutBack
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutBack
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInOutBack
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 33
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInOutBack = 21
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInElastic
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInElastic
+  id: EaseInElastic
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInElastic
+  nameWithType: Easings.EaseInElastic
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInElastic
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInElastic
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 34
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInElastic = 22
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseOutElastic
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseOutElastic
+  id: EaseOutElastic
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseOutElastic
+  nameWithType: Easings.EaseOutElastic
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseOutElastic
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseOutElastic
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 35
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseOutElastic = 23
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutElastic
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInOutElastic
+  id: EaseInOutElastic
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInOutElastic
+  nameWithType: Easings.EaseInOutElastic
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutElastic
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInOutElastic
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 36
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInOutElastic = 24
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInBounce
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInBounce
+  id: EaseInBounce
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInBounce
+  nameWithType: Easings.EaseInBounce
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInBounce
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInBounce
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 37
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInBounce = 25
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseOutBounce
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseOutBounce
+  id: EaseOutBounce
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseOutBounce
+  nameWithType: Easings.EaseOutBounce
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseOutBounce
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseOutBounce
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 38
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseOutBounce = 26
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutBounce
+  commentId: F:NoodleScripter.Models.NoodleScripter.Easings.EaseInOutBounce
+  id: EaseInOutBounce
+  parent: NoodleScripter.Models.NoodleScripter.Easings
+  langs:
+  - csharp
+  - vb
+  name: EaseInOutBounce
+  nameWithType: Easings.EaseInOutBounce
+  fullName: NoodleScripter.Models.NoodleScripter.Easings.EaseInOutBounce
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: EaseInOutBounce
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 39
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: EaseInOutBounce = 27
+    return:
+      type: NoodleScripter.Models.NoodleScripter.Easings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: NoodleScripter.Models.NoodleScripter.Easings
+  commentId: T:NoodleScripter.Models.NoodleScripter.Easings
+  parent: NoodleScripter.Models.NoodleScripter
+  name: Easings
+  nameWithType: Easings
+  fullName: NoodleScripter.Models.NoodleScripter.Easings

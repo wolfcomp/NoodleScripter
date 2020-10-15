@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  commentId: T:NoodleScripter.Models.NoodleScripter.MirrorPoint
+  id: MirrorPoint
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.MirrorPoint.None
+  - NoodleScripter.Models.NoodleScripter.MirrorPoint.X
+  - NoodleScripter.Models.NoodleScripter.MirrorPoint.Y
+  - NoodleScripter.Models.NoodleScripter.MirrorPoint.Z
+  langs:
+  - csharp
+  - vb
+  name: MirrorPoint
+  nameWithType: MirrorPoint
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  type: Enum
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: MirrorPoint
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 144
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum MirrorPoint
+    content.vb: >-
+      <Flags>
+
+      Public Enum MirrorPoint
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NoodleScripter.Models.NoodleScripter.MirrorPoint.None
+  commentId: F:NoodleScripter.Models.NoodleScripter.MirrorPoint.None
+  id: None
+  parent: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: MirrorPoint.None
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorPoint.None
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: None
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 147
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: None = 0
+    return:
+      type: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.MirrorPoint.X
+  commentId: F:NoodleScripter.Models.NoodleScripter.MirrorPoint.X
+  id: X
+  parent: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: MirrorPoint.X
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorPoint.X
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: X
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 148
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: X = 1
+    return:
+      type: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.MirrorPoint.Y
+  commentId: F:NoodleScripter.Models.NoodleScripter.MirrorPoint.Y
+  id: Y
+  parent: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: MirrorPoint.Y
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorPoint.Y
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Y
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 149
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Y = 2
+    return:
+      type: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.MirrorPoint.Z
+  commentId: F:NoodleScripter.Models.NoodleScripter.MirrorPoint.Z
+  id: Z
+  parent: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  langs:
+  - csharp
+  - vb
+  name: Z
+  nameWithType: MirrorPoint.Z
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorPoint.Z
+  type: Field
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+    id: Z
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 150
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Z = 4
+    return:
+      type: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: NoodleScripter.Models.NoodleScripter.MirrorPoint
+  commentId: T:NoodleScripter.Models.NoodleScripter.MirrorPoint
+  parent: NoodleScripter.Models.NoodleScripter
+  name: MirrorPoint
+  nameWithType: MirrorPoint
+  fullName: NoodleScripter.Models.NoodleScripter.MirrorPoint

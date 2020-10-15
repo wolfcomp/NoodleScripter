@@ -1,0 +1,146 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.StaticRotation
+  commentId: T:NoodleScripter.Models.NoodleScripter.StaticRotation
+  id: StaticRotation
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.StaticRotation.LocalRotation
+  - NoodleScripter.Models.NoodleScripter.StaticRotation.Rotation
+  langs:
+  - csharp
+  - vb
+  name: StaticRotation
+  nameWithType: StaticRotation
+  fullName: NoodleScripter.Models.NoodleScripter.StaticRotation
+  type: Class
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: StaticRotation
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 42
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: 'public class StaticRotation : IRotationMode'
+    content.vb: >-
+      Public Class StaticRotation
+          Implements IRotationMode
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NoodleScripter.Models.NoodleScripter.StaticRotation.Rotation
+  commentId: P:NoodleScripter.Models.NoodleScripter.StaticRotation.Rotation
+  id: Rotation
+  parent: NoodleScripter.Models.NoodleScripter.StaticRotation
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: StaticRotation.Rotation
+  fullName: NoodleScripter.Models.NoodleScripter.StaticRotation.Rotation
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: Rotation
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 44
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Vector3D Rotation { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Media3D.Vector3D
+    content.vb: Public Property Rotation As Vector3D
+  overload: NoodleScripter.Models.NoodleScripter.StaticRotation.Rotation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.StaticRotation.LocalRotation
+  commentId: P:NoodleScripter.Models.NoodleScripter.StaticRotation.LocalRotation
+  id: LocalRotation
+  parent: NoodleScripter.Models.NoodleScripter.StaticRotation
+  langs:
+  - csharp
+  - vb
+  name: LocalRotation
+  nameWithType: StaticRotation.LocalRotation
+  fullName: NoodleScripter.Models.NoodleScripter.StaticRotation.LocalRotation
+  type: Property
+  source:
+    remote:
+      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+    id: LocalRotation
+    path: Models/NoodleScripter/EasingModes.cs
+    startLine: 45
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public Vector3D LocalRotation { get; set; }
+    parameters: []
+    return:
+      type: System.Windows.Media.Media3D.Vector3D
+    content.vb: Public Property LocalRotation As Vector3D
+  overload: NoodleScripter.Models.NoodleScripter.StaticRotation.LocalRotation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NoodleScripter.Models.NoodleScripter.StaticRotation.Rotation*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.StaticRotation.Rotation
+  name: Rotation
+  nameWithType: StaticRotation.Rotation
+  fullName: NoodleScripter.Models.NoodleScripter.StaticRotation.Rotation
+- uid: System.Windows.Media.Media3D.Vector3D
+  commentId: T:System.Windows.Media.Media3D.Vector3D
+  parent: System.Windows.Media.Media3D
+  isExternal: true
+  name: Vector3D
+  nameWithType: Vector3D
+  fullName: System.Windows.Media.Media3D.Vector3D
+- uid: System.Windows.Media.Media3D
+  commentId: N:System.Windows.Media.Media3D
+  isExternal: true
+  name: System.Windows.Media.Media3D
+  nameWithType: System.Windows.Media.Media3D
+  fullName: System.Windows.Media.Media3D
+- uid: NoodleScripter.Models.NoodleScripter.StaticRotation.LocalRotation*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.StaticRotation.LocalRotation
+  name: LocalRotation
+  nameWithType: StaticRotation.LocalRotation
+  fullName: NoodleScripter.Models.NoodleScripter.StaticRotation.LocalRotation
