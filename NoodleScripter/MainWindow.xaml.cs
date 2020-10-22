@@ -46,17 +46,11 @@ namespace NoodleScripter
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            using (var dialog = new FolderBrowserDialog())
-            {
-                var result = dialog.ShowDialog();
-                if (result == System.Windows.Forms.DialogResult.OK)
-                {
-                    Global.Instance.InstallPath = dialog.SelectedPath;
-                    Button_Refresh(sender, e);
-                }
-            }
-
-            Button.Focus();
+            using var dialog = new FolderBrowserDialog();
+            var result = dialog.ShowDialog();
+            if (result != System.Windows.Forms.DialogResult.OK) return;
+            Global.Instance.InstallPath = dialog.SelectedPath;
+            Button_Refresh(sender, e);
         }
 
         private void Button_Refresh(object sender, RoutedEventArgs e)
@@ -87,7 +81,7 @@ namespace NoodleScripter
         {
             var button = sender as Button;
             var beatmap = button.DataContext as Beatmap;
-            ScriptExecutor.Execute(beatmap.FullPath, beatmap);
+            ScriptExecutor.Execute(beatmap);
             GC.Collect();
             GC.WaitForFullGCComplete();
         }

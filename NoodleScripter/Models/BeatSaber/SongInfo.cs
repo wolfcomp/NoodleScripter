@@ -44,6 +44,7 @@ namespace NoodleScripter.Models.BeatSaber
         public string Mapper { get; }
         public string CoverFileName { get; }
         public string SongFolderName { get; }
+        public string FullFolderPath => Path.Combine(Global.Instance.InstallPath, SongFolderName);
 
         public ImageSource Cover => Global.GetImageSource(CoverFileName, SongFolderName);
 
@@ -111,7 +112,8 @@ namespace NoodleScripter.Models.BeatSaber
         public int NJS { get; }
         public double Offset { get; }
         public string FileName { get; }
-        public string FullPath => Path.Combine(Global.Instance.InstallPath, SongInfo.SongFolderName, FileName);
+        public string FullPath => Path.Combine(SongInfo.FullFolderPath, FileName);
+        public List<string> YmlFiles = new List<string>();
 
         public bool ScriptNotInitialized
         {

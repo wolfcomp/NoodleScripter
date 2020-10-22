@@ -24,7 +24,7 @@ namespace NoodleScripter.Commands
         public static string Template;
 
         public static Regex PointRegex = new Regex("^p([0-9])", RegexOptions.Multiline | RegexOptions.IgnoreCase);
-        
+
         private static Calculator calculator = new Calculator();
 
         public static void Initialize(Beatmap beatmap)
@@ -38,26 +38,254 @@ namespace NoodleScripter.Commands
             beatmap.ScriptNotInitialized = false;
         }
 
-        public static void Execute(string fullPath, Beatmap beatmap)
+        public static void Execute(Beatmap beatmap)
         {
             try
             {
-                var file = File.Open(fullPath.Replace(".dat", ".yml"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                var streamFile = new StreamReader(file);
-                var info = streamFile.ReadAllLines().Where(t => !t.Trim().StartsWith("#")).Select(t => t.Trim().ToLowerInvariant().Split(':'));
-                streamFile.Dispose();
-                file.Dispose();
                 var tuples = new List<Tuple<string, string, List<KeyValuePair<string, string>>>>();
-                var isStart = true;
-                var curIndex = 0;
-                var defaultGenerator = new WallGenerator();
+
+                groupYmlContextLines(readAllLinesFromFile(beatmap.FullPath.Replace(".dat", ".yml")), tuples, beatmap.SongInfo.FullFolderPath);
+                
                 var generatorList = new List<WallGenerator>();
-                var structures = new Dictionary<string, WallGenerator>();
+
+                setGenerators(tuples, generatorList);
+
                 var wallList = new List<Wall>();
                 var eventList = new List<Event>();
-                var rotationModes = new Dictionary<string, IRotationMode>();
-                var colorModes = new Dictionary<string, ColorManager>();
-                foreach (var infoStrings in info)
+
+                foreach (var wallGenerator in generatorList)
+                {
+                    wallList.AddRange(wallGenerator.GenerateWallsFinalized());
+                    eventList.AddRange(wallGenerator.GenerateEventsFinalized());
+                }
+
+                var walls = wallList.Select(t => t.GenerateObstacle()).ToArray();
+                var events = eventList.Select(t => t.GenerateEvent()).ToArray();
+                var jObject = JObject.Parse(File.ReadAllText(beatmap.FullPath));
+                var oldObstaclesPath = getOldPath(beatmap, "Obstacles");
+                var oldEventsPath = getOldPath(beatmap, "Events");
+
+                if (walls.Any())
+                {
+                    File.WriteAllText(Path.Combine(oldObstaclesPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.obstacles.json"), jObject["_obstacles"].ToString(Formatting.None));
+                    jObject["_obstacles"] = walls.ToJArray();
+                }
+
+                if (events.Any())
+                {
+                    File.WriteAllText(Path.Combine(oldEventsPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.events.json"), jObject["_events"].ToString(Formatting.None));
+                    jObject["_events"] = events.ToJArray();
+
+                }
+
+                File.WriteAllText(beatmap.FullPath, jObject.ToString(Formatting.None));
+            }
+            catch (Exception e)
+            {
+                Global.Instance.Logger.Error(e, e.Message);
+            }
+        }
+
+        private static string getOldPath(Beatmap beatmap, string type)
+        {
+            var path = Path.Combine(beatmap.FullPath, $"old{type}").Replace(".dat", "");
+            if (!Directory.Exists(path)) Directory.CreateDirectory(path);
+            cleanOverStorage(path);
+            return path;
+        }
+
+        private static void cleanOverStorage(string path)
+        {
+            var files = Directory.GetFiles(path);
+            if (files.Length > 19)
+            {
+                foreach (var s in files.Take(files.Length - 19))
+                {
+                    File.Delete(s);
+                }
+            }
+        }
+
+        private static void setGenerators(List<Tuple<string, string, List<KeyValuePair<string, string>>>> tuples, List<WallGenerator> generatorList)
+        {
+            var defaultGenerator = new WallGenerator();
+            var structures = new Dictionary<string, WallGenerator>();
+            var rotationModes = new Dictionary<string, IRotationMode>();
+            var colorModes = new Dictionary<string, ColorManager>();
+            foreach (var (identifier, type, list) in tuples)
+            {
+                if (type == "")
+                {
+                    var seed = Convert.ToInt32(list.First(t => t.Key.Invariant("seed")).Value);
+                    defaultGenerator.Random = new Random(seed);
+                }
+                else if (identifier.Invariant("rotationMode"))
+                {
+                    var local = false;
+                    var multi = false;
+                    var localRotList = new List<Tuple<Vector3D, double>>();
+                    var rotList = new List<Tuple<Vector3D, double>>();
+                    dynamic rotationStore = new NoRotation();
+                    foreach (var (key, value) in list)
+                    {
+                        if (key.Invariant("localrotation"))
+                        {
+                            local = true;
+
+                            if (value == "")
+                            {
+                                multi = true;
+                                continue;
+                            }
+                        }
+                        else if (key.Invariant("rotation"))
+                        {
+                            local = false;
+
+                            if (value == "")
+                            {
+                                multi = true;
+                                continue;
+                            }
+                        }
+
+                        if (key.Invariant("type")) rotationStore = value.ToLowerInvariant() switch
+                        {
+                            "static" => new StaticRotation(),
+                            "ease" => new EaseRotation(),
+                            "random" => new RandomRotation(),
+                            "switch" => new SwitchRotation(),
+                            _ => throw new ArgumentOutOfRangeException("Rotation type can only be of types: Static, Ease, Random, Switch")
+                        };
+                        else if (key.Invariant("ease"))
+                        {
+                            rotationStore.Easing = value.GetEasing();
+                        }
+                        else
+                        {
+                            if (multi)
+                            {
+                                switch (rotationStore)
+                                {
+                                    case EaseRotation _:
+                                        var vector = value.Substring(0, value.LastIndexOf(','));
+                                        var time = Convert.ToDouble(value.Substring(value.LastIndexOf(',') + 1));
+                                        if (local)
+                                            localRotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(vector), time));
+                                        else
+                                            rotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(vector), time));
+                                        break;
+                                    case RandomRotation _:
+                                        if (local)
+                                            localRotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(value), 0));
+                                        else
+                                            rotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(value), 0));
+                                        break;
+                                    case SwitchRotation _:
+                                        if (local)
+                                            localRotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(value), 0));
+                                        else
+                                            rotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(value), 0));
+                                        break;
+                                }
+                            }
+                            else
+                            {
+                                if (local)
+                                    rotationStore.LocalRotation = Vector3D.Parse(value);
+                                else
+                                    rotationStore.Rotation = Vector3D.Parse(value);
+                            }
+                        }
+                    }
+                    switch (rotationStore)
+                    {
+                        case EaseRotation easeStore:
+                            easeStore.LocalRotations = localRotList.ToArray();
+                            easeStore.Rotations = rotList.ToArray();
+                            break;
+                        case RandomRotation randomStore:
+                            randomStore.LocalRotation = new Tuple<Vector3D, Vector3D>(localRotList[0].Item1, localRotList[1].Item1);
+                            randomStore.Rotation = new Tuple<Vector3D, Vector3D>(rotList[0].Item1, rotList[1].Item1);
+                            break;
+                        case SwitchRotation switchStore:
+                            switchStore.LocalRotations = localRotList.Select(t => t.Item1).ToArray();
+                            switchStore.Rotations = rotList.Select(t => t.Item1).ToArray();
+                            break;
+                    }
+                    rotationModes.Add(type, rotationStore);
+                }
+                else if (identifier.Invariant("colorMode"))
+                {
+                    var color = new ColorManager();
+                    var colorList = new List<Tuple<Color, double>>();
+                    foreach (var (key, value) in list)
+                    {
+                        if (key.StartsWith("p"))
+                        {
+                            var values = value.Split(',');
+                            var colorType = values[0];
+                            var time = Convert.ToDouble(values[1]);
+                            colorList.Add(new Tuple<Color, double>(
+                                // ReSharper disable once PossibleNullReferenceException
+                                ((System.Windows.Media.Color)ColorConverter.ConvertFromString(colorType)).GetScriptColor(),
+                                time));
+                        }
+                        else if (key.Invariant("type"))
+                        {
+                            if (value.Invariant("Single"))
+                                color.Type = ColorType.Single;
+                            else if (value.Invariant("Gradient"))
+                                color.Type = ColorType.Gradient;
+                            else if (value.Invariant("Flash"))
+                                color.Type = ColorType.Flash;
+                            else if (value.Invariant("Rainbow"))
+                                color.Type = ColorType.Rainbow;
+                            else
+                                throw new ArgumentOutOfRangeException("type", "Color mode type can only be of types: Single, Gradient, Flash, Rainbow");
+                        }
+                        else if (key.Invariant("repetitions"))
+                        {
+                            color.Repetitions = Convert.ToSingle(value);
+                        }
+                    }
+
+                    color.Colors = colorList.ToArray();
+                    colorModes.Add(type, color);
+                }
+                else
+                {
+                    if (!tryGetGenerator(type.Replace("wall", "WallGenerator").Replace("event", "EventGenerator"), out var generator))
+                        generator = structures[type].Copy();
+
+                    var points = new List<Vector3D>();
+                    generator = generator.GetWallGenerator(defaultGenerator);
+                    foreach (var (key, value) in list)
+                    {
+                        setFieldValue(generator, key, value, points, rotationModes, colorModes, structures);
+                    }
+
+                    if (float.TryParse(identifier, out var beat))
+                    {
+                        generator.Beat = beat;
+                        generatorList.Add(generator);
+                    }
+                    else
+                    {
+                        structures.Add(identifier, generator);
+                    }
+                }
+            }
+        }
+
+        private static void groupYmlContextLines(string[][] input, List<Tuple<string, string, List<KeyValuePair<string, string>>>> tuples, string path)
+        {
+            var isStart = true;
+            var curIndex = 0;
+            foreach (var infoStrings in input)
+            {
+                if (infoStrings[0].Trim().Invariant("importFile")) groupYmlContextLines(readAllLinesFromFile(Path.Combine(path, infoStrings[1].Trim())), tuples, path);
+                else
                 {
                     if (isStart && infoStrings.Length != 1)
                     {
@@ -76,220 +304,17 @@ namespace NoodleScripter.Commands
                         tuples[curIndex].Item3.Add(new KeyValuePair<string, string>(infoStrings[0].Trim(), infoStrings[1].Trim()));
                     }
                 }
-
-                foreach (var (identifier, type, list) in tuples)
-                {
-                    if (type == "")
-                    {
-                        var seed = Convert.ToInt32(list.First(t => t.Key.Invariant("seed")).Value);
-                        defaultGenerator.Random = new Random(seed);
-                    }
-                    else if (identifier.Invariant("rotationMode"))
-                    {
-                        var local = false;
-                        var multi = false;
-                        var localRotList = new List<Tuple<Vector3D, double>>();
-                        var rotList = new List<Tuple<Vector3D, double>>();
-                        dynamic rotationStore = new NoRotation();
-                        foreach (var (key, value) in list)
-                        {
-                            if (key.Invariant("localrotation"))
-                            {
-                                local = true;
-
-                                if (value == "")
-                                {
-                                    multi = true;
-                                    continue;
-                                }
-                            }
-                            else if (key.Invariant("rotation"))
-                            {
-                                local = false;
-
-                                if (value == "")
-                                {
-                                    multi = true;
-                                    continue;
-                                }
-                            }
-
-                            if (key.Invariant("type")) rotationStore = value.ToLowerInvariant() switch
-                            {
-                                "static" => new StaticRotation(),
-                                "ease" => new EaseRotation(),
-                                "random" => new RandomRotation(),
-                                "switch" => new SwitchRotation(),
-                                _ => throw new ArgumentOutOfRangeException("Rotation type can only be of types: Static, Ease, Random, Switch")
-                            };
-                            else if (key.Invariant("ease"))
-                            {
-                                rotationStore.Easing = value.GetEasing();
-                            }
-                            else
-                            {
-                                if (multi)
-                                {
-                                    switch (rotationStore)
-                                    {
-                                        case EaseRotation _:
-                                            var vector = value.Substring(0, value.LastIndexOf(','));
-                                            var time = Convert.ToDouble(value.Substring(value.LastIndexOf(',') + 1));
-                                            if (local)
-                                                localRotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(vector), time));
-                                            else
-                                                rotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(vector), time));
-                                            break;
-                                        case RandomRotation _:
-                                            if (local)
-                                                localRotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(value), 0));
-                                            else
-                                                rotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(value), 0));
-                                            break;
-                                        case SwitchRotation _:
-                                            if (local)
-                                                localRotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(value), 0));
-                                            else
-                                                rotList.Add(new Tuple<Vector3D, double>(Vector3D.Parse(value), 0));
-                                            break;
-                                    }
-                                }
-                                else
-                                {
-                                    if (local)
-                                        rotationStore.LocalRotation = Vector3D.Parse(value);
-                                    else
-                                        rotationStore.Rotation = Vector3D.Parse(value);
-                                }
-                            }
-                        }
-                        switch (rotationStore)
-                        {
-                            case EaseRotation easeStore:
-                                easeStore.LocalRotations = localRotList.ToArray();
-                                easeStore.Rotations = rotList.ToArray();
-                                break;
-                            case RandomRotation randomStore:
-                                randomStore.LocalRotation = new Tuple<Vector3D, Vector3D>(localRotList[0].Item1, localRotList[1].Item1);
-                                randomStore.Rotation = new Tuple<Vector3D, Vector3D>(rotList[0].Item1, rotList[1].Item1);
-                                break;
-                            case SwitchRotation switchStore:
-                                switchStore.LocalRotations = localRotList.Select(t => t.Item1).ToArray();
-                                switchStore.Rotations = rotList.Select(t => t.Item1).ToArray();
-                                break;
-                        }
-                        rotationModes.Add(type, rotationStore);
-                    }
-                    else if (identifier.Invariant("colorMode"))
-                    {
-                        var local = false;
-                        var color = new ColorManager();
-                        var colorList = new List<Tuple<Color, double>>();
-                        foreach (var (key, value) in list)
-                        {
-                            if (key.StartsWith("p"))
-                            {
-                                var values = value.Split(',');
-                                var colorType = values[0];
-                                var time = Convert.ToDouble(values[1]);
-                                colorList.Add(new Tuple<Color, double>(
-                                    // ReSharper disable once PossibleNullReferenceException
-                                    ((System.Windows.Media.Color)ColorConverter.ConvertFromString(colorType)).GetScriptColor(),
-                                    time));
-                            }
-                            else if (key.Invariant("type"))
-                            {
-                                if (value.Invariant("Single"))
-                                    color.Type = ColorType.Single;
-                                else if (value.Invariant("Gradient"))
-                                    color.Type = ColorType.Gradient;
-                                else if (value.Invariant("Flash"))
-                                    color.Type = ColorType.Flash;
-                                else if (value.Invariant("Rainbow"))
-                                    color.Type = ColorType.Rainbow;
-                                else
-                                    throw new ArgumentOutOfRangeException("type", "Color mode type can only be of types: Single, Gradient, Flash, Rainbow");
-                            }
-                            else if (key.Invariant("repetitions"))
-                            {
-                                color.Repetitions = Convert.ToSingle(value);
-                            }
-                        }
-
-                        color.Colors = colorList.ToArray();
-                        colorModes.Add(type, color);
-                    }
-                    else if (float.TryParse(identifier, out var beat))
-                    {
-                        if (!TryGetGenerator(type.Replace("wall", "WallGenerator").Replace("event", "EventGenerator"), out var generator)) 
-                            generator = structures[type].Copy();
-
-                        var points = new List<Vector3D>();
-                        generator = generator.GetWallGenerator(defaultGenerator);
-                        generator.Beat = beat;
-                        foreach (var (key, value) in list)
-                        {
-                            setFieldValue(generator, key, value, points, rotationModes, colorModes, structures);
-                        }
-                        generatorList.Add(generator);
-                    }
-                    else
-                    {
-                        if (!TryGetGenerator(type.Replace("wall", "WallGenerator").Replace("event", "EventGenerator"), out var generator)) 
-                            generator = structures[type].Copy();
-                        
-                        var points = new List<Vector3D>();
-                        generator = generator.GetWallGenerator(defaultGenerator);
-                        foreach (var (key, value) in list)
-                        {
-                            setFieldValue(generator, key, value, points, rotationModes, colorModes, structures);
-                        }
-
-                        structures.Add(identifier, generator);
-                    }
-                }
-
-                foreach (var wallGenerator in generatorList)
-                {
-                    switch (wallGenerator)
-                    {
-                        case EventGenerator _:
-                            eventList.AddRange(wallGenerator.GenerateEventsFinalized());
-                            break;
-                        case Structure structure:
-                            wallList.AddRange(structure.GenerateWallsFinalized());
-                            eventList.AddRange(structure.GenerateEventsFinalized());
-                            break;
-                        default:
-                            wallList.AddRange(wallGenerator.GenerateWallsFinalized());
-                            break;
-                    }
-                }
-
-                var walls = wallList.Select(t => t.GenerateObstacle()).ToArray();
-                var events = eventList.Select(t => t.GenerateEvent()).ToArray();
-                var jObject = JObject.Parse(File.ReadAllText(beatmap.FullPath));
-                var oldPath = Path.Combine(beatmap.FullPath, "old").Replace(".dat", "");
-                if (!Directory.Exists(oldPath)) Directory.CreateDirectory(oldPath);
-                var files = Directory.GetFiles(oldPath);
-                if (files.Length > 19)
-                {
-                    foreach (var s in files.Take(files.Length - 19))
-                    {
-                        File.Delete(s);
-                    }
-                }
-
-                File.WriteAllText(Path.Combine(oldPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.obstacles.json"), jObject["_obstacles"].ToString(Formatting.None));
-                File.WriteAllText(Path.Combine(oldPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.events.json"), jObject["_events"].ToString(Formatting.None));
-                jObject["_obstacles"] = walls.ToJArray();
-                jObject["_events"] = events.ToJArray();
-                File.WriteAllText(beatmap.FullPath, jObject.ToString(Formatting.None));
             }
-            catch (Exception e)
-            {
-                Global.Instance.Logger.Error(e, e.Message);
-            }
+        }
+
+        private static string[][] readAllLinesFromFile(string fileName)
+        {
+            var file = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            var streamFile = new StreamReader(file);
+            var info = streamFile.ReadAllLines().Where(t => !t.Trim().StartsWith("#")).Select(t => t.Trim().ToLowerInvariant().Split(':')).ToArray();
+            streamFile.Dispose();
+            file.Dispose();
+            return info;
         }
 
         private static void setFieldValue(WallGenerator generator, string key, string value, List<Vector3D> points, Dictionary<string, IRotationMode> rotationModes, Dictionary<string, ColorManager> colorModes, Dictionary<string, WallGenerator> structures)
@@ -368,7 +393,7 @@ namespace NoodleScripter.Commands
             }
         }
 
-        private static bool TryGetGenerator(string type, out WallGenerator generator)
+        private static bool tryGetGenerator(string type, out WallGenerator generator)
         {
             generator = null;
             var types = Assembly.GetExecutingAssembly().GetTypes().Where(t => t.Namespace == "NoodleScripter.Models.NoodleScripter").ToArray();
@@ -376,6 +401,23 @@ namespace NoodleScripter.Commands
             if (generatorType == null) return false;
             generator = (WallGenerator)Activator.CreateInstance(generatorType);
             return true;
+        }
+
+        public static void GetAllYmlFilesForBeatmap(Beatmap beatmap, FileInfo file)
+        {
+            void getYmlFiles(string path)
+            {
+                foreach (var strings in readAllLinesFromFile(path))
+                {
+                    if (strings[0].Trim().Invariant("importFile"))
+                    {
+                        beatmap.YmlFiles.Add(strings[1].Trim());
+                        getYmlFiles(Path.Combine(file.DirectoryName, strings[1].Trim()));
+                    }
+                }
+            }
+            beatmap.YmlFiles.Add(file.Name);
+            getYmlFiles(file.FullName);
         }
     }
 }

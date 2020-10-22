@@ -16,10 +16,10 @@ namespace NoodleScripter.Models.BeatSaber
         public override void WriteJson(JsonWriter writer, Color value, JsonSerializer serializer)
         {
             writer.WriteStartArray();
-            writer.WriteValue(value.R);
-            writer.WriteValue(value.G);
-            writer.WriteValue(value.B);
-            writer.WriteValue(value.A);
+            writer.WriteValue((float)value.R);
+            writer.WriteValue((float)value.G);
+            writer.WriteValue((float)value.B);
+            writer.WriteValue((float)value.A);
             writer.WriteEndArray();
         }
 
@@ -36,8 +36,8 @@ namespace NoodleScripter.Models.BeatSaber
         public override void WriteJson(JsonWriter writer, Vector value, JsonSerializer serializer)
         {
             writer.WriteStartArray();
-            writer.WriteValue(value.X);
-            writer.WriteValue(value.Y);
+            writer.WriteValue((float)value.X);
+            writer.WriteValue((float)value.Y);
             writer.WriteEndArray();
         }
 
@@ -54,9 +54,9 @@ namespace NoodleScripter.Models.BeatSaber
         public override void WriteJson(JsonWriter writer, Vector3D value, JsonSerializer serializer)
         {
             writer.WriteStartArray();
-            writer.WriteValue(value.X);
-            writer.WriteValue(value.Y);
-            writer.WriteValue(value.Z);
+            writer.WriteValue((float)value.X);
+            writer.WriteValue((float)value.Y);
+            writer.WriteValue((float)value.Z);
             writer.WriteEndArray();
         }
 
@@ -74,9 +74,9 @@ namespace NoodleScripter.Models.BeatSaber
         {
             if(!value.HasValue) return;
             writer.WriteStartArray();
-            writer.WriteValue(value.Value.X);
-            writer.WriteValue(value.Value.Y);
-            writer.WriteValue(value.Value.Z);
+            writer.WriteValue((float)value.Value.X);
+            writer.WriteValue((float)value.Value.Y);
+            writer.WriteValue((float)value.Value.Z);
             writer.WriteEndArray();
         }
 

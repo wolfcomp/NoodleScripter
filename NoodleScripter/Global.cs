@@ -80,8 +80,10 @@ namespace NoodleScripter
             lock (Instance)
             {
                 Task.Delay(TimeSpan.FromMilliseconds(100)).GetAwaiter().GetResult();
-                var beatmap = SongInfos.SelectMany(song => song.BeatmapSets.SelectMany(bs => bs.Beatmaps.Where(bm => bm.FullPath.Replace(".dat", ".yml") == e.FullPath))).First();
-                ScriptExecutor.Execute(e.FullPath, beatmap);
+                foreach (var beatmap in SongInfos.SelectMany(song => song.BeatmapSets.SelectMany(bs => bs.Beatmaps.Where(bm => bm.YmlFiles.Any(t => t.Invariant(e.Name))))))
+                {
+                    ScriptExecutor.Execute(beatmap);
+                }
                 GC.Collect();
                 GC.WaitForFullGCComplete();
             }
@@ -104,15 +106,14 @@ namespace NoodleScripter
             var folder = Instance.InstallFolder.GetDirectories(info.SongFolderName)[0];
             foreach (var beatmapSet in info.BeatmapSets)
                 foreach (var beatmap in beatmapSet.Beatmaps)
-                    //if (folder.GetFiles($"{beatmap.Difficulty}{beatmapSet.Characteristic}.bw").Length > 0)
-                    //{
-                    //    ScriptConverter.Convert(folder.GetFiles($"{beatmap.Difficulty}{beatmapSet.Characteristic}.bw")[0]);
-                    //    beatmap.ScriptNotInitialized = false;
-                    //}
-                    if (folder.GetFiles($"{beatmap.Difficulty}{beatmapSet.Characteristic}.yml").Length > 0)
+                {
+                    var file = folder.GetFiles($"{beatmap.Difficulty}{beatmapSet.Characteristic}.yml").FirstOrDefault();
+                    if (file != null)
                     {
+                        ScriptExecutor.GetAllYmlFilesForBeatmap(beatmap, file);
                         beatmap.ScriptNotInitialized = false;
                     }
+                }
 
             GC.Collect();
             GC.WaitForFullGCComplete();
