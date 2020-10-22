@@ -40,9 +40,11 @@ namespace NoodleScripter
             {
                 _xStore.Easing = value;
                 _yStore.Easing = value;
-                _zStore.Easing = value;
+                if(!LinearTimeScale) _zStore.Easing = value;
             }
         }
+
+        public bool LinearTimeScale { get; set; } = true;
 
         public Vector3D GetValue(double time) => new Vector3D(_xStore.GetValue(time), _yStore.GetValue(time), _zStore.GetValue(time));
 

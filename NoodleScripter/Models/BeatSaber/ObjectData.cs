@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using Newtonsoft.Json;
+using Color = NoodleScripter.Models.NoodleScripter.Color;
 
 namespace NoodleScripter.Models.BeatSaber
 {
@@ -45,7 +47,7 @@ namespace NoodleScripter.Models.BeatSaber
         [JsonProperty("_position")]
         public Vector Position { get; set; }
         [JsonProperty("_color")]
-        public Vector3D? Color { get; set; }
+        public Color? Color { get; set; }
         [JsonProperty("_localRotation")]
         public Vector3D LocalRotation { get; set; }
         [JsonProperty("_rotation")]

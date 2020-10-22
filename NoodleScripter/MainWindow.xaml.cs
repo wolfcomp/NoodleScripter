@@ -35,10 +35,6 @@ namespace NoodleScripter
         public MainWindow()
         {
             InitializeComponent();
-            foreach (var manifestResourceName in Assembly.GetExecutingAssembly().GetManifestResourceNames())
-            {
-                Console.WriteLine(manifestResourceName);
-            }
             using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("NoodleScripter.Models.NoodleScripter.template.yml"))
             {
                 using (StreamReader streamReader = new StreamReader(stream))
@@ -56,6 +52,7 @@ namespace NoodleScripter
                 if (result == System.Windows.Forms.DialogResult.OK)
                 {
                     Global.Instance.InstallPath = dialog.SelectedPath;
+                    Button_Refresh(sender, e);
                 }
             }
 

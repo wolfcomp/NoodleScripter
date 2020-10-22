@@ -109,6 +109,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BpmAdjuster.cs" />
+    <Compile Include="Calculator.cs" />
     <Compile Include="Commands\ScriptConverter.cs" />
     <Compile Include="Commands\ScriptExecutor.cs" />
     <Compile Include="CurveCalculations.cs" />
@@ -121,15 +122,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\BeatSaber\VectorConverters.cs" />
-    <Compile Include="Models\NoodleScripter\Color.cs" />
+    <Compile Include="Models\BeatSaber\EventData.cs" />
+    <Compile Include="Models\BeatSaber\Converters.cs" />
+    <Compile Include="Models\NoodleScripter\ColorManager.cs" />
     <Compile Include="Models\NoodleScripter\Curve.cs" />
     <Compile Include="EasingCalculations.cs" />
     <Compile Include="Easings.cs" />
+    <Compile Include="Models\NoodleScripter\Event.cs" />
+    <Compile Include="Models\NoodleScripter\EventGenerator.cs" />
     <Compile Include="Models\NoodleScripter\Noise.cs" />
     <Compile Include="Models\BeatSaber\ObjectData.cs" />
     <Compile Include="Models\BeatSaber\SongInfo.cs" />
     <Compile Include="Models\NoodleScripter\EasingModes.cs" />
+    <Compile Include="Models\NoodleScripter\Propigator.cs" />
+    <Compile Include="Models\NoodleScripter\Toggler.cs" />
     <Compile Include="Models\NoodleScripter\Wall.cs" />
     <Compile Include="Models\NoodleScripter\WallGenerator.cs" />
     <Compile Include="MouseMessageFilter.cs" />

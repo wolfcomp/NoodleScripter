@@ -12,6 +12,7 @@ using Newtonsoft.Json.Linq;
 using NoodleScripter.Models.BeatSaber;
 using NoodleScripter.Models.NoodleScripter;
 using Color = System.Windows.Media.Color;
+using ScriptColor = NoodleScripter.Models.NoodleScripter.Color;
 using Vector3DConverter = NoodleScripter.Models.BeatSaber.Vector3DConverter;
 
 namespace NoodleScripter
@@ -53,7 +54,8 @@ namespace NoodleScripter
             {
                 new Vector3DConverter(),
                 new VectorConverter(),
-                new NullableVector3DConverter()
+                new NullableVector3DConverter(),
+                new ColorConverter()
             }
         };
 
@@ -90,12 +92,13 @@ namespace NoodleScripter
             _ => throw new ArgumentOutOfRangeException()
         };
 
-        public static Vector3D GetVector(this Color color)
+        public static ScriptColor GetScriptColor(this Color color)
         {
-            var r = (color.R * (color.A / 255D)) / 255D;
-            var g = (color.G * (color.A / 255D)) / 255D;
-            var b = (color.B * (color.A / 255D)) / 255D;
-            return new Vector3D(r, g, b);
+            var a = color.A / 255D;
+            var r = color.R / 255D;
+            var g = color.G / 255D;
+            var b = color.B / 255D;
+            return ScriptColor.FromArgb(a, r, g, b);
         }
 
         public static IEnumerable<Wall> MirrorGenerator<T>(this IEnumerable<Wall> walls, WallGenerator<T> generator)

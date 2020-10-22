@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
@@ -12,6 +13,7 @@ using Newtonsoft.Json.Linq;
 using NoodleScripter.Models.BeatSaber;
 using NoodleScripter.Models.NoodleScripter;
 using Color = NoodleScripter.Models.NoodleScripter.Color;
+using ColorConverter = System.Windows.Media.ColorConverter;
 
 // ReSharper disable PatternAlwaysOfType
 
@@ -20,6 +22,10 @@ namespace NoodleScripter.Commands
     public class ScriptExecutor
     {
         public static string Template;
+
+        public static Regex PointRegex = new Regex("^p([0-9])", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+        
+        private static Calculator calculator = new Calculator();
 
         public static void Initialize(Beatmap beatmap)
         {
@@ -48,8 +54,9 @@ namespace NoodleScripter.Commands
                 var generatorList = new List<WallGenerator>();
                 var structures = new Dictionary<string, WallGenerator>();
                 var wallList = new List<Wall>();
+                var eventList = new List<Event>();
                 var rotationModes = new Dictionary<string, IRotationMode>();
-                var colorModes = new Dictionary<string, Color>();
+                var colorModes = new Dictionary<string, ColorManager>();
                 foreach (var infoStrings in info)
                 {
                     if (isStart && infoStrings.Length != 1)
@@ -176,8 +183,8 @@ namespace NoodleScripter.Commands
                     else if (identifier.Invariant("colorMode"))
                     {
                         var local = false;
-                        var color = new Color();
-                        var colorList = new List<Tuple<System.Windows.Media.Color, double>>();
+                        var color = new ColorManager();
+                        var colorList = new List<Tuple<Color, double>>();
                         foreach (var (key, value) in list)
                         {
                             if (key.StartsWith("p"))
@@ -185,7 +192,10 @@ namespace NoodleScripter.Commands
                                 var values = value.Split(',');
                                 var colorType = values[0];
                                 var time = Convert.ToDouble(values[1]);
-                                colorList.Add(new Tuple<System.Windows.Media.Color, double>((System.Windows.Media.Color)ColorConverter.ConvertFromString(colorType), time));
+                                colorList.Add(new Tuple<Color, double>(
+                                    // ReSharper disable once PossibleNullReferenceException
+                                    ((System.Windows.Media.Color)ColorConverter.ConvertFromString(colorType)).GetScriptColor(),
+                                    time));
                             }
                             else if (key.Invariant("type"))
                             {
@@ -198,7 +208,7 @@ namespace NoodleScripter.Commands
                                 else if (value.Invariant("Rainbow"))
                                     color.Type = ColorType.Rainbow;
                                 else
-                                    throw new ArgumentOutOfRangeException("Color mode type can only be of types: Single, Gradient, Flash, Rainbow");
+                                    throw new ArgumentOutOfRangeException("type", "Color mode type can only be of types: Single, Gradient, Flash, Rainbow");
                             }
                             else if (key.Invariant("repetitions"))
                             {
@@ -211,7 +221,9 @@ namespace NoodleScripter.Commands
                     }
                     else if (float.TryParse(identifier, out var beat))
                     {
-                        var generator = getGenerator(type.Replace("wall", "WallGenerator"));
+                        if (!TryGetGenerator(type.Replace("wall", "WallGenerator").Replace("event", "EventGenerator"), out var generator)) 
+                            generator = structures[type].Copy();
+
                         var points = new List<Vector3D>();
                         generator = generator.GetWallGenerator(defaultGenerator);
                         generator.Beat = beat;
@@ -223,25 +235,41 @@ namespace NoodleScripter.Commands
                     }
                     else
                     {
-                        var generator = getGenerator(type.Replace("wall", "WallGenerator"));
+                        if (!TryGetGenerator(type.Replace("wall", "WallGenerator").Replace("event", "EventGenerator"), out var generator)) 
+                            generator = structures[type].Copy();
+                        
                         var points = new List<Vector3D>();
                         generator = generator.GetWallGenerator(defaultGenerator);
                         foreach (var (key, value) in list)
                         {
                             setFieldValue(generator, key, value, points, rotationModes, colorModes, structures);
                         }
+
                         structures.Add(identifier, generator);
                     }
                 }
 
                 foreach (var wallGenerator in generatorList)
                 {
-                    wallList.AddRange(wallGenerator.GenerateWallsFinalized());
+                    switch (wallGenerator)
+                    {
+                        case EventGenerator _:
+                            eventList.AddRange(wallGenerator.GenerateEventsFinalized());
+                            break;
+                        case Structure structure:
+                            wallList.AddRange(structure.GenerateWallsFinalized());
+                            eventList.AddRange(structure.GenerateEventsFinalized());
+                            break;
+                        default:
+                            wallList.AddRange(wallGenerator.GenerateWallsFinalized());
+                            break;
+                    }
                 }
 
                 var walls = wallList.Select(t => t.GenerateObstacle()).ToArray();
+                var events = eventList.Select(t => t.GenerateEvent()).ToArray();
                 var jObject = JObject.Parse(File.ReadAllText(beatmap.FullPath));
-                var oldPath = Path.Combine(beatmap.FullPath, "oldObstacles").Replace(".dat", "");
+                var oldPath = Path.Combine(beatmap.FullPath, "old").Replace(".dat", "");
                 if (!Directory.Exists(oldPath)) Directory.CreateDirectory(oldPath);
                 var files = Directory.GetFiles(oldPath);
                 if (files.Length > 19)
@@ -252,8 +280,10 @@ namespace NoodleScripter.Commands
                     }
                 }
 
-                File.WriteAllText(Path.Combine(oldPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.json"), jObject["_obstacles"].ToString(Formatting.None));
+                File.WriteAllText(Path.Combine(oldPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.obstacles.json"), jObject["_obstacles"].ToString(Formatting.None));
+                File.WriteAllText(Path.Combine(oldPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.events.json"), jObject["_events"].ToString(Formatting.None));
                 jObject["_obstacles"] = walls.ToJArray();
+                jObject["_events"] = events.ToJArray();
                 File.WriteAllText(beatmap.FullPath, jObject.ToString(Formatting.None));
             }
             catch (Exception e)
@@ -262,9 +292,9 @@ namespace NoodleScripter.Commands
             }
         }
 
-        private static void setFieldValue(WallGenerator generator, string key, string value, List<Vector3D> points, Dictionary<string, IRotationMode> rotationModes, Dictionary<string, Color> colorModes, Dictionary<string, WallGenerator> structures)
+        private static void setFieldValue(WallGenerator generator, string key, string value, List<Vector3D> points, Dictionary<string, IRotationMode> rotationModes, Dictionary<string, ColorManager> colorModes, Dictionary<string, WallGenerator> structures)
         {
-            if (key.StartsWith("p"))
+            if (PointRegex.IsMatch(key))
             {
                 points.Add(Vector3D.Parse(value));
                 generator.GetType().GetProperty("Points").SetValue(generator, points.ToArray());
@@ -281,24 +311,33 @@ namespace NoodleScripter.Commands
                         field.SetValue(generator, rotationModes[value]);
                         break;
                     case Type nullableIntType when nullableIntType == typeof(int?):
-                        field.SetValue(generator, Convert.ToInt32(value));
+                        field.SetValue(generator, Convert.ToInt32(calculator.Solve(value)));
                         break;
                     case Type nullableDoubleType when nullableDoubleType == typeof(double?):
-                        field.SetValue(generator, Convert.ToDouble(value));
+                        field.SetValue(generator, Convert.ToDouble(calculator.Solve(value)));
+                        break;
+                    case Type nullableDoubleType when nullableDoubleType == typeof(float?):
+                        field.SetValue(generator, Convert.ToSingle(calculator.Solve(value)));
                         break;
                     case Type mirrorPointType when mirrorPointType == typeof(MirrorPoint):
                         field.SetValue(generator, (MirrorPoint)Convert.ToInt32(value));
                         break;
-                    case Type mirrorTypeType when mirrorTypeType == typeof(MirrorType):
+                    case Type mirrorType when mirrorType == typeof(MirrorType):
                         field.SetValue(generator, (MirrorType)Convert.ToInt32(value));
                         break;
-                    case Type mirrorTypeType when mirrorTypeType == typeof(CurveType):
+                    case Type curveType when curveType == typeof(CurveType):
                         field.SetValue(generator, (CurveType)Convert.ToInt32(value));
                         break;
-                    case Type mirrorTypeType when mirrorTypeType == typeof(Random):
+                    case Type eventType when eventType == typeof(EventType):
+                        field.SetValue(generator, (EventType)Convert.ToInt32(value));
+                        break;
+                    case Type lightType when lightType == typeof(LightType):
+                        field.SetValue(generator, (LightType)Convert.ToInt32(value));
+                        break;
+                    case Type randomType when randomType == typeof(Random):
                         field.SetValue(generator, new Random(Convert.ToInt32(value)));
                         break;
-                    case Type colorModesType when colorModesType == typeof(Color):
+                    case Type colorModesType when colorModesType == typeof(ColorManager):
                         field.SetValue(generator, colorModes[value]);
                         break;
                     case Type easingsType when easingsType == typeof(Easings):
@@ -310,6 +349,17 @@ namespace NoodleScripter.Commands
                             generator.Structures.Add(structures[s]);
                         }
                         break;
+                    case Type integerType when integerType == typeof(double) ||
+                                               integerType == typeof(float) ||
+                                               integerType == typeof(int) ||
+                                               integerType == typeof(uint) ||
+                                               integerType == typeof(long) ||
+                                               integerType == typeof(ulong) ||
+                                               integerType == typeof(short) ||
+                                               integerType == typeof(ushort):
+                        var calculatedValue = Convert.ChangeType(calculator.Solve(value), field.PropertyType);
+                        field.SetValue(generator, calculatedValue);
+                        break;
                     default:
                         var fieldValue = Convert.ChangeType(value, field.PropertyType);
                         field.SetValue(generator, fieldValue);
@@ -318,10 +368,14 @@ namespace NoodleScripter.Commands
             }
         }
 
-        private static WallGenerator getGenerator(string type)
+        private static bool TryGetGenerator(string type, out WallGenerator generator)
         {
+            generator = null;
             var types = Assembly.GetExecutingAssembly().GetTypes().Where(t => t.Namespace == "NoodleScripter.Models.NoodleScripter").ToArray();
-            return (WallGenerator)Activator.CreateInstance(types.First(t => string.Equals(t.Name, type, StringComparison.InvariantCultureIgnoreCase)));
+            var generatorType = types.FirstOrDefault(t => string.Equals(t.Name, type, StringComparison.InvariantCultureIgnoreCase));
+            if (generatorType == null) return false;
+            generator = (WallGenerator)Activator.CreateInstance(generatorType);
+            return true;
         }
     }
 }

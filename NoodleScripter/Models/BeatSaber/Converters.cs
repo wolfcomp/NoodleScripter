@@ -7,9 +7,30 @@ using System.Windows;
 using System.Windows.Media.Media3D;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using NoodleScripter.Models.NoodleScripter;
 
 namespace NoodleScripter.Models.BeatSaber
 {
+    public class ColorConverter : JsonConverter<Color>
+    {
+        public override void WriteJson(JsonWriter writer, Color value, JsonSerializer serializer)
+        {
+            writer.WriteStartArray();
+            writer.WriteValue(value.R);
+            writer.WriteValue(value.G);
+            writer.WriteValue(value.B);
+            writer.WriteValue(value.A);
+            writer.WriteEndArray();
+        }
+
+        public override Color ReadJson(JsonReader reader, Type objectType, Color existingValue, bool hasExistingValue, JsonSerializer serializer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool CanRead => false;
+    }
+
     public class VectorConverter : JsonConverter<Vector>
     {
         public override void WriteJson(JsonWriter writer, Vector value, JsonSerializer serializer)

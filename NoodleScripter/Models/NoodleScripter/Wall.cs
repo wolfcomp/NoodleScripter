@@ -9,7 +9,7 @@ namespace NoodleScripter.Models.NoodleScripter
     public class Wall
     {
         public bool Bomb { get; set; }
-        public Vector3D? Color { get; set; }
+        public Color? Color { get; set; }
         public Vector3D Rotation { get; set; }
         public Vector3D LocalRotation { get; set; }
         public float? NJS { get; set; }

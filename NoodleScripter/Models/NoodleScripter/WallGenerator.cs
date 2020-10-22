@@ -12,6 +12,11 @@ namespace NoodleScripter.Models.NoodleScripter
             return this;
         }
 
+        public override IEnumerable<Event> GenerateEvents()
+        {
+            return new Event[] { };
+        }
+
         public override IEnumerable<Wall> GenerateWalls()
         {
             return new[]
@@ -43,7 +48,12 @@ namespace NoodleScripter.Models.NoodleScripter
 
         public override IEnumerable<Wall> GenerateWalls()
         {
-            return Structures.SelectMany(t => t.GetWallGenerator(this).GenerateWallsFinalized());
+            return Structures.Where(t => !(t is EventGenerator)).SelectMany(t => t.GetWallGenerator(this).GenerateWallsFinalized());
+        }
+
+        public override IEnumerable<Event> GenerateEvents()
+        {
+            return Structures.Where(t => t is EventGenerator).SelectMany(t => t.GetWallGenerator(this).GenerateEventsFinalized());
         }
     }
 
@@ -53,7 +63,7 @@ namespace NoodleScripter.Models.NoodleScripter
         public Random Random { get; set; }
         public bool Bomb { get; set; }
         public float Beat { get; set; }
-        public Color Color { get; set; } = new Color();
+        public ColorManager ColorMode { get; set; } = new ColorManager();
         public IRotationMode RotationMode { get; set; } = new NoRotation();
         public MirrorPoint Mirror { get; set; } = MirrorPoint.None;
         public MirrorType MirrorType { get; set; } = MirrorType.None;
@@ -89,12 +99,33 @@ namespace NoodleScripter.Models.NoodleScripter
 
         public abstract T GetWallGenerator(WallGenerator wallGenerator);
 
+        public abstract IEnumerable<Event> GenerateEvents();
+
         public abstract IEnumerable<Wall> GenerateWalls();
 
         public IEnumerable<Wall> GenerateWallsFinalized()
         {
             if (RotationMode is RandomRotation randomRotation) randomRotation.Random = Random;
-            return adjust(RotationMode.GetValue(Color.SetColor(GenerateWalls().OrderBy(t => t.StartTime).ToArray()))).MirrorGenerator(this);
+            return adjust(RotationMode.GetValue(ColorMode.SetColor(GenerateWalls().OrderBy(t => t.StartTime).ToArray()))).MirrorGenerator(this);
+        }
+
+        public IEnumerable<Event> GenerateEventsFinalized()
+        {
+            return adjust(ColorMode.SetColor(GenerateEvents().OrderBy(t => t.StartTime).ToArray()));
+        }
+
+        private IEnumerable<Event> adjust(IEnumerable<Event> events)
+        {
+            foreach (var @event in events)
+            {
+                @event.StartTime = @event.StartTime * ScaleStartTime + AddStartTime;
+                
+                @event.StartTime *= Scale;
+
+                @event.StartTime += Beat;
+            }
+
+            return events;
         }
 
         private IEnumerable<Wall> adjust(IEnumerable<Wall> walls)
@@ -148,8 +179,7 @@ namespace NoodleScripter.Models.NoodleScripter
                 if (Duration > 0)
                     wall.Duration *= Scale;
 
-                if(wall.StartTime < Beat)
-                    wall.StartTime += Beat;
+                wall.StartTime += Beat;
 
                 if (Duration < 0)
                 {
