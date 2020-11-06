@@ -19,27 +19,34 @@ namespace NoodleScripter.Models.NoodleScripter
 
         public override IEnumerable<Wall> GenerateWalls()
         {
-            return new[]
+            var stepTime = Duration / Amount;
+            var list = new List<Wall>();
+            for (var i = 0; i < Amount; i++)
             {
-                new Wall
+                list.Add(new Wall
                 {
                     Bomb = Bomb,
                     Width = Width,
                     Height = Height,
-                    StartTime = StartTime,
+                    StartTime = StartTime + stepTime * i,
                     StartHeight = StartHeight,
                     StartRow = StartRow,
                     Duration = Duration,
                     NJS = NJS,
                     Offset = Offset,
                     Track = Track
-                }
-            };
+                });
+            }
+            return list.ToArray();
         }
     }
 
-    public class Structure : WallGenerator
+    public class Structure : EventGenerator
     {
+        public bool Override { get; set; }
+        public new EventType? Type { get; set; }
+        public new LightType? Value { get; set; }
+
         public override WallGenerator GetWallGenerator(WallGenerator wallGenerator)
         {
             Random = wallGenerator.Random;
@@ -62,6 +69,7 @@ namespace NoodleScripter.Models.NoodleScripter
         public List<WallGenerator> Structures { get; set; } = new List<WallGenerator>();
         public Random Random { get; set; }
         public bool Bomb { get; set; }
+        public int Amount { get; set; } = 1;
         public float Beat { get; set; }
         public ColorManager ColorMode { get; set; } = new ColorManager();
         public IRotationMode RotationMode { get; set; } = new NoRotation();
@@ -105,6 +113,7 @@ namespace NoodleScripter.Models.NoodleScripter
 
         public IEnumerable<Wall> GenerateWallsFinalized()
         {
+            if (this is EventGenerator && !(this is Structure)) return new Wall[0];
             if (RotationMode is RandomRotation randomRotation) randomRotation.Random = Random;
             return adjust(RotationMode.GetValue(ColorMode.SetColor(GenerateWalls().OrderBy(t => t.StartTime).ToArray()))).MirrorGenerator(this);
         }

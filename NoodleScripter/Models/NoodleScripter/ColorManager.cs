@@ -18,12 +18,12 @@ namespace NoodleScripter.Models.NoodleScripter
 
         public static Color FromArgb(double a, double r, double g, double b)
         {
-            return new Color()
+            return new Color
             {
-                A = a,
-                R = r,
-                G = g,
-                B = b
+                A = Math.Round(a, 5),
+                R = Math.Round(r, 5),
+                G = Math.Round(g, 5),
+                B = Math.Round(b, 5)
             };
         }
 
@@ -38,6 +38,8 @@ namespace NoodleScripter.Models.NoodleScripter
         public Tuple<Color, double>[] Colors { get; set; }
         public ColorType Type { get; set; } = ColorType.None;
         public float Repetitions { get; set; }
+        public Easings Easing { get; set; } = Easings.Linear;
+        private static EventType[] LaserTypes = { EventType.LightBackTopLasers, EventType.LightBottomBackSideLasers, EventType.LightLeftLasers, EventType.LightRightLasers, EventType.LightTrackRingNeons };
 
         public Wall[] SetColor(Wall[] walls)
         {
@@ -65,7 +67,7 @@ namespace NoodleScripter.Models.NoodleScripter
                             var cg = (1 - tupleTime) * curTuple.Item1.G + tupleTime * nextTuple.Item1.G;
                             var cb = (1 - tupleTime) * curTuple.Item1.B + tupleTime * nextTuple.Item1.B;
                             var ca = (1 - tupleTime) * curTuple.Item1.A + tupleTime * nextTuple.Item1.A;
-                            walls[i].Color = Color.FromArgb(ca, cr,  cg, cb);
+                            walls[i].Color = Color.FromArgb(ca, cr, cg, cb);
                             prevTuple = nextTuple;
                         }
                         else
@@ -99,7 +101,7 @@ namespace NoodleScripter.Models.NoodleScripter
 
         public Event[] SetColor(Event[] events)
         {
-            var colorEvents = events.Where(t => t.Value != LightType.Off).ToArray();
+            var colorEvents = events.Where(t => t.Value != LightType.Off && LaserTypes.Contains(t.Type)).ToArray();
             switch (Type)
             {
                 case ColorType.Single:
@@ -120,11 +122,11 @@ namespace NoodleScripter.Models.NoodleScripter
                             var nextTuple = Colors.First(t => t.Item2 >= time);
                             if (nextTuple.Item2 > prevTuple.Item2) curTuple = prevTuple;
                             var tupleTime = (time - curTuple.Item2) / (nextTuple.Item2 - curTuple.Item2);
-                            var cr = (1 - tupleTime) * curTuple.Item1.R + tupleTime * nextTuple.Item1.R;
-                            var cg = (1 - tupleTime) * curTuple.Item1.G + tupleTime * nextTuple.Item1.G;
-                            var cb = (1 - tupleTime) * curTuple.Item1.B + tupleTime * nextTuple.Item1.B;
-                            var ca = (1 - tupleTime) * curTuple.Item1.A + tupleTime * nextTuple.Item1.A;
-                            colorEvents[i].Color = Color.FromArgb(ca, cr,  cg, cb);
+                            var cr = Easing.GetValue(curTuple.Item1.R, nextTuple.Item1.R, tupleTime);
+                            var cg = Easing.GetValue(curTuple.Item1.G, nextTuple.Item1.G, tupleTime);
+                            var cb = Easing.GetValue(curTuple.Item1.B, nextTuple.Item1.B, tupleTime);
+                            var ca = Easing.GetValue(curTuple.Item1.A, nextTuple.Item1.A, tupleTime);
+                            colorEvents[i].Color = Color.FromArgb(ca, cr, cg, cb);
                             prevTuple = nextTuple;
                         }
                         else

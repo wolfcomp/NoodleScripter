@@ -50,7 +50,7 @@ namespace NoodleScripter
             1.0 => 1.0,
             _ => -(Math.Pow(2, -10 * x) * Math.Sin((x * 10 - 0.75) * c4) + 1)
         };
-        public static double EaseInOutElastic(double x) => 
+        public static double EaseInOutElastic(double x) =>
             x == 0.0 ? 0.0 :
             x == 1.0 ? 1.0 :
             x < 0.5 ? -(Math.Pow(2, 20 * x - 10) * Math.Sin((20 * x - 11.125) * c5)) / 2 :
@@ -61,10 +61,20 @@ namespace NoodleScripter
 
         private static double bounceOut(double x)
         {
-            return 
+            return
                 x < 1 / d1 ? n1 * x * x : x < 2 / d1 ? n1 * ((x - 1.5) / d1) * (x - 1.5) + 0.75 :
                 x < 2.5 / d1 ? n1 * ((x - 2.25) / d1) * (x - 2.25) + 0.9375 :
                 n1 * ((x - 2.625) / d1) * (x - 2.625) + 0.984375;
         }
+
+        public static double EaseInExpo(double x) => Math.Abs(x) <= 0 ? 0 : Math.Pow(2, 10 * x - 10);
+        public static double EaseOutExpo(double x) => Math.Abs(x) >= 1 ? 1 : 1 - Math.Pow(2, -10 * x);
+        public static double EaseInOutExpo(double x) => Math.Abs(x) <= 0
+            ? 0
+            : Math.Abs(x) >= 1
+                ? 1
+                : x < 0.5
+                    ? Math.Pow(2, 20 * x - 10) / 2
+                    : (2 - Math.Pow(2, -20 * x + 10)) / 2;
     }
 }

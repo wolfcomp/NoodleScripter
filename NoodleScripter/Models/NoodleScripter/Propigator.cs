@@ -15,13 +15,13 @@ namespace NoodleScripter.Models.NoodleScripter
 
         public override IEnumerable<Event> GenerateEvents()
         {
-            Amount *= (EndProp + 1);
+            Amount *= ((Math.Max(EndProp, StartProp) - Math.Min(EndProp, StartProp)) + 1);
             var stepTime = Duration / (Amount - 1);
             var list = new List<Event>();
             int? previousProp = null;
             for (var i = 0; i < Amount; i++)
             {
-                var curProp = previousProp.HasValue ? previousProp == EndProp ? StartProp : previousProp.Value + 1 : StartProp;
+                var curProp = previousProp.HasValue ? previousProp == EndProp ? StartProp : (StartProp < EndProp ? previousProp.Value + 1 : previousProp.Value - 1) : StartProp;
                 list.Add(new Event
                 {
                     Direction = Direction,

@@ -6,7 +6,7 @@ namespace NoodleScripter.Models.NoodleScripter
 {
     public class Noise : WallGenerator
     {
-        public int? Amount { get; set; }
+        public new int? Amount { get; set; }
         public bool AvoidCenter { get; set; } = true;
 
         public Vector3D TopLeft

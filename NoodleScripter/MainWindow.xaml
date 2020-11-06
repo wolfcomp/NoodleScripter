@@ -31,33 +31,42 @@
             <DataTemplate x:Key="BeatmapsTemplate">
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="140"></ColumnDefinition>
+                        <ColumnDefinition Width="500"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="{Binding Difficulty}" HorizontalAlignment="Left"></TextBlock>
-                    <Button HorizontalAlignment="Right" IsEnabled="{Binding ScriptNotInitialized}" Margin="0" Click="Button_Initialize">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Content" Value="Initialize"></Setter>
-                                <Style.Triggers>
-                                    <DataTrigger Binding="{Binding ScriptNotInitialized}" Value="False">
-                                        <Setter Property="Content" Value="Initialized"></Setter>
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                    </Button>
-                    <Button HorizontalAlignment="Right" Content="Run Script" Click="Button_RunScript">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Visibility" Value="Hidden"></Setter>
-                                <Style.Triggers>
-                                    <DataTrigger Binding="{Binding ScriptNotInitialized}" Value="False">
-                                        <Setter Property="Visibility" Value="Visible"></Setter>
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                    </Button>
+                    <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Difficulty}" HorizontalAlignment="Left" Width="70"></TextBlock>
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button HorizontalAlignment="Right" IsEnabled="{Binding ScriptNotInitialized}" Margin="0" Click="Button_Initialize">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Content" Value="Initialize"></Setter>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ScriptNotInitialized}" Value="False">
+                                            <Setter Property="Visibility" Value="Hidden"></Setter>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button HorizontalAlignment="Right" Content="Run Script" Click="Button_RunScript">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Visibility" Value="Hidden"></Setter>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ScriptNotInitialized}" Value="False">
+                                            <Setter Property="Visibility" Value="Visible"></Setter>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </Grid>
+                    <TextBlock Margin="20,0,0,0" Text="Current Stats:"></TextBlock>
+                    <TextBlock Text="{Binding GeneratedObjects}"></TextBlock>
+                    </StackPanel>
                 </Grid>
             </DataTemplate>
         </ResourceDictionary>

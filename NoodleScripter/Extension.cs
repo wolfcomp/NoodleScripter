@@ -89,6 +89,9 @@ namespace NoodleScripter
             "easeinbounce" => Easings.EaseInBounce,
             "easeoutbounce" => Easings.EaseOutBounce,
             "easeinoutbounce" => Easings.EaseInOutBounce,
+            "easeinexpo" => Easings.EaseInExpo,
+            "easeoutexpo" => Easings.EaseOutExpo,
+            "easeinoutexpo" => Easings.EaseInOutExpo,
             _ => throw new ArgumentOutOfRangeException()
         };
 
@@ -213,6 +216,46 @@ namespace NoodleScripter
         public static bool Invariant(this string a, string b)
         {
             return string.Equals(a, b, StringComparison.InvariantCultureIgnoreCase);
+        }
+
+        public static double GetValue(this Easings easings, double one, double two, double time)
+        {
+            var curTime = easings switch
+            {
+                Easings.Linear => EasingCalculations.Linear(time),
+                Easings.EaseInQuad => EasingCalculations.EaseInQuad(time),
+                Easings.EaseOutQuad => EasingCalculations.EaseOutQuad(time),
+                Easings.EaseInOutQuad => EasingCalculations.EaseInOutQuad(time),
+                Easings.EaseInCubic => EasingCalculations.EaseInCubic(time),
+                Easings.EaseOutCubic => EasingCalculations.EaseOutCubic(time),
+                Easings.EaseInOutCubic => EasingCalculations.EaseInOutCubic(time),
+                Easings.EaseInQuart => EasingCalculations.EaseInQuart(time),
+                Easings.EaseOutQuart => EasingCalculations.EaseOutQuart(time),
+                Easings.EaseInOutQuart => EasingCalculations.EaseInOutQuart(time),
+                Easings.EaseInQuint => EasingCalculations.EaseInQuint(time),
+                Easings.EaseOutQuint => EasingCalculations.EaseOutQuint(time),
+                Easings.EaseInOutQuint => EasingCalculations.EaseInOutQuint(time),
+                Easings.EaseInSine => EasingCalculations.EaseInSine(time),
+                Easings.EaseOutSine => EasingCalculations.EaseOutSine(time),
+                Easings.EaseInOutSine => EasingCalculations.EaseInOutSine(time),
+                Easings.EaseInCirc => EasingCalculations.EaseInCirc(time),
+                Easings.EaseOutCirc => EasingCalculations.EaseOutCirc(time),
+                Easings.EaseInOutCirc => EasingCalculations.EaseInOutCirc(time),
+                Easings.EaseInBack => EasingCalculations.EaseInBack(time),
+                Easings.EaseOutBack => EasingCalculations.EaseOutBack(time),
+                Easings.EaseInOutBack => EasingCalculations.EaseInOutBack(time),
+                Easings.EaseInElastic => EasingCalculations.EaseInElastic(time),
+                Easings.EaseOutElastic => EasingCalculations.EaseOutElastic(time),
+                Easings.EaseInOutElastic => EasingCalculations.EaseInOutElastic(time),
+                Easings.EaseInBounce => EasingCalculations.EaseInBounce(time),
+                Easings.EaseOutBounce => EasingCalculations.EaseOutBounce(time),
+                Easings.EaseInOutBounce => EasingCalculations.EaseInOutBounce(time),
+                Easings.EaseInExpo => EasingCalculations.EaseInExpo(time),
+                Easings.EaseOutExpo => EasingCalculations.EaseOutExpo(time),
+                Easings.EaseInOutExpo => EasingCalculations.EaseInOutExpo(time),
+                _ => throw new ArgumentOutOfRangeException(nameof(easings), easings, null)
+            };
+            return (1 - curTime) * one + curTime * two;
         }
     }
 

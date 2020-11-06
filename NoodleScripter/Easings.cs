@@ -136,6 +136,9 @@ namespace NoodleScripter
             Easings.EaseInBounce => EasingCalculations.EaseInBounce(time),
             Easings.EaseOutBounce => EasingCalculations.EaseOutBounce(time),
             Easings.EaseInOutBounce => EasingCalculations.EaseInOutBounce(time),
+            Easings.EaseInExpo => EasingCalculations.EaseInExpo(time),
+            Easings.EaseOutExpo => EasingCalculations.EaseOutExpo(time),
+            Easings.EaseInOutExpo => EasingCalculations.EaseInOutExpo(time),
             _ => throw new ArgumentOutOfRangeException()
         };
     }

@@ -9,7 +9,6 @@ namespace NoodleScripter.Models.NoodleScripter
     {
         public CurveType Type { get; set; }
         public Vector3D[] Points { get; set; }
-        public int Amount { get; set; }
         public Easings Easing
         {
             get => Store.Easing;

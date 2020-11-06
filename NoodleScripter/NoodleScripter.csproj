@@ -62,10 +62,16 @@
     <ManifestKeyFile>NoodleScripter_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -134,7 +140,9 @@
     <Compile Include="Models\BeatSaber\ObjectData.cs" />
     <Compile Include="Models\BeatSaber\SongInfo.cs" />
     <Compile Include="Models\NoodleScripter\EasingModes.cs" />
+    <Compile Include="Models\NoodleScripter\Pattern.cs" />
     <Compile Include="Models\NoodleScripter\Propigator.cs" />
+    <Compile Include="Models\NoodleScripter\Strober.cs" />
     <Compile Include="Models\NoodleScripter\Toggler.cs" />
     <Compile Include="Models\NoodleScripter\Wall.cs" />
     <Compile Include="Models\NoodleScripter\WallGenerator.cs" />
@@ -159,12 +167,10 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="app.manifest" />
     <None Include="docfx.json" />
     <None Include="filterConfig.yml" />
     <EmbeddedResource Include="Models\NoodleScripter\template.yml" />
-    <None Include="NLog.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="NoodleScripter_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

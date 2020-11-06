@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Microsoft.Win32;
 using NLog;
 using NoodleScripter.Commands;
 using NoodleScripter.Models;
@@ -24,7 +25,10 @@ namespace NoodleScripter
 
         public DirectoryInfo InstallFolder { get; internal set; }
 
+        private RegistryKey registryPath = Registry.CurrentUser.OpenSubKey(regKey, true);
+
         private string installPath = "";
+        private const string regKey = "SOFTWARE\\NoodleScripter";
 
         public string InstallPath
         {
@@ -32,6 +36,7 @@ namespace NoodleScripter
             set
             {
                 watcher.EnableRaisingEvents = false;
+                registryPath.SetValue("BeatSaberPath", value);
                 InstallFolder = new DirectoryInfo(value);
                 installPath = value;
                 OnPropertyChanged(nameof(InstallPath));
@@ -71,6 +76,10 @@ namespace NoodleScripter
                 Logger = LogManager.GetLogger("global");
 #if DEBUG
                 InstallPath = "D:\\Games\\SteamLibrary\\steamapps\\common\\Beat Saber\\Beat Saber_Data\\CustomWIPLevels";
+#else
+                if(registryPath == null) registryPath = Registry.CurrentUser.CreateSubKey(regKey);
+                var path = registryPath.GetValue("BeatSaberPath");
+                if(path != null) InstallPath = path.ToString();
 #endif
             }
         }
@@ -80,7 +89,8 @@ namespace NoodleScripter
             lock (Instance)
             {
                 Task.Delay(TimeSpan.FromMilliseconds(100)).GetAwaiter().GetResult();
-                foreach (var beatmap in SongInfos.SelectMany(song => song.BeatmapSets.SelectMany(bs => bs.Beatmaps.Where(bm => bm.YmlFiles.Any(t => t.Invariant(e.Name))))))
+                var file = new FileInfo(e.FullPath);
+                foreach (var beatmap in SongInfos.SelectMany(song => song.BeatmapSets.SelectMany(bs => bs.Beatmaps.Where(bm => bm.YmlFiles.Any(t => t.Invariant(file.Name))))))
                 {
                     ScriptExecutor.Execute(beatmap);
                 }

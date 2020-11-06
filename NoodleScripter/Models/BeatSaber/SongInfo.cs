@@ -76,7 +76,7 @@ namespace NoodleScripter.Models.BeatSaber
                     {
                         if (beatmapJt is JObject beatmap)
                         {
-                            beatmaps.Add(new Beatmap(beatmap["_beatmapFilename"].ToString(), beatmap["_noteJumpMovementSpeed"].ToObject<int>(), beatmap["_noteJumpStartBeatOffset"].ToObject<double>(), SongInfoExt.GetDifficulty(beatmap["_difficulty"].ToString())));
+                            beatmaps.Add(new Beatmap(beatmap["_beatmapFilename"].ToString(), beatmap["_noteJumpMovementSpeed"].ToObject<int>(), beatmap["_noteJumpStartBeatOffset"].ToObject<double>(), SongInfoExt.GetDifficulty(beatmap["_difficulty"].ToString()), file.DirectoryName));
                         }
                     }
                     beatmapsets.Add(new BeatmapSet(beatmaps.ToArray(), SongInfoExt.GetCharacteristic(beatmapset["_beatmapCharacteristicName"].ToString())));
@@ -125,15 +125,52 @@ namespace NoodleScripter.Models.BeatSaber
             }
         }
 
+        public string GeneratedObjects => $" Notes: {NoteCount}, Obstacles: {ObstacleCount}, Events: {EventCount}";
+
+        private int noteCount;
+        public int NoteCount
+        {
+            get => noteCount;
+            set
+            {
+                noteCount = value;
+                OnPropertyChanged(nameof(GeneratedObjects));
+            }
+        }
+        private int obstacleCount;
+        public int ObstacleCount
+        {
+            get => obstacleCount;
+            set
+            {
+                obstacleCount = value;
+                OnPropertyChanged(nameof(GeneratedObjects));
+            }
+        }
+        private int eventCount;
+        public int EventCount
+        {
+            get => eventCount;
+            set
+            {
+                eventCount = value;
+                OnPropertyChanged(nameof(GeneratedObjects));
+            }
+        }
+
         public BeatmapSet BeatmapSet { get; set; }
         public SongInfo SongInfo => BeatmapSet.SongInfo;
 
-        public Beatmap(string fileName, int njs, double offset, BeatmapDifficulty difficulty)
+        public Beatmap(string fileName, int njs, double offset, BeatmapDifficulty difficulty, string folderPath)
         {
             FileName = fileName;
             NJS = njs;
             Offset = offset;
             Difficulty = difficulty;
+            var info = JObject.Parse(File.OpenText(Path.Combine(folderPath, fileName)).ReadToEnd());
+            EventCount = info["_events"].Children().Count();
+            ObstacleCount = info["_obstacles"].Children().Count();
+            NoteCount = info["_notes"].Children().Count();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -45,7 +45,7 @@ namespace NoodleScripter.Commands
                 var tuples = new List<Tuple<string, string, List<KeyValuePair<string, string>>>>();
 
                 groupYmlContextLines(readAllLinesFromFile(beatmap.FullPath.Replace(".dat", ".yml")), tuples, beatmap.SongInfo.FullFolderPath);
-                
+
                 var generatorList = new List<WallGenerator>();
 
                 setGenerators(tuples, generatorList);
@@ -59,8 +59,8 @@ namespace NoodleScripter.Commands
                     eventList.AddRange(wallGenerator.GenerateEventsFinalized());
                 }
 
-                var walls = wallList.Select(t => t.GenerateObstacle()).ToArray();
-                var events = eventList.Select(t => t.GenerateEvent()).ToArray();
+                var walls = wallList.Select(t => t.GenerateObstacle()).OrderBy(t => t.Time).ToArray();
+                var events = eventList.Select(t => t.GenerateEvent()).OrderBy(t => t.Time).ToArray();
                 var jObject = JObject.Parse(File.ReadAllText(beatmap.FullPath));
                 var oldObstaclesPath = getOldPath(beatmap, "Obstacles");
                 var oldEventsPath = getOldPath(beatmap, "Events");
@@ -75,8 +75,10 @@ namespace NoodleScripter.Commands
                 {
                     File.WriteAllText(Path.Combine(oldEventsPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.events.json"), jObject["_events"].ToString(Formatting.None));
                     jObject["_events"] = events.ToJArray();
-
                 }
+                beatmap.EventCount = jObject["_events"].Children().Count();
+                beatmap.ObstacleCount = jObject["_obstacles"].Children().Count();
+                beatmap.NoteCount = jObject["_notes"].Children().Count();
 
                 File.WriteAllText(beatmap.FullPath, jObject.ToString(Formatting.None));
             }
@@ -213,50 +215,32 @@ namespace NoodleScripter.Commands
                             switchStore.Rotations = rotList.Select(t => t.Item1).ToArray();
                             break;
                     }
-                    rotationModes.Add(type, rotationStore);
+                    try
+                    {
+                        rotationModes.Add(type, rotationStore);
+                    }
+                    catch (Exception e)
+                    {
+                        Global.Instance.Logger.Error($"Could not add rotationMode name: {type}, as it already exists");
+                        throw e;
+                    }
                 }
                 else if (identifier.Invariant("colorMode"))
                 {
-                    var color = new ColorManager();
-                    var colorList = new List<Tuple<Color, double>>();
-                    foreach (var (key, value) in list)
-                    {
-                        if (key.StartsWith("p"))
-                        {
-                            var values = value.Split(',');
-                            var colorType = values[0];
-                            var time = Convert.ToDouble(values[1]);
-                            colorList.Add(new Tuple<Color, double>(
-                                // ReSharper disable once PossibleNullReferenceException
-                                ((System.Windows.Media.Color)ColorConverter.ConvertFromString(colorType)).GetScriptColor(),
-                                time));
-                        }
-                        else if (key.Invariant("type"))
-                        {
-                            if (value.Invariant("Single"))
-                                color.Type = ColorType.Single;
-                            else if (value.Invariant("Gradient"))
-                                color.Type = ColorType.Gradient;
-                            else if (value.Invariant("Flash"))
-                                color.Type = ColorType.Flash;
-                            else if (value.Invariant("Rainbow"))
-                                color.Type = ColorType.Rainbow;
-                            else
-                                throw new ArgumentOutOfRangeException("type", "Color mode type can only be of types: Single, Gradient, Flash, Rainbow");
-                        }
-                        else if (key.Invariant("repetitions"))
-                        {
-                            color.Repetitions = Convert.ToSingle(value);
-                        }
-                    }
-
-                    color.Colors = colorList.ToArray();
-                    colorModes.Add(type, color);
+                    setColorMode(colorModes, type, list);
                 }
                 else
                 {
                     if (!tryGetGenerator(type.Replace("wall", "WallGenerator").Replace("event", "EventGenerator"), out var generator))
-                        generator = structures[type].Copy();
+                        try
+                        {
+                            generator = structures[type].Copy();
+                        }
+                        catch (Exception e)
+                        {
+                            Global.Instance.Logger.Error($"Could not find the key: {type}");
+                            throw e;
+                        }
 
                     var points = new List<Vector3D>();
                     generator = generator.GetWallGenerator(defaultGenerator);
@@ -272,9 +256,92 @@ namespace NoodleScripter.Commands
                     }
                     else
                     {
-                        structures.Add(identifier, generator);
+                        try
+                        {
+                            structures.Add(identifier, generator);
+                        }
+                        catch (Exception e)
+                        {
+                            Global.Instance.Logger.Error($"Could not add structure name: {identifier}, as it already exists");
+                            throw e;
+                        }
                     }
                 }
+            }
+        }
+
+        private static void setColorMode(Dictionary<string, ColorManager> colorModes, string type, List<KeyValuePair<string, string>> list)
+        {
+            var color = new ColorManager();
+            var colorList = new List<Tuple<Color, double>>();
+            foreach (var (key, value) in list)
+            {
+                if (key.StartsWith("p"))
+                {
+                    var values = value.Split(',');
+                    if (values.Length == 2)
+                    {
+                        colorList.Add(new Tuple<Color, double>(
+                            // ReSharper disable once PossibleNullReferenceException
+                            ((System.Windows.Media.Color)ColorConverter.ConvertFromString(values[0])).GetScriptColor(),
+                            Convert.ToDouble(values[1])));
+                    }
+                    else if (values.Length == 1)
+                    {
+                        colorList.Add(new Tuple<Color, double>(
+                            // ReSharper disable once PossibleNullReferenceException
+                            ((System.Windows.Media.Color)ColorConverter.ConvertFromString(values[0])).GetScriptColor(),
+                            0));
+                    }
+                    else if (values.Length == 4)
+                    {
+                        colorList.Add(new Tuple<Color, double>(
+                            // ReSharper disable once PossibleNullReferenceException
+                            Color.FromRgb(Convert.ToDouble(values[0]), Convert.ToDouble(values[1]), Convert.ToDouble(values[2])),
+                            Convert.ToDouble(values[3])));
+                    }
+                    else if (values.Length == 5)
+                    {
+                        colorList.Add(new Tuple<Color, double>(
+                            // ReSharper disable once PossibleNullReferenceException
+                            Color.FromArgb(Convert.ToDouble(values[0]), Convert.ToDouble(values[1]), Convert.ToDouble(values[2]), Convert.ToDouble(values[3])),
+                            Convert.ToDouble(values[4])));
+                    }
+                    else
+                        throw new ArgumentOutOfRangeException("p", "Color can only be of Name, Hex, 3 double, 4 double and end with time if not Name or Hex");
+                }
+                else if (key.Invariant("type"))
+                {
+                    if (value.Invariant("Single"))
+                        color.Type = ColorType.Single;
+                    else if (value.Invariant("Gradient"))
+                        color.Type = ColorType.Gradient;
+                    else if (value.Invariant("Flash"))
+                        color.Type = ColorType.Flash;
+                    else if (value.Invariant("Rainbow"))
+                        color.Type = ColorType.Rainbow;
+                    else
+                        throw new ArgumentOutOfRangeException("type", "Color mode type can only be of types: Single, Gradient, Flash, Rainbow");
+                }
+                else if (key.Invariant("repetitions"))
+                {
+                    color.Repetitions = Convert.ToSingle(value);
+                }
+                else if (key.Invariant("easing"))
+                {
+                    color.Easing = value.GetEasing();
+                }
+            }
+
+            color.Colors = colorList.ToArray();
+            try
+            {
+                colorModes.Add(type, color);
+            }
+            catch (Exception e)
+            {
+                Global.Instance.Logger.Error($"Could not add colorMode name: {type}, as it already exists");
+                throw e;
             }
         }
 
@@ -326,69 +393,93 @@ namespace NoodleScripter.Commands
             }
             else
             {
-                var field = generator.GetType().GetProperties().First(f => key.Invariant(f.Name));
-                switch (field.PropertyType)
+                try
                 {
-                    case Type vector3DType when vector3DType == typeof(Vector3D):
-                        field.SetValue(generator, Vector3D.Parse(value));
-                        break;
-                    case Type rotationModeType when rotationModeType == typeof(IRotationMode):
-                        field.SetValue(generator, rotationModes[value]);
-                        break;
-                    case Type nullableIntType when nullableIntType == typeof(int?):
-                        field.SetValue(generator, Convert.ToInt32(calculator.Solve(value)));
-                        break;
-                    case Type nullableDoubleType when nullableDoubleType == typeof(double?):
-                        field.SetValue(generator, Convert.ToDouble(calculator.Solve(value)));
-                        break;
-                    case Type nullableDoubleType when nullableDoubleType == typeof(float?):
-                        field.SetValue(generator, Convert.ToSingle(calculator.Solve(value)));
-                        break;
-                    case Type mirrorPointType when mirrorPointType == typeof(MirrorPoint):
-                        field.SetValue(generator, (MirrorPoint)Convert.ToInt32(value));
-                        break;
-                    case Type mirrorType when mirrorType == typeof(MirrorType):
-                        field.SetValue(generator, (MirrorType)Convert.ToInt32(value));
-                        break;
-                    case Type curveType when curveType == typeof(CurveType):
-                        field.SetValue(generator, (CurveType)Convert.ToInt32(value));
-                        break;
-                    case Type eventType when eventType == typeof(EventType):
-                        field.SetValue(generator, (EventType)Convert.ToInt32(value));
-                        break;
-                    case Type lightType when lightType == typeof(LightType):
-                        field.SetValue(generator, (LightType)Convert.ToInt32(value));
-                        break;
-                    case Type randomType when randomType == typeof(Random):
-                        field.SetValue(generator, new Random(Convert.ToInt32(value)));
-                        break;
-                    case Type colorModesType when colorModesType == typeof(ColorManager):
-                        field.SetValue(generator, colorModes[value]);
-                        break;
-                    case Type easingsType when easingsType == typeof(Easings):
-                        field.SetValue(generator, value.GetEasing());
-                        break;
-                    case Type structuresType when structuresType == typeof(List<WallGenerator>):
-                        foreach (var s in value.Split(',').Where(t => !string.IsNullOrWhiteSpace(t)))
-                        {
-                            generator.Structures.Add(structures[s]);
-                        }
-                        break;
-                    case Type integerType when integerType == typeof(double) ||
-                                               integerType == typeof(float) ||
-                                               integerType == typeof(int) ||
-                                               integerType == typeof(uint) ||
-                                               integerType == typeof(long) ||
-                                               integerType == typeof(ulong) ||
-                                               integerType == typeof(short) ||
-                                               integerType == typeof(ushort):
-                        var calculatedValue = Convert.ChangeType(calculator.Solve(value), field.PropertyType);
-                        field.SetValue(generator, calculatedValue);
-                        break;
-                    default:
-                        var fieldValue = Convert.ChangeType(value, field.PropertyType);
-                        field.SetValue(generator, fieldValue);
-                        break;
+                    var field = generator.GetType().GetProperties().First(f => key.Invariant(f.Name));
+                    var propertyType = Nullable.GetUnderlyingType(field.PropertyType) ?? field.PropertyType;
+                    switch (propertyType)
+                    {
+                        case Type vector3DType when vector3DType == typeof(Vector3D):
+                            field.SetValue(generator, Vector3D.Parse(value));
+                            break;
+                        case Type rotationModeType when rotationModeType == typeof(IRotationMode):
+                            try
+                            {
+                                field.SetValue(generator, rotationModes[value]);
+                            }
+                            catch (Exception e)
+                            {
+                                Global.Instance.Logger.Error($"Could not find the key: {value}");
+                                throw e;
+                            }
+                            break;
+                        case Type mirrorPointType when mirrorPointType == typeof(MirrorPoint):
+                            field.SetValue(generator, (MirrorPoint)Convert.ToInt32(value));
+                            break;
+                        case Type mirrorType when mirrorType == typeof(MirrorType):
+                            field.SetValue(generator, (MirrorType)Convert.ToInt32(value));
+                            break;
+                        case Type curveType when curveType == typeof(CurveType):
+                            field.SetValue(generator, (CurveType)Convert.ToInt32(value));
+                            break;
+                        case Type eventType when eventType == typeof(EventType):
+                            field.SetValue(generator, (EventType)Convert.ToInt32(value));
+                            break;
+                        case Type lightType when lightType == typeof(LightType):
+                            field.SetValue(generator, (LightType)Convert.ToInt32(value));
+                            break;
+                        case Type randomType when randomType == typeof(Random):
+                            field.SetValue(generator, new Random(Convert.ToInt32(value)));
+                            break;
+                        case Type colorModesType when colorModesType == typeof(ColorManager):
+                            try
+                            {
+                                field.SetValue(generator, colorModes[value]);
+                            }
+                            catch (Exception e)
+                            {
+                                Global.Instance.Logger.Error($"Could not find the key: {value}");
+                                throw e;
+                            }
+                            break;
+                        case Type easingsType when easingsType == typeof(Easings):
+                            field.SetValue(generator, value.GetEasing());
+                            break;
+                        case Type structuresType when structuresType == typeof(List<WallGenerator>):
+                            foreach (var s in value.Split(',').Where(t => !string.IsNullOrWhiteSpace(t)))
+                            {
+                                try
+                                {
+                                    generator.Structures.Add(structures[s].Copy());
+                                }
+                                catch (Exception e)
+                                {
+                                    Global.Instance.Logger.Error($"Could not find the key: {s}");
+                                    throw e;
+                                }
+                            }
+                            break;
+                        case Type integerType when integerType == typeof(double) ||
+                                                   integerType == typeof(float) ||
+                                                   integerType == typeof(int) ||
+                                                   integerType == typeof(uint) ||
+                                                   integerType == typeof(long) ||
+                                                   integerType == typeof(ulong) ||
+                                                   integerType == typeof(short) ||
+                                                   integerType == typeof(ushort):
+                            var calculatedValue = Convert.ChangeType(calculator.Solve(value), propertyType);
+                            field.SetValue(generator, calculatedValue);
+                            break;
+                        default:
+                            var fieldValue = Convert.ChangeType(value, propertyType);
+                            field.SetValue(generator, fieldValue);
+                            break;
+                    }
+                }
+                catch(Exception e)
+                {
+                    Global.Instance.Logger.Error($"Could not process key: {key}");
+                    throw e;
                 }
             }
         }

@@ -37,7 +37,10 @@ namespace NoodleScripter.Models.NoodleScripter
         EaseInOutElastic,
         EaseInBounce,
         EaseOutBounce,
-        EaseInOutBounce
+        EaseInOutBounce,
+        EaseInExpo,
+        EaseOutExpo,
+        EaseInOutExpo
     }
 
     public class StaticRotation : IRotationMode

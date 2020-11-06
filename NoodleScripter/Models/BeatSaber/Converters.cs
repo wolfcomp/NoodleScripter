@@ -16,10 +16,10 @@ namespace NoodleScripter.Models.BeatSaber
         public override void WriteJson(JsonWriter writer, Color value, JsonSerializer serializer)
         {
             writer.WriteStartArray();
-            writer.WriteValue((float)value.R);
-            writer.WriteValue((float)value.G);
-            writer.WriteValue((float)value.B);
-            writer.WriteValue((float)value.A);
+            writer.WriteValue(value.R);
+            writer.WriteValue(value.G);
+            writer.WriteValue(value.B);
+            writer.WriteValue(value.A);
             writer.WriteEndArray();
         }
 
@@ -36,8 +36,8 @@ namespace NoodleScripter.Models.BeatSaber
         public override void WriteJson(JsonWriter writer, Vector value, JsonSerializer serializer)
         {
             writer.WriteStartArray();
-            writer.WriteValue((float)value.X);
-            writer.WriteValue((float)value.Y);
+            writer.WriteValue(Math.Round(value.X,4));
+            writer.WriteValue(Math.Round(value.Y,4));
             writer.WriteEndArray();
         }
 
@@ -54,9 +54,9 @@ namespace NoodleScripter.Models.BeatSaber
         public override void WriteJson(JsonWriter writer, Vector3D value, JsonSerializer serializer)
         {
             writer.WriteStartArray();
-            writer.WriteValue((float)value.X);
-            writer.WriteValue((float)value.Y);
-            writer.WriteValue((float)value.Z);
+            writer.WriteValue(Math.Round(value.X,4));
+            writer.WriteValue(Math.Round(value.Y,4));
+            writer.WriteValue(Math.Round(value.Z,4));
             writer.WriteEndArray();
         }
 
