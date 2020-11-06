@@ -1,36 +1,32 @@
 ### YamlMime:ManagedReference
 items:
-- uid: NoodleScripter.Models.NoodleScripter.Noise
-  commentId: T:NoodleScripter.Models.NoodleScripter.Noise
-  id: Noise
+- uid: NoodleScripter.Models.NoodleScripter.Structure
+  commentId: T:NoodleScripter.Models.NoodleScripter.Structure
+  id: Structure
   parent: NoodleScripter.Models.NoodleScripter
-  children:
-  - NoodleScripter.Models.NoodleScripter.Noise.Amount
-  - NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
-  - NoodleScripter.Models.NoodleScripter.Noise.BottomRight
-  - NoodleScripter.Models.NoodleScripter.Noise.TopLeft
+  children: []
   langs:
   - csharp
   - vb
-  name: Noise
-  nameWithType: Noise
-  fullName: NoodleScripter.Models.NoodleScripter.Noise
+  name: Structure
+  nameWithType: Structure
+  fullName: NoodleScripter.Models.NoodleScripter.Structure
   type: Class
   source:
     remote:
-      path: NoodleScripter/Models/NoodleScripter/Noise.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
       branch: master
       repo: git@gitlab.com:WildWolf/noodlescripter.git
-    id: Noise
-    path: Models/NoodleScripter/Noise.cs
-    startLine: 6
+    id: Structure
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 40
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
   syntax:
-    content: 'public class Noise : WallGenerator'
+    content: 'public class Structure : WallGenerator'
     content.vb: >-
-      Public Class Noise
+      Public Class Structure
           Inherits WallGenerator
   inheritance:
   - System.Object
@@ -80,146 +76,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: NoodleScripter.Models.NoodleScripter.Noise.Amount
-  commentId: P:NoodleScripter.Models.NoodleScripter.Noise.Amount
-  id: Amount
-  parent: NoodleScripter.Models.NoodleScripter.Noise
-  langs:
-  - csharp
-  - vb
-  name: Amount
-  nameWithType: Noise.Amount
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.Amount
-  type: Property
-  source:
-    remote:
-      path: NoodleScripter/Models/NoodleScripter/Noise.cs
-      branch: master
-      repo: git@gitlab.com:WildWolf/noodlescripter.git
-    id: Amount
-    path: Models/NoodleScripter/Noise.cs
-    startLine: 8
-  assemblies:
-  - NoodleScripter
-  namespace: NoodleScripter.Models.NoodleScripter
-  syntax:
-    content: public int? Amount { get; set; }
-    parameters: []
-    return:
-      type: System.Nullable{System.Int32}
-    content.vb: Public Property Amount As Integer?
-  overload: NoodleScripter.Models.NoodleScripter.Noise.Amount*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
-  commentId: P:NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
-  id: AvoidCenter
-  parent: NoodleScripter.Models.NoodleScripter.Noise
-  langs:
-  - csharp
-  - vb
-  name: AvoidCenter
-  nameWithType: Noise.AvoidCenter
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
-  type: Property
-  source:
-    remote:
-      path: NoodleScripter/Models/NoodleScripter/Noise.cs
-      branch: master
-      repo: git@gitlab.com:WildWolf/noodlescripter.git
-    id: AvoidCenter
-    path: Models/NoodleScripter/Noise.cs
-    startLine: 9
-  assemblies:
-  - NoodleScripter
-  namespace: NoodleScripter.Models.NoodleScripter
-  syntax:
-    content: public bool AvoidCenter { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property AvoidCenter As Boolean
-  overload: NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: NoodleScripter.Models.NoodleScripter.Noise.TopLeft
-  commentId: P:NoodleScripter.Models.NoodleScripter.Noise.TopLeft
-  id: TopLeft
-  parent: NoodleScripter.Models.NoodleScripter.Noise
-  langs:
-  - csharp
-  - vb
-  name: TopLeft
-  nameWithType: Noise.TopLeft
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.TopLeft
-  type: Property
-  source:
-    remote:
-      path: NoodleScripter/Models/NoodleScripter/Noise.cs
-      branch: master
-      repo: git@gitlab.com:WildWolf/noodlescripter.git
-    id: TopLeft
-    path: Models/NoodleScripter/Noise.cs
-    startLine: 11
-  assemblies:
-  - NoodleScripter
-  namespace: NoodleScripter.Models.NoodleScripter
-  syntax:
-    content: public Vector3D TopLeft { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.Media.Media3D.Vector3D
-    content.vb: Public Property TopLeft As Vector3D
-  overload: NoodleScripter.Models.NoodleScripter.Noise.TopLeft*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: NoodleScripter.Models.NoodleScripter.Noise.BottomRight
-  commentId: P:NoodleScripter.Models.NoodleScripter.Noise.BottomRight
-  id: BottomRight
-  parent: NoodleScripter.Models.NoodleScripter.Noise
-  langs:
-  - csharp
-  - vb
-  name: BottomRight
-  nameWithType: Noise.BottomRight
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.BottomRight
-  type: Property
-  source:
-    remote:
-      path: NoodleScripter/Models/NoodleScripter/Noise.cs
-      branch: master
-      repo: git@gitlab.com:WildWolf/noodlescripter.git
-    id: BottomRight
-    path: Models/NoodleScripter/Noise.cs
-    startLine: 17
-  assemblies:
-  - NoodleScripter
-  namespace: NoodleScripter.Models.NoodleScripter
-  syntax:
-    content: public Vector3D BottomRight { get; set; }
-    parameters: []
-    return:
-      type: System.Windows.Media.Media3D.Vector3D
-    content.vb: Public Property BottomRight As Vector3D
-  overload: NoodleScripter.Models.NoodleScripter.Noise.BottomRight*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 references:
 - uid: NoodleScripter.Models.NoodleScripter
   commentId: N:NoodleScripter.Models.NoodleScripter
@@ -913,126 +769,3 @@ references:
   fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Track
   nameWithType.vb: WallGenerator(Of T).Track
   fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Track
-- uid: NoodleScripter.Models.NoodleScripter.Noise.Amount*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.Noise.Amount
-  name: Amount
-  nameWithType: Noise.Amount
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.Amount
-- uid: System.Nullable{System.Int32}
-  commentId: T:System.Nullable{System.Int32}
-  parent: System
-  definition: System.Nullable`1
-  name: Nullable<Int32>
-  nameWithType: Nullable<Int32>
-  fullName: System.Nullable<System.Int32>
-  nameWithType.vb: Nullable(Of Int32)
-  fullName.vb: System.Nullable(Of System.Int32)
-  name.vb: Nullable(Of Int32)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: System.Int32
-    name: Int32
-    nameWithType: Int32
-    fullName: System.Int32
-    isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: System.Int32
-    name: Int32
-    nameWithType: Int32
-    fullName: System.Int32
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Nullable`1
-  commentId: T:System.Nullable`1
-  isExternal: true
-  name: Nullable<T>
-  nameWithType: Nullable<T>
-  fullName: System.Nullable<T>
-  nameWithType.vb: Nullable(Of T)
-  fullName.vb: System.Nullable(Of T)
-  name.vb: Nullable(Of T)
-  spec.csharp:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Nullable`1
-    name: Nullable
-    nameWithType: Nullable
-    fullName: System.Nullable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
-  name: AvoidCenter
-  nameWithType: Noise.AvoidCenter
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: NoodleScripter.Models.NoodleScripter.Noise.TopLeft*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.Noise.TopLeft
-  name: TopLeft
-  nameWithType: Noise.TopLeft
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.TopLeft
-- uid: System.Windows.Media.Media3D.Vector3D
-  commentId: T:System.Windows.Media.Media3D.Vector3D
-  parent: System.Windows.Media.Media3D
-  isExternal: true
-  name: Vector3D
-  nameWithType: Vector3D
-  fullName: System.Windows.Media.Media3D.Vector3D
-- uid: System.Windows.Media.Media3D
-  commentId: N:System.Windows.Media.Media3D
-  isExternal: true
-  name: System.Windows.Media.Media3D
-  nameWithType: System.Windows.Media.Media3D
-  fullName: System.Windows.Media.Media3D
-- uid: NoodleScripter.Models.NoodleScripter.Noise.BottomRight*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.Noise.BottomRight
-  name: BottomRight
-  nameWithType: Noise.BottomRight
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.BottomRight

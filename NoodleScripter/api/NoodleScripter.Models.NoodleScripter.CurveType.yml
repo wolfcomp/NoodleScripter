@@ -6,7 +6,7 @@ items:
   parent: NoodleScripter.Models.NoodleScripter
   children:
   - NoodleScripter.Models.NoodleScripter.CurveType.Bezier
-  - NoodleScripter.Models.NoodleScripter.CurveType.Linear
+  - NoodleScripter.Models.NoodleScripter.CurveType.Easing
   langs:
   - csharp
   - vb
@@ -16,10 +16,12 @@ items:
   type: Enum
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Curve.cs
+      path: NoodleScripter/Models/NoodleScripter/Curve.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: CurveType
     path: Models/NoodleScripter/Curve.cs
-    startLine: 61
+    startLine: 81
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -45,10 +47,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Curve.cs
+      path: NoodleScripter/Models/NoodleScripter/Curve.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Bezier
     path: Models/NoodleScripter/Curve.cs
-    startLine: 63
+    startLine: 83
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -62,28 +66,30 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: NoodleScripter.Models.NoodleScripter.CurveType.Linear
-  commentId: F:NoodleScripter.Models.NoodleScripter.CurveType.Linear
-  id: Linear
+- uid: NoodleScripter.Models.NoodleScripter.CurveType.Easing
+  commentId: F:NoodleScripter.Models.NoodleScripter.CurveType.Easing
+  id: Easing
   parent: NoodleScripter.Models.NoodleScripter.CurveType
   langs:
   - csharp
   - vb
-  name: Linear
-  nameWithType: CurveType.Linear
-  fullName: NoodleScripter.Models.NoodleScripter.CurveType.Linear
+  name: Easing
+  nameWithType: CurveType.Easing
+  fullName: NoodleScripter.Models.NoodleScripter.CurveType.Easing
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Curve.cs
-    id: Linear
+      path: NoodleScripter/Models/NoodleScripter/Curve.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: Easing
     path: Models/NoodleScripter/Curve.cs
-    startLine: 64
+    startLine: 84
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
   syntax:
-    content: Linear = 1
+    content: Easing = 1
     return:
       type: NoodleScripter.Models.NoodleScripter.CurveType
   modifiers.csharp:

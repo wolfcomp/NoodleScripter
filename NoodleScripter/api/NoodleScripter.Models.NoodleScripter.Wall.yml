@@ -27,7 +27,9 @@ items:
   type: Class
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Wall
     path: Models/NoodleScripter/Wall.cs
     startLine: 8
@@ -58,7 +60,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Bomb
     path: Models/NoodleScripter/Wall.cs
     startLine: 10
@@ -91,7 +95,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Color
     path: Models/NoodleScripter/Wall.cs
     startLine: 11
@@ -99,11 +105,11 @@ items:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
   syntax:
-    content: public Vector3D? Color { get; set; }
+    content: public Color? Color { get; set; }
     parameters: []
     return:
-      type: System.Nullable{System.Windows.Media.Media3D.Vector3D}
-    content.vb: Public Property Color As Vector3D?
+      type: System.Nullable{NoodleScripter.Models.NoodleScripter.Color}
+    content.vb: Public Property Color As Color?
   overload: NoodleScripter.Models.NoodleScripter.Wall.Color*
   modifiers.csharp:
   - public
@@ -124,7 +130,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Rotation
     path: Models/NoodleScripter/Wall.cs
     startLine: 12
@@ -157,7 +165,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: LocalRotation
     path: Models/NoodleScripter/Wall.cs
     startLine: 13
@@ -190,7 +200,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: NJS
     path: Models/NoodleScripter/Wall.cs
     startLine: 14
@@ -223,7 +235,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Offset
     path: Models/NoodleScripter/Wall.cs
     startLine: 15
@@ -256,7 +270,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Width
     path: Models/NoodleScripter/Wall.cs
     startLine: 16
@@ -289,7 +305,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Height
     path: Models/NoodleScripter/Wall.cs
     startLine: 17
@@ -322,7 +340,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: StartHeight
     path: Models/NoodleScripter/Wall.cs
     startLine: 18
@@ -355,7 +375,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: StartRow
     path: Models/NoodleScripter/Wall.cs
     startLine: 19
@@ -388,7 +410,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Duration
     path: Models/NoodleScripter/Wall.cs
     startLine: 20
@@ -421,7 +445,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: StartTime
     path: Models/NoodleScripter/Wall.cs
     startLine: 21
@@ -454,7 +480,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Wall.cs
+      path: NoodleScripter/Models/NoodleScripter/Wall.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Track
     path: Models/NoodleScripter/Wall.cs
     startLine: 22
@@ -510,16 +538,16 @@ references:
   name: Color
   nameWithType: Wall.Color
   fullName: NoodleScripter.Models.NoodleScripter.Wall.Color
-- uid: System.Nullable{System.Windows.Media.Media3D.Vector3D}
-  commentId: T:System.Nullable{System.Windows.Media.Media3D.Vector3D}
+- uid: System.Nullable{NoodleScripter.Models.NoodleScripter.Color}
+  commentId: T:System.Nullable{NoodleScripter.Models.NoodleScripter.Color}
   parent: System
   definition: System.Nullable`1
-  name: Nullable<Vector3D>
-  nameWithType: Nullable<Vector3D>
-  fullName: System.Nullable<System.Windows.Media.Media3D.Vector3D>
-  nameWithType.vb: Nullable(Of Vector3D)
-  fullName.vb: System.Nullable(Of System.Windows.Media.Media3D.Vector3D)
-  name.vb: Nullable(Of Vector3D)
+  name: Nullable<Color>
+  nameWithType: Nullable<Color>
+  fullName: System.Nullable<NoodleScripter.Models.NoodleScripter.Color>
+  nameWithType.vb: Nullable(Of Color)
+  fullName.vb: System.Nullable(Of NoodleScripter.Models.NoodleScripter.Color)
+  name.vb: Nullable(Of Color)
   spec.csharp:
   - uid: System.Nullable`1
     name: Nullable
@@ -529,11 +557,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.Windows.Media.Media3D.Vector3D
-    name: Vector3D
-    nameWithType: Vector3D
-    fullName: System.Windows.Media.Media3D.Vector3D
-    isExternal: true
+  - uid: NoodleScripter.Models.NoodleScripter.Color
+    name: Color
+    nameWithType: Color
+    fullName: NoodleScripter.Models.NoodleScripter.Color
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -546,11 +573,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.Windows.Media.Media3D.Vector3D
-    name: Vector3D
-    nameWithType: Vector3D
-    fullName: System.Windows.Media.Media3D.Vector3D
-    isExternal: true
+  - uid: NoodleScripter.Models.NoodleScripter.Color
+    name: Color
+    nameWithType: Color
+    fullName: NoodleScripter.Models.NoodleScripter.Color
   - name: )
     nameWithType: )
     fullName: )

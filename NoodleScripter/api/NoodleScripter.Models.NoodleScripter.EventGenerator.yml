@@ -1,41 +1,55 @@
 ### YamlMime:ManagedReference
 items:
-- uid: NoodleScripter.Models.NoodleScripter.Noise
-  commentId: T:NoodleScripter.Models.NoodleScripter.Noise
-  id: Noise
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator
+  commentId: T:NoodleScripter.Models.NoodleScripter.EventGenerator
+  id: EventGenerator
   parent: NoodleScripter.Models.NoodleScripter
   children:
-  - NoodleScripter.Models.NoodleScripter.Noise.Amount
-  - NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
-  - NoodleScripter.Models.NoodleScripter.Noise.BottomRight
-  - NoodleScripter.Models.NoodleScripter.Noise.TopLeft
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.Amount
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.CounterLock
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.Direction
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.Filter
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.LightID
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.Prop
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.PropID
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.PropMult
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.Reset
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.Speed
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.SpeedMult
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.Step
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.StepMult
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.Type
+  - NoodleScripter.Models.NoodleScripter.EventGenerator.Value
   langs:
   - csharp
   - vb
-  name: Noise
-  nameWithType: Noise
-  fullName: NoodleScripter.Models.NoodleScripter.Noise
+  name: EventGenerator
+  nameWithType: EventGenerator
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator
   type: Class
   source:
     remote:
-      path: NoodleScripter/Models/NoodleScripter/Noise.cs
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
       branch: master
       repo: git@gitlab.com:WildWolf/noodlescripter.git
-    id: Noise
-    path: Models/NoodleScripter/Noise.cs
-    startLine: 6
+    id: EventGenerator
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 8
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
   syntax:
-    content: 'public class Noise : WallGenerator'
+    content: 'public class EventGenerator : WallGenerator'
     content.vb: >-
-      Public Class Noise
+      Public Class EventGenerator
           Inherits WallGenerator
   inheritance:
   - System.Object
   - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
   - NoodleScripter.Models.NoodleScripter.WallGenerator
+  derivedClasses:
+  - NoodleScripter.Models.NoodleScripter.Propigator
+  - NoodleScripter.Models.NoodleScripter.Toggler
   inheritedMembers:
   - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Structures
   - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Random
@@ -80,140 +94,525 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: NoodleScripter.Models.NoodleScripter.Noise.Amount
-  commentId: P:NoodleScripter.Models.NoodleScripter.Noise.Amount
-  id: Amount
-  parent: NoodleScripter.Models.NoodleScripter.Noise
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Type
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.Type
+  id: Type
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
   langs:
   - csharp
   - vb
-  name: Amount
-  nameWithType: Noise.Amount
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.Amount
+  name: Type
+  nameWithType: EventGenerator.Type
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Type
   type: Property
   source:
     remote:
-      path: NoodleScripter/Models/NoodleScripter/Noise.cs
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
       branch: master
       repo: git@gitlab.com:WildWolf/noodlescripter.git
-    id: Amount
-    path: Models/NoodleScripter/Noise.cs
-    startLine: 8
+    id: Type
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 10
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
   syntax:
-    content: public int? Amount { get; set; }
+    content: public EventType Type { get; set; }
     parameters: []
     return:
-      type: System.Nullable{System.Int32}
-    content.vb: Public Property Amount As Integer?
-  overload: NoodleScripter.Models.NoodleScripter.Noise.Amount*
+      type: NoodleScripter.Models.NoodleScripter.EventType
+    content.vb: Public Property Type As EventType
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.Type*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
-  commentId: P:NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
-  id: AvoidCenter
-  parent: NoodleScripter.Models.NoodleScripter.Noise
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Value
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.Value
+  id: Value
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
   langs:
   - csharp
   - vb
-  name: AvoidCenter
-  nameWithType: Noise.AvoidCenter
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
+  name: Value
+  nameWithType: EventGenerator.Value
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Value
   type: Property
   source:
     remote:
-      path: NoodleScripter/Models/NoodleScripter/Noise.cs
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
       branch: master
       repo: git@gitlab.com:WildWolf/noodlescripter.git
-    id: AvoidCenter
-    path: Models/NoodleScripter/Noise.cs
-    startLine: 9
-  assemblies:
-  - NoodleScripter
-  namespace: NoodleScripter.Models.NoodleScripter
-  syntax:
-    content: public bool AvoidCenter { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property AvoidCenter As Boolean
-  overload: NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: NoodleScripter.Models.NoodleScripter.Noise.TopLeft
-  commentId: P:NoodleScripter.Models.NoodleScripter.Noise.TopLeft
-  id: TopLeft
-  parent: NoodleScripter.Models.NoodleScripter.Noise
-  langs:
-  - csharp
-  - vb
-  name: TopLeft
-  nameWithType: Noise.TopLeft
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.TopLeft
-  type: Property
-  source:
-    remote:
-      path: NoodleScripter/Models/NoodleScripter/Noise.cs
-      branch: master
-      repo: git@gitlab.com:WildWolf/noodlescripter.git
-    id: TopLeft
-    path: Models/NoodleScripter/Noise.cs
+    id: Value
+    path: Models/NoodleScripter/EventGenerator.cs
     startLine: 11
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
   syntax:
-    content: public Vector3D TopLeft { get; set; }
+    content: public LightType Value { get; set; }
     parameters: []
     return:
-      type: System.Windows.Media.Media3D.Vector3D
-    content.vb: Public Property TopLeft As Vector3D
-  overload: NoodleScripter.Models.NoodleScripter.Noise.TopLeft*
+      type: NoodleScripter.Models.NoodleScripter.LightType
+    content.vb: Public Property Value As LightType
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.Value*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: NoodleScripter.Models.NoodleScripter.Noise.BottomRight
-  commentId: P:NoodleScripter.Models.NoodleScripter.Noise.BottomRight
-  id: BottomRight
-  parent: NoodleScripter.Models.NoodleScripter.Noise
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Amount
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.Amount
+  id: Amount
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
   langs:
   - csharp
   - vb
-  name: BottomRight
-  nameWithType: Noise.BottomRight
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.BottomRight
+  name: Amount
+  nameWithType: EventGenerator.Amount
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Amount
   type: Property
   source:
     remote:
-      path: NoodleScripter/Models/NoodleScripter/Noise.cs
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
       branch: master
       repo: git@gitlab.com:WildWolf/noodlescripter.git
-    id: BottomRight
-    path: Models/NoodleScripter/Noise.cs
+    id: Amount
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 12
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public int Amount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Amount As Integer
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.Amount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Direction
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.Direction
+  id: Direction
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: Direction
+  nameWithType: EventGenerator.Direction
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Direction
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: Direction
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 13
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public int? Direction { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property Direction As Integer?
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.Direction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.CounterLock
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.CounterLock
+  id: CounterLock
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: CounterLock
+  nameWithType: EventGenerator.CounterLock
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.CounterLock
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: CounterLock
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 14
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public bool? CounterLock { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property CounterLock As Boolean?
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.CounterLock*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Speed
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.Speed
+  id: Speed
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: Speed
+  nameWithType: EventGenerator.Speed
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Speed
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: Speed
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 15
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public float? Speed { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property Speed As Single?
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.Speed*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Step
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.Step
+  id: Step
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: Step
+  nameWithType: EventGenerator.Step
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Step
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: Step
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 16
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public float? Step { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property Step As Single?
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.Step*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Prop
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.Prop
+  id: Prop
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: Prop
+  nameWithType: EventGenerator.Prop
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Prop
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: Prop
+    path: Models/NoodleScripter/EventGenerator.cs
     startLine: 17
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
   syntax:
-    content: public Vector3D BottomRight { get; set; }
+    content: public float? Prop { get; set; }
     parameters: []
     return:
-      type: System.Windows.Media.Media3D.Vector3D
-    content.vb: Public Property BottomRight As Vector3D
-  overload: NoodleScripter.Models.NoodleScripter.Noise.BottomRight*
+      type: System.Nullable{System.Single}
+    content.vb: Public Property Prop As Single?
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.Prop*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.SpeedMult
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.SpeedMult
+  id: SpeedMult
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: SpeedMult
+  nameWithType: EventGenerator.SpeedMult
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.SpeedMult
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: SpeedMult
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 18
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public float? SpeedMult { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property SpeedMult As Single?
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.SpeedMult*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.StepMult
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.StepMult
+  id: StepMult
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: StepMult
+  nameWithType: EventGenerator.StepMult
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.StepMult
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: StepMult
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 19
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public float? StepMult { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property StepMult As Single?
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.StepMult*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.PropMult
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.PropMult
+  id: PropMult
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: PropMult
+  nameWithType: EventGenerator.PropMult
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.PropMult
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: PropMult
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 20
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public float? PropMult { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Property PropMult As Single?
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.PropMult*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Filter
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.Filter
+  id: Filter
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: Filter
+  nameWithType: EventGenerator.Filter
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Filter
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: Filter
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 21
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public string Filter { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Filter As String
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.Filter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Reset
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.Reset
+  id: Reset
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: Reset
+  nameWithType: EventGenerator.Reset
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Reset
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: Reset
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 22
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public bool? Reset { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property Reset As Boolean?
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.Reset*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.PropID
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.PropID
+  id: PropID
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: PropID
+  nameWithType: EventGenerator.PropID
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.PropID
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: PropID
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 23
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public int? PropID { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property PropID As Integer?
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.PropID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.LightID
+  commentId: P:NoodleScripter.Models.NoodleScripter.EventGenerator.LightID
+  id: LightID
+  parent: NoodleScripter.Models.NoodleScripter.EventGenerator
+  langs:
+  - csharp
+  - vb
+  name: LightID
+  nameWithType: EventGenerator.LightID
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.LightID
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/EventGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: LightID
+    path: Models/NoodleScripter/EventGenerator.cs
+    startLine: 24
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public int? LightID { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property LightID As Integer?
+  overload: NoodleScripter.Models.NoodleScripter.EventGenerator.LightID*
   modifiers.csharp:
   - public
   - get
@@ -913,11 +1312,45 @@ references:
   fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Track
   nameWithType.vb: WallGenerator(Of T).Track
   fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Track
-- uid: NoodleScripter.Models.NoodleScripter.Noise.Amount*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.Noise.Amount
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Type*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.Type
+  name: Type
+  nameWithType: EventGenerator.Type
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Type
+- uid: NoodleScripter.Models.NoodleScripter.EventType
+  commentId: T:NoodleScripter.Models.NoodleScripter.EventType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: EventType
+  nameWithType: EventType
+  fullName: NoodleScripter.Models.NoodleScripter.EventType
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Value*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.Value
+  name: Value
+  nameWithType: EventGenerator.Value
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Value
+- uid: NoodleScripter.Models.NoodleScripter.LightType
+  commentId: T:NoodleScripter.Models.NoodleScripter.LightType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: LightType
+  nameWithType: LightType
+  fullName: NoodleScripter.Models.NoodleScripter.LightType
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Amount*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.Amount
   name: Amount
-  nameWithType: Noise.Amount
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.Amount
+  nameWithType: EventGenerator.Amount
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Amount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Direction*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.Direction
+  name: Direction
+  nameWithType: EventGenerator.Direction
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Direction
 - uid: System.Nullable{System.Int32}
   commentId: T:System.Nullable{System.Int32}
   parent: System
@@ -1001,38 +1434,153 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
-  name: AvoidCenter
-  nameWithType: Noise.AvoidCenter
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.AvoidCenter
-- uid: System.Boolean
-  commentId: T:System.Boolean
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.CounterLock*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.CounterLock
+  name: CounterLock
+  nameWithType: EventGenerator.CounterLock
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.CounterLock
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Speed*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.Speed
+  name: Speed
+  nameWithType: EventGenerator.Speed
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Speed
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Single>
+  nameWithType: Nullable<Single>
+  fullName: System.Nullable<System.Single>
+  nameWithType.vb: Nullable(Of Single)
+  fullName.vb: System.Nullable(Of System.Single)
+  name.vb: Nullable(Of Single)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Step*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.Step
+  name: Step
+  nameWithType: EventGenerator.Step
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Step
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Prop*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.Prop
+  name: Prop
+  nameWithType: EventGenerator.Prop
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Prop
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.SpeedMult*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.SpeedMult
+  name: SpeedMult
+  nameWithType: EventGenerator.SpeedMult
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.SpeedMult
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.StepMult*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.StepMult
+  name: StepMult
+  nameWithType: EventGenerator.StepMult
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.StepMult
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.PropMult*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.PropMult
+  name: PropMult
+  nameWithType: EventGenerator.PropMult
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.PropMult
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Filter*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.Filter
+  name: Filter
+  nameWithType: EventGenerator.Filter
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Filter
+- uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: NoodleScripter.Models.NoodleScripter.Noise.TopLeft*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.Noise.TopLeft
-  name: TopLeft
-  nameWithType: Noise.TopLeft
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.TopLeft
-- uid: System.Windows.Media.Media3D.Vector3D
-  commentId: T:System.Windows.Media.Media3D.Vector3D
-  parent: System.Windows.Media.Media3D
-  isExternal: true
-  name: Vector3D
-  nameWithType: Vector3D
-  fullName: System.Windows.Media.Media3D.Vector3D
-- uid: System.Windows.Media.Media3D
-  commentId: N:System.Windows.Media.Media3D
-  isExternal: true
-  name: System.Windows.Media.Media3D
-  nameWithType: System.Windows.Media.Media3D
-  fullName: System.Windows.Media.Media3D
-- uid: NoodleScripter.Models.NoodleScripter.Noise.BottomRight*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.Noise.BottomRight
-  name: BottomRight
-  nameWithType: Noise.BottomRight
-  fullName: NoodleScripter.Models.NoodleScripter.Noise.BottomRight
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.Reset*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.Reset
+  name: Reset
+  nameWithType: EventGenerator.Reset
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.Reset
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.PropID*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.PropID
+  name: PropID
+  nameWithType: EventGenerator.PropID
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.PropID
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator.LightID*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.EventGenerator.LightID
+  name: LightID
+  nameWithType: EventGenerator.LightID
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator.LightID

@@ -19,10 +19,12 @@ items:
   type: Enum
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+      path: NoodleScripter/Models/NoodleScripter/ColorManager.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: ColorType
-    path: Models/NoodleScripter/Color.cs
-    startLine: 74
+    path: Models/NoodleScripter/ColorManager.cs
+    startLine: 160
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -48,10 +50,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+      path: NoodleScripter/Models/NoodleScripter/ColorManager.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: None
-    path: Models/NoodleScripter/Color.cs
-    startLine: 76
+    path: Models/NoodleScripter/ColorManager.cs
+    startLine: 162
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -78,10 +82,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+      path: NoodleScripter/Models/NoodleScripter/ColorManager.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Single
-    path: Models/NoodleScripter/Color.cs
-    startLine: 77
+    path: Models/NoodleScripter/ColorManager.cs
+    startLine: 163
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -108,10 +114,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+      path: NoodleScripter/Models/NoodleScripter/ColorManager.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Gradient
-    path: Models/NoodleScripter/Color.cs
-    startLine: 78
+    path: Models/NoodleScripter/ColorManager.cs
+    startLine: 164
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -138,10 +146,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+      path: NoodleScripter/Models/NoodleScripter/ColorManager.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Flash
-    path: Models/NoodleScripter/Color.cs
-    startLine: 79
+    path: Models/NoodleScripter/ColorManager.cs
+    startLine: 165
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -168,10 +178,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+      path: NoodleScripter/Models/NoodleScripter/ColorManager.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Rainbow
-    path: Models/NoodleScripter/Color.cs
-    startLine: 80
+    path: Models/NoodleScripter/ColorManager.cs
+    startLine: 166
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter

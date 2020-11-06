@@ -5,133 +5,169 @@ items:
   id: Color
   parent: NoodleScripter.Models.NoodleScripter
   children:
-  - NoodleScripter.Models.NoodleScripter.Color.Colors
-  - NoodleScripter.Models.NoodleScripter.Color.Repetitions
-  - NoodleScripter.Models.NoodleScripter.Color.Type
+  - NoodleScripter.Models.NoodleScripter.Color.A
+  - NoodleScripter.Models.NoodleScripter.Color.B
+  - NoodleScripter.Models.NoodleScripter.Color.G
+  - NoodleScripter.Models.NoodleScripter.Color.R
   langs:
   - csharp
   - vb
   name: Color
   nameWithType: Color
   fullName: NoodleScripter.Models.NoodleScripter.Color
-  type: Class
+  type: Struct
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
+      path: NoodleScripter/Models/NoodleScripter/ColorManager.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Color
-    path: Models/NoodleScripter/Color.cs
-    startLine: 9
+    path: Models/NoodleScripter/ColorManager.cs
+    startLine: 10
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
   syntax:
-    content: public class Color
-    content.vb: Public Class Color
-  inheritance:
-  - System.Object
+    content: >-
+      [JsonConverter(typeof(ColorConverter))]
+
+      public struct Color
+    content.vb: >-
+      <JsonConverter(GetType(ColorConverter))>
+
+      Public Structure Color
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
   modifiers.csharp:
   - public
-  - class
+  - struct
   modifiers.vb:
   - Public
-  - Class
-- uid: NoodleScripter.Models.NoodleScripter.Color.Colors
-  commentId: P:NoodleScripter.Models.NoodleScripter.Color.Colors
-  id: Colors
+  - Structure
+- uid: NoodleScripter.Models.NoodleScripter.Color.A
+  commentId: F:NoodleScripter.Models.NoodleScripter.Color.A
+  id: A
   parent: NoodleScripter.Models.NoodleScripter.Color
   langs:
   - csharp
   - vb
-  name: Colors
-  nameWithType: Color.Colors
-  fullName: NoodleScripter.Models.NoodleScripter.Color.Colors
-  type: Property
+  name: A
+  nameWithType: Color.A
+  fullName: NoodleScripter.Models.NoodleScripter.Color.A
+  type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
-    id: Colors
-    path: Models/NoodleScripter/Color.cs
-    startLine: 11
-  assemblies:
-  - NoodleScripter
-  namespace: NoodleScripter.Models.NoodleScripter
-  syntax:
-    content: public Tuple<Color, double>[] Colors { get; set; }
-    parameters: []
-    return:
-      type: System.Tuple{System.Windows.Media.Color,System.Double}[]
-    content.vb: Public Property Colors As Tuple(Of Color, Double)()
-  overload: NoodleScripter.Models.NoodleScripter.Color.Colors*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: NoodleScripter.Models.NoodleScripter.Color.Type
-  commentId: P:NoodleScripter.Models.NoodleScripter.Color.Type
-  id: Type
-  parent: NoodleScripter.Models.NoodleScripter.Color
-  langs:
-  - csharp
-  - vb
-  name: Type
-  nameWithType: Color.Type
-  fullName: NoodleScripter.Models.NoodleScripter.Color.Type
-  type: Property
-  source:
-    remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
-    id: Type
-    path: Models/NoodleScripter/Color.cs
-    startLine: 12
-  assemblies:
-  - NoodleScripter
-  namespace: NoodleScripter.Models.NoodleScripter
-  syntax:
-    content: public ColorType Type { get; set; }
-    parameters: []
-    return:
-      type: NoodleScripter.Models.NoodleScripter.ColorType
-    content.vb: Public Property Type As ColorType
-  overload: NoodleScripter.Models.NoodleScripter.Color.Type*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: NoodleScripter.Models.NoodleScripter.Color.Repetitions
-  commentId: P:NoodleScripter.Models.NoodleScripter.Color.Repetitions
-  id: Repetitions
-  parent: NoodleScripter.Models.NoodleScripter.Color
-  langs:
-  - csharp
-  - vb
-  name: Repetitions
-  nameWithType: Color.Repetitions
-  fullName: NoodleScripter.Models.NoodleScripter.Color.Repetitions
-  type: Property
-  source:
-    remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/Color.cs
-    id: Repetitions
-    path: Models/NoodleScripter/Color.cs
+      path: NoodleScripter/Models/NoodleScripter/ColorManager.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: A
+    path: Models/NoodleScripter/ColorManager.cs
     startLine: 13
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
   syntax:
-    content: public float Repetitions { get; set; }
-    parameters: []
+    content: public double A
     return:
-      type: System.Single
-    content.vb: Public Property Repetitions As Single
-  overload: NoodleScripter.Models.NoodleScripter.Color.Repetitions*
+      type: System.Double
+    content.vb: Public A As Double
   modifiers.csharp:
   - public
-  - get
-  - set
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Color.R
+  commentId: F:NoodleScripter.Models.NoodleScripter.Color.R
+  id: R
+  parent: NoodleScripter.Models.NoodleScripter.Color
+  langs:
+  - csharp
+  - vb
+  name: R
+  nameWithType: Color.R
+  fullName: NoodleScripter.Models.NoodleScripter.Color.R
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/ColorManager.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: R
+    path: Models/NoodleScripter/ColorManager.cs
+    startLine: 14
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double R
+    return:
+      type: System.Double
+    content.vb: Public R As Double
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Color.G
+  commentId: F:NoodleScripter.Models.NoodleScripter.Color.G
+  id: G
+  parent: NoodleScripter.Models.NoodleScripter.Color
+  langs:
+  - csharp
+  - vb
+  name: G
+  nameWithType: Color.G
+  fullName: NoodleScripter.Models.NoodleScripter.Color.G
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/ColorManager.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: G
+    path: Models/NoodleScripter/ColorManager.cs
+    startLine: 15
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double G
+    return:
+      type: System.Double
+    content.vb: Public G As Double
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NoodleScripter.Models.NoodleScripter.Color.B
+  commentId: F:NoodleScripter.Models.NoodleScripter.Color.B
+  id: B
+  parent: NoodleScripter.Models.NoodleScripter.Color
+  langs:
+  - csharp
+  - vb
+  name: B
+  nameWithType: Color.B
+  fullName: NoodleScripter.Models.NoodleScripter.Color.B
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/ColorManager.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: B
+    path: Models/NoodleScripter/ColorManager.cs
+    startLine: 16
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public double B
+    return:
+      type: System.Double
+    content.vb: Public B As Double
+  modifiers.csharp:
+  - public
   modifiers.vb:
   - Public
 references:
@@ -140,108 +176,126 @@ references:
   name: NoodleScripter.Models.NoodleScripter
   nameWithType: NoodleScripter.Models.NoodleScripter
   fullName: NoodleScripter.Models.NoodleScripter
-- uid: System.Object
-  commentId: T:System.Object
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
   parent: System
   isExternal: true
-  name: Object
-  nameWithType: Object
-  fullName: System.Object
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
 - uid: System
   commentId: N:System
   isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: NoodleScripter.Models.NoodleScripter.Color.Colors*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.Color.Colors
-  name: Colors
-  nameWithType: Color.Colors
-  fullName: NoodleScripter.Models.NoodleScripter.Color.Colors
-- uid: System.Tuple{System.Windows.Media.Color,System.Double}[]
-  isExternal: true
-  name: Tuple<Color, Double>[]
-  nameWithType: Tuple<Color, Double>[]
-  fullName: System.Tuple<System.Windows.Media.Color, System.Double>[]
-  nameWithType.vb: Tuple(Of Color, Double)()
-  fullName.vb: System.Tuple(Of System.Windows.Media.Color, System.Double)()
-  name.vb: Tuple(Of Color, Double)()
-  spec.csharp:
-  - uid: System.Tuple`2
-    name: Tuple
-    nameWithType: Tuple
-    fullName: System.Tuple
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: System.Windows.Media.Color
-    name: Color
-    nameWithType: Color
-    fullName: System.Windows.Media.Color
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Double
-    name: Double
-    nameWithType: Double
-    fullName: System.Double
-    isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.Tuple`2
-    name: Tuple
-    nameWithType: Tuple
-    fullName: System.Tuple
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: System.Windows.Media.Color
-    name: Color
-    nameWithType: Color
-    fullName: System.Windows.Media.Color
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Double
-    name: Double
-    nameWithType: Double
-    fullName: System.Double
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: NoodleScripter.Models.NoodleScripter.Color.Type*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.Color.Type
-  name: Type
-  nameWithType: Color.Type
-  fullName: NoodleScripter.Models.NoodleScripter.Color.Type
-- uid: NoodleScripter.Models.NoodleScripter.ColorType
-  commentId: T:NoodleScripter.Models.NoodleScripter.ColorType
-  parent: NoodleScripter.Models.NoodleScripter
-  name: ColorType
-  nameWithType: ColorType
-  fullName: NoodleScripter.Models.NoodleScripter.ColorType
-- uid: NoodleScripter.Models.NoodleScripter.Color.Repetitions*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.Color.Repetitions
-  name: Repetitions
-  nameWithType: Color.Repetitions
-  fullName: NoodleScripter.Models.NoodleScripter.Color.Repetitions
-- uid: System.Single
-  commentId: T:System.Single
+- uid: System.Double
+  commentId: T:System.Double
   parent: System
   isExternal: true
-  name: Single
-  nameWithType: Single
-  fullName: System.Single
+  name: Double
+  nameWithType: Double
+  fullName: System.Double

@@ -17,7 +17,9 @@ items:
   type: Class
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: RandomRotation
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 121
@@ -50,7 +52,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Rotation
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 123
@@ -83,7 +87,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: LocalRotation
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 124
@@ -116,7 +122,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Random
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 125

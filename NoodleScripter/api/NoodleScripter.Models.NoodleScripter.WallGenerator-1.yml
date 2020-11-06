@@ -13,7 +13,7 @@ items:
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1.AddWidth
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Beat
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Bomb
-  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.ColorMode
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Duration
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitDuration
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1.FitHeight
@@ -39,6 +39,7 @@ items:
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartHeight
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartRow
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1.StartTime
+  - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Structures
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Track
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1.Width
   langs:
@@ -50,10 +51,12 @@ items:
   type: Class
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: WallGenerator
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 31
+    startLine: 59
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -77,6 +80,43 @@ items:
   - Class
   fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T)
   name.vb: WallGenerator(Of T)
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Structures
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Structures
+  id: Structures
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
+  langs:
+  - csharp
+  - vb
+  name: Structures
+  nameWithType: WallGenerator<T>.Structures
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Structures
+  type: Property
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: Structures
+    path: Models/NoodleScripter/WallGenerator.cs
+    startLine: 61
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public List<WallGenerator> Structures { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{NoodleScripter.Models.NoodleScripter.WallGenerator}
+    content.vb: Public Property Structures As List(Of WallGenerator)
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Structures*
+  nameWithType.vb: WallGenerator(Of T).Structures
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Structures
 - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
   commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
   id: Random
@@ -90,10 +130,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Random
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 33
+    startLine: 62
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -125,10 +167,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Bomb
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 34
+    startLine: 63
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -160,19 +204,21 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Beat
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 35
+    startLine: 64
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
   syntax:
-    content: public int Beat { get; set; }
+    content: public float Beat { get; set; }
     parameters: []
     return:
-      type: System.Int32
-    content.vb: Public Property Beat As Integer
+      type: System.Single
+    content.vb: Public Property Beat As Single
   overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Beat*
   nameWithType.vb: WallGenerator(Of T).Beat
   modifiers.csharp:
@@ -182,41 +228,43 @@ items:
   modifiers.vb:
   - Public
   fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Beat
-- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
-  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
-  id: Color
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ColorMode
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ColorMode
+  id: ColorMode
   parent: NoodleScripter.Models.NoodleScripter.WallGenerator`1
   langs:
   - csharp
   - vb
-  name: Color
-  nameWithType: WallGenerator<T>.Color
-  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Color
+  name: ColorMode
+  nameWithType: WallGenerator<T>.ColorMode
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ColorMode
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
-    id: Color
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: ColorMode
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 36
+    startLine: 65
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
   syntax:
-    content: public Color Color { get; set; }
+    content: public ColorManager ColorMode { get; set; }
     parameters: []
     return:
-      type: NoodleScripter.Models.NoodleScripter.Color
-    content.vb: Public Property Color As Color
-  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color*
-  nameWithType.vb: WallGenerator(Of T).Color
+      type: NoodleScripter.Models.NoodleScripter.ColorManager
+    content.vb: Public Property ColorMode As ColorManager
+  overload: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ColorMode*
+  nameWithType.vb: WallGenerator(Of T).ColorMode
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Color
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ColorMode
 - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
   commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
   id: RotationMode
@@ -230,10 +278,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: RotationMode
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 37
+    startLine: 66
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -265,10 +315,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Mirror
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 38
+    startLine: 67
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -300,10 +352,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: MirrorType
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 39
+    startLine: 68
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -335,10 +389,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Reverse
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 40
+    startLine: 69
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -370,10 +426,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: NJS
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 41
+    startLine: 70
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -405,10 +463,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Offset
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 42
+    startLine: 71
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -440,10 +500,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Width
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 43
+    startLine: 72
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -475,10 +537,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Height
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 44
+    startLine: 73
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -510,10 +574,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: StartHeight
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 45
+    startLine: 74
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -545,10 +611,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: StartRow
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 46
+    startLine: 75
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -580,10 +648,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Duration
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 47
+    startLine: 76
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -615,10 +685,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: StartTime
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 48
+    startLine: 77
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -650,10 +722,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: ScaleWidth
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 49
+    startLine: 78
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -685,10 +759,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: ScaleHeight
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 50
+    startLine: 79
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -720,10 +796,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: ScaleStartHeight
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 51
+    startLine: 80
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -755,10 +833,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: ScaleStartRow
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 52
+    startLine: 81
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -790,10 +870,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: ScaleDuration
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 53
+    startLine: 82
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -825,10 +907,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: ScaleStartTime
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 54
+    startLine: 83
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -860,10 +944,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: AddWidth
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 55
+    startLine: 84
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -895,10 +981,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: AddHeight
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 56
+    startLine: 85
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -930,10 +1018,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: AddStartHeight
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 57
+    startLine: 86
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -965,10 +1055,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: AddStartRow
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 58
+    startLine: 87
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -1000,10 +1092,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: AddDuration
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 59
+    startLine: 88
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -1035,10 +1129,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: AddStartTime
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 60
+    startLine: 89
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -1070,10 +1166,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: FitWidth
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 61
+    startLine: 90
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -1105,10 +1203,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: FitHeight
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 62
+    startLine: 91
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -1140,10 +1240,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: FitStartHeight
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 63
+    startLine: 92
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -1175,10 +1277,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: FitStartRow
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 64
+    startLine: 93
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -1210,10 +1314,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: FitDuration
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 65
+    startLine: 94
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -1245,10 +1351,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: FitStartTime
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 66
+    startLine: 95
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -1280,10 +1388,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Scale
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 67
+    startLine: 96
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -1315,10 +1425,12 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Track
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 68
+    startLine: 97
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -1356,6 +1468,100 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Structures*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Structures
+  name: Structures
+  nameWithType: WallGenerator<T>.Structures
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Structures
+  nameWithType.vb: WallGenerator(Of T).Structures
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Structures
+- uid: System.Collections.Generic.List{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  commentId: T:System.Collections.Generic.List{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<WallGenerator>
+  nameWithType: List<WallGenerator>
+  fullName: System.Collections.Generic.List<NoodleScripter.Models.NoodleScripter.WallGenerator>
+  nameWithType.vb: List(Of WallGenerator)
+  fullName.vb: System.Collections.Generic.List(Of NoodleScripter.Models.NoodleScripter.WallGenerator)
+  name.vb: List(Of WallGenerator)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NoodleScripter.Models.NoodleScripter.WallGenerator
+    name: WallGenerator
+    nameWithType: WallGenerator
+    fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NoodleScripter.Models.NoodleScripter.WallGenerator
+    name: WallGenerator
+    nameWithType: WallGenerator
+    fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random*
   commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
   name: Random
@@ -1391,26 +1597,26 @@ references:
   fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Beat
   nameWithType.vb: WallGenerator(Of T).Beat
   fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Beat
-- uid: System.Int32
-  commentId: T:System.Int32
+- uid: System.Single
+  commentId: T:System.Single
   parent: System
   isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color*
-  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
-  name: Color
-  nameWithType: WallGenerator<T>.Color
-  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Color
-  nameWithType.vb: WallGenerator(Of T).Color
-  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Color
-- uid: NoodleScripter.Models.NoodleScripter.Color
-  commentId: T:NoodleScripter.Models.NoodleScripter.Color
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ColorMode*
+  commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ColorMode
+  name: ColorMode
+  nameWithType: WallGenerator<T>.ColorMode
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ColorMode
+  nameWithType.vb: WallGenerator(Of T).ColorMode
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ColorMode
+- uid: NoodleScripter.Models.NoodleScripter.ColorManager
+  commentId: T:NoodleScripter.Models.NoodleScripter.ColorManager
   parent: NoodleScripter.Models.NoodleScripter
-  name: Color
-  nameWithType: Color
-  fullName: NoodleScripter.Models.NoodleScripter.Color
+  name: ColorManager
+  nameWithType: ColorManager
+  fullName: NoodleScripter.Models.NoodleScripter.ColorManager
 - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode*
   commentId: Overload:NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
   name: RotationMode

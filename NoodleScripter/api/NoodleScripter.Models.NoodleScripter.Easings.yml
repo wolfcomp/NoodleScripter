@@ -42,7 +42,9 @@ items:
   type: Enum
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Easings
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 10
@@ -71,7 +73,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Linear
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 12
@@ -101,7 +105,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInQuad
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 13
@@ -131,7 +137,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseOutQuad
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 14
@@ -161,7 +169,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInOutQuad
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 15
@@ -191,7 +201,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInCubic
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 16
@@ -221,7 +233,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseOutCubic
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 17
@@ -251,7 +265,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInOutCubic
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 18
@@ -281,7 +297,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInQuart
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 19
@@ -311,7 +329,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseOutQuart
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 20
@@ -341,7 +361,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInOutQuart
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 21
@@ -371,7 +393,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInQuint
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 22
@@ -401,7 +425,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseOutQuint
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 23
@@ -431,7 +457,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInOutQuint
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 24
@@ -461,7 +489,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInSine
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 25
@@ -491,7 +521,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseOutSine
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 26
@@ -521,7 +553,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInOutSine
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 27
@@ -551,7 +585,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInCirc
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 28
@@ -581,7 +617,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseOutCirc
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 29
@@ -611,7 +649,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInOutCirc
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 30
@@ -641,7 +681,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInBack
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 31
@@ -671,7 +713,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseOutBack
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 32
@@ -701,7 +745,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInOutBack
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 33
@@ -731,7 +777,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInElastic
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 34
@@ -761,7 +809,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseOutElastic
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 35
@@ -791,7 +841,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInOutElastic
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 36
@@ -821,7 +873,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInBounce
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 37
@@ -851,7 +905,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseOutBounce
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 38
@@ -881,7 +937,9 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: EaseInOutBounce
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 39

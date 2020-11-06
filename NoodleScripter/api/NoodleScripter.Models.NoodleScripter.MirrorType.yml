@@ -16,10 +16,12 @@ items:
   type: Enum
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: MirrorType
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 137
+    startLine: 193
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -55,10 +57,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: None
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 140
+    startLine: 196
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -85,10 +89,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Add
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 141
+    startLine: 197
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter

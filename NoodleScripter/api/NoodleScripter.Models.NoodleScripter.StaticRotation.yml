@@ -16,7 +16,9 @@ items:
   type: Class
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: StaticRotation
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 42
@@ -49,7 +51,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Rotation
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 44
@@ -82,7 +86,9 @@ items:
   type: Property
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      path: NoodleScripter/Models/NoodleScripter/EasingModes.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: LocalRotation
     path: Models/NoodleScripter/EasingModes.cs
     startLine: 45

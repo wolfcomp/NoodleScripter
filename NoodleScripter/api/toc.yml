@@ -4,6 +4,8 @@
   items:
   - uid: NoodleScripter.Models.NoodleScripter.Color
     name: Color
+  - uid: NoodleScripter.Models.NoodleScripter.ColorManager
+    name: ColorManager
   - uid: NoodleScripter.Models.NoodleScripter.ColorType
     name: ColorType
   - uid: NoodleScripter.Models.NoodleScripter.Curve
@@ -14,6 +16,14 @@
     name: EaseRotation
   - uid: NoodleScripter.Models.NoodleScripter.Easings
     name: Easings
+  - uid: NoodleScripter.Models.NoodleScripter.Event
+    name: Event
+  - uid: NoodleScripter.Models.NoodleScripter.EventGenerator
+    name: EventGenerator
+  - uid: NoodleScripter.Models.NoodleScripter.EventType
+    name: EventType
+  - uid: NoodleScripter.Models.NoodleScripter.LightType
+    name: LightType
   - uid: NoodleScripter.Models.NoodleScripter.MirrorPoint
     name: MirrorPoint
   - uid: NoodleScripter.Models.NoodleScripter.MirrorType
@@ -22,14 +32,20 @@
     name: Noise
   - uid: NoodleScripter.Models.NoodleScripter.NoRotation
     name: NoRotation
+  - uid: NoodleScripter.Models.NoodleScripter.Propigator
+    name: Propigator
   - uid: NoodleScripter.Models.NoodleScripter.RandomRotation
     name: RandomRotation
   - uid: NoodleScripter.Models.NoodleScripter.Reverse
     name: Reverse
   - uid: NoodleScripter.Models.NoodleScripter.StaticRotation
     name: StaticRotation
+  - uid: NoodleScripter.Models.NoodleScripter.Structure
+    name: Structure
   - uid: NoodleScripter.Models.NoodleScripter.SwitchRotation
     name: SwitchRotation
+  - uid: NoodleScripter.Models.NoodleScripter.Toggler
+    name: Toggler
   - uid: NoodleScripter.Models.NoodleScripter.Wall
     name: Wall
   - uid: NoodleScripter.Models.NoodleScripter.WallGenerator

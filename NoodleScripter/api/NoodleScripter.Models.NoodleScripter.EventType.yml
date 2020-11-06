@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.EventType
+  commentId: T:NoodleScripter.Models.NoodleScripter.EventType
+  id: EventType
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.EventType.LightBackTopLasers
+  - NoodleScripter.Models.NoodleScripter.EventType.LightBottomBackSideLasers
+  - NoodleScripter.Models.NoodleScripter.EventType.LightLeftLasers
+  - NoodleScripter.Models.NoodleScripter.EventType.LightRightLasers
+  - NoodleScripter.Models.NoodleScripter.EventType.LightTrackRingNeons
+  - NoodleScripter.Models.NoodleScripter.EventType.RotatingLeftLasers
+  - NoodleScripter.Models.NoodleScripter.EventType.RotatingRightLasers
+  - NoodleScripter.Models.NoodleScripter.EventType.RotationAllTrackRings
+  - NoodleScripter.Models.NoodleScripter.EventType.RotationSmallTrackRings
+  langs:
+  - csharp
+  - vb
+  name: EventType
+  nameWithType: EventType
+  fullName: NoodleScripter.Models.NoodleScripter.EventType
+  type: Enum
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: EventType
+    path: Models/NoodleScripter/Event.cs
+    startLine: 83
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public enum EventType
+    content.vb: Public Enum EventType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NoodleScripter.Models.NoodleScripter.EventType.LightBackTopLasers
+  commentId: F:NoodleScripter.Models.NoodleScripter.EventType.LightBackTopLasers
+  id: LightBackTopLasers
+  parent: NoodleScripter.Models.NoodleScripter.EventType
+  langs:
+  - csharp
+  - vb
+  name: LightBackTopLasers
+  nameWithType: EventType.LightBackTopLasers
+  fullName: NoodleScripter.Models.NoodleScripter.EventType.LightBackTopLasers
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: LightBackTopLasers
+    path: Models/NoodleScripter/Event.cs
+    startLine: 85
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: LightBackTopLasers = 0
+    return:
+      type: NoodleScripter.Models.NoodleScripter.EventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.EventType.LightTrackRingNeons
+  commentId: F:NoodleScripter.Models.NoodleScripter.EventType.LightTrackRingNeons
+  id: LightTrackRingNeons
+  parent: NoodleScripter.Models.NoodleScripter.EventType
+  langs:
+  - csharp
+  - vb
+  name: LightTrackRingNeons
+  nameWithType: EventType.LightTrackRingNeons
+  fullName: NoodleScripter.Models.NoodleScripter.EventType.LightTrackRingNeons
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: LightTrackRingNeons
+    path: Models/NoodleScripter/Event.cs
+    startLine: 86
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: LightTrackRingNeons = 1
+    return:
+      type: NoodleScripter.Models.NoodleScripter.EventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.EventType.LightLeftLasers
+  commentId: F:NoodleScripter.Models.NoodleScripter.EventType.LightLeftLasers
+  id: LightLeftLasers
+  parent: NoodleScripter.Models.NoodleScripter.EventType
+  langs:
+  - csharp
+  - vb
+  name: LightLeftLasers
+  nameWithType: EventType.LightLeftLasers
+  fullName: NoodleScripter.Models.NoodleScripter.EventType.LightLeftLasers
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: LightLeftLasers
+    path: Models/NoodleScripter/Event.cs
+    startLine: 87
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: LightLeftLasers = 2
+    return:
+      type: NoodleScripter.Models.NoodleScripter.EventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.EventType.LightRightLasers
+  commentId: F:NoodleScripter.Models.NoodleScripter.EventType.LightRightLasers
+  id: LightRightLasers
+  parent: NoodleScripter.Models.NoodleScripter.EventType
+  langs:
+  - csharp
+  - vb
+  name: LightRightLasers
+  nameWithType: EventType.LightRightLasers
+  fullName: NoodleScripter.Models.NoodleScripter.EventType.LightRightLasers
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: LightRightLasers
+    path: Models/NoodleScripter/Event.cs
+    startLine: 88
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: LightRightLasers = 3
+    return:
+      type: NoodleScripter.Models.NoodleScripter.EventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.EventType.LightBottomBackSideLasers
+  commentId: F:NoodleScripter.Models.NoodleScripter.EventType.LightBottomBackSideLasers
+  id: LightBottomBackSideLasers
+  parent: NoodleScripter.Models.NoodleScripter.EventType
+  langs:
+  - csharp
+  - vb
+  name: LightBottomBackSideLasers
+  nameWithType: EventType.LightBottomBackSideLasers
+  fullName: NoodleScripter.Models.NoodleScripter.EventType.LightBottomBackSideLasers
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: LightBottomBackSideLasers
+    path: Models/NoodleScripter/Event.cs
+    startLine: 89
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: LightBottomBackSideLasers = 4
+    return:
+      type: NoodleScripter.Models.NoodleScripter.EventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.EventType.RotationAllTrackRings
+  commentId: F:NoodleScripter.Models.NoodleScripter.EventType.RotationAllTrackRings
+  id: RotationAllTrackRings
+  parent: NoodleScripter.Models.NoodleScripter.EventType
+  langs:
+  - csharp
+  - vb
+  name: RotationAllTrackRings
+  nameWithType: EventType.RotationAllTrackRings
+  fullName: NoodleScripter.Models.NoodleScripter.EventType.RotationAllTrackRings
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: RotationAllTrackRings
+    path: Models/NoodleScripter/Event.cs
+    startLine: 90
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: RotationAllTrackRings = 8
+    return:
+      type: NoodleScripter.Models.NoodleScripter.EventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.EventType.RotationSmallTrackRings
+  commentId: F:NoodleScripter.Models.NoodleScripter.EventType.RotationSmallTrackRings
+  id: RotationSmallTrackRings
+  parent: NoodleScripter.Models.NoodleScripter.EventType
+  langs:
+  - csharp
+  - vb
+  name: RotationSmallTrackRings
+  nameWithType: EventType.RotationSmallTrackRings
+  fullName: NoodleScripter.Models.NoodleScripter.EventType.RotationSmallTrackRings
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: RotationSmallTrackRings
+    path: Models/NoodleScripter/Event.cs
+    startLine: 91
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: RotationSmallTrackRings = 9
+    return:
+      type: NoodleScripter.Models.NoodleScripter.EventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.EventType.RotatingLeftLasers
+  commentId: F:NoodleScripter.Models.NoodleScripter.EventType.RotatingLeftLasers
+  id: RotatingLeftLasers
+  parent: NoodleScripter.Models.NoodleScripter.EventType
+  langs:
+  - csharp
+  - vb
+  name: RotatingLeftLasers
+  nameWithType: EventType.RotatingLeftLasers
+  fullName: NoodleScripter.Models.NoodleScripter.EventType.RotatingLeftLasers
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: RotatingLeftLasers
+    path: Models/NoodleScripter/Event.cs
+    startLine: 92
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: RotatingLeftLasers = 12
+    return:
+      type: NoodleScripter.Models.NoodleScripter.EventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.EventType.RotatingRightLasers
+  commentId: F:NoodleScripter.Models.NoodleScripter.EventType.RotatingRightLasers
+  id: RotatingRightLasers
+  parent: NoodleScripter.Models.NoodleScripter.EventType
+  langs:
+  - csharp
+  - vb
+  name: RotatingRightLasers
+  nameWithType: EventType.RotatingRightLasers
+  fullName: NoodleScripter.Models.NoodleScripter.EventType.RotatingRightLasers
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: RotatingRightLasers
+    path: Models/NoodleScripter/Event.cs
+    startLine: 93
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: RotatingRightLasers = 13
+    return:
+      type: NoodleScripter.Models.NoodleScripter.EventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: NoodleScripter.Models.NoodleScripter.EventType
+  commentId: T:NoodleScripter.Models.NoodleScripter.EventType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: EventType
+  nameWithType: EventType
+  fullName: NoodleScripter.Models.NoodleScripter.EventType

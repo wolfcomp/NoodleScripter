@@ -1,0 +1,277 @@
+### YamlMime:ManagedReference
+items:
+- uid: NoodleScripter.Models.NoodleScripter.LightType
+  commentId: T:NoodleScripter.Models.NoodleScripter.LightType
+  id: LightType
+  parent: NoodleScripter.Models.NoodleScripter
+  children:
+  - NoodleScripter.Models.NoodleScripter.LightType.BlueFade
+  - NoodleScripter.Models.NoodleScripter.LightType.BlueFlash
+  - NoodleScripter.Models.NoodleScripter.LightType.BlueOn
+  - NoodleScripter.Models.NoodleScripter.LightType.Off
+  - NoodleScripter.Models.NoodleScripter.LightType.RedFade
+  - NoodleScripter.Models.NoodleScripter.LightType.RedFlash
+  - NoodleScripter.Models.NoodleScripter.LightType.RedOn
+  langs:
+  - csharp
+  - vb
+  name: LightType
+  nameWithType: LightType
+  fullName: NoodleScripter.Models.NoodleScripter.LightType
+  type: Enum
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: LightType
+    path: Models/NoodleScripter/Event.cs
+    startLine: 96
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: public enum LightType
+    content.vb: Public Enum LightType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NoodleScripter.Models.NoodleScripter.LightType.Off
+  commentId: F:NoodleScripter.Models.NoodleScripter.LightType.Off
+  id: Off
+  parent: NoodleScripter.Models.NoodleScripter.LightType
+  langs:
+  - csharp
+  - vb
+  name: Off
+  nameWithType: LightType.Off
+  fullName: NoodleScripter.Models.NoodleScripter.LightType.Off
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: Off
+    path: Models/NoodleScripter/Event.cs
+    startLine: 98
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: Off = 0
+    return:
+      type: NoodleScripter.Models.NoodleScripter.LightType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.LightType.BlueOn
+  commentId: F:NoodleScripter.Models.NoodleScripter.LightType.BlueOn
+  id: BlueOn
+  parent: NoodleScripter.Models.NoodleScripter.LightType
+  langs:
+  - csharp
+  - vb
+  name: BlueOn
+  nameWithType: LightType.BlueOn
+  fullName: NoodleScripter.Models.NoodleScripter.LightType.BlueOn
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: BlueOn
+    path: Models/NoodleScripter/Event.cs
+    startLine: 99
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: BlueOn = 1
+    return:
+      type: NoodleScripter.Models.NoodleScripter.LightType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.LightType.BlueFlash
+  commentId: F:NoodleScripter.Models.NoodleScripter.LightType.BlueFlash
+  id: BlueFlash
+  parent: NoodleScripter.Models.NoodleScripter.LightType
+  langs:
+  - csharp
+  - vb
+  name: BlueFlash
+  nameWithType: LightType.BlueFlash
+  fullName: NoodleScripter.Models.NoodleScripter.LightType.BlueFlash
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: BlueFlash
+    path: Models/NoodleScripter/Event.cs
+    startLine: 100
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: BlueFlash = 2
+    return:
+      type: NoodleScripter.Models.NoodleScripter.LightType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.LightType.BlueFade
+  commentId: F:NoodleScripter.Models.NoodleScripter.LightType.BlueFade
+  id: BlueFade
+  parent: NoodleScripter.Models.NoodleScripter.LightType
+  langs:
+  - csharp
+  - vb
+  name: BlueFade
+  nameWithType: LightType.BlueFade
+  fullName: NoodleScripter.Models.NoodleScripter.LightType.BlueFade
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: BlueFade
+    path: Models/NoodleScripter/Event.cs
+    startLine: 101
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: BlueFade = 3
+    return:
+      type: NoodleScripter.Models.NoodleScripter.LightType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.LightType.RedOn
+  commentId: F:NoodleScripter.Models.NoodleScripter.LightType.RedOn
+  id: RedOn
+  parent: NoodleScripter.Models.NoodleScripter.LightType
+  langs:
+  - csharp
+  - vb
+  name: RedOn
+  nameWithType: LightType.RedOn
+  fullName: NoodleScripter.Models.NoodleScripter.LightType.RedOn
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: RedOn
+    path: Models/NoodleScripter/Event.cs
+    startLine: 102
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: RedOn = 5
+    return:
+      type: NoodleScripter.Models.NoodleScripter.LightType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.LightType.RedFlash
+  commentId: F:NoodleScripter.Models.NoodleScripter.LightType.RedFlash
+  id: RedFlash
+  parent: NoodleScripter.Models.NoodleScripter.LightType
+  langs:
+  - csharp
+  - vb
+  name: RedFlash
+  nameWithType: LightType.RedFlash
+  fullName: NoodleScripter.Models.NoodleScripter.LightType.RedFlash
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: RedFlash
+    path: Models/NoodleScripter/Event.cs
+    startLine: 103
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: RedFlash = 6
+    return:
+      type: NoodleScripter.Models.NoodleScripter.LightType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NoodleScripter.Models.NoodleScripter.LightType.RedFade
+  commentId: F:NoodleScripter.Models.NoodleScripter.LightType.RedFade
+  id: RedFade
+  parent: NoodleScripter.Models.NoodleScripter.LightType
+  langs:
+  - csharp
+  - vb
+  name: RedFade
+  nameWithType: LightType.RedFade
+  fullName: NoodleScripter.Models.NoodleScripter.LightType.RedFade
+  type: Field
+  source:
+    remote:
+      path: NoodleScripter/Models/NoodleScripter/Event.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
+    id: RedFade
+    path: Models/NoodleScripter/Event.cs
+    startLine: 104
+  assemblies:
+  - NoodleScripter
+  namespace: NoodleScripter.Models.NoodleScripter
+  syntax:
+    content: RedFade = 7
+    return:
+      type: NoodleScripter.Models.NoodleScripter.LightType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NoodleScripter.Models.NoodleScripter
+  commentId: N:NoodleScripter.Models.NoodleScripter
+  name: NoodleScripter.Models.NoodleScripter
+  nameWithType: NoodleScripter.Models.NoodleScripter
+  fullName: NoodleScripter.Models.NoodleScripter
+- uid: NoodleScripter.Models.NoodleScripter.LightType
+  commentId: T:NoodleScripter.Models.NoodleScripter.LightType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: LightType
+  nameWithType: LightType
+  fullName: NoodleScripter.Models.NoodleScripter.LightType

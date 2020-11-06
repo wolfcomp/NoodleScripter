@@ -18,10 +18,12 @@ items:
   type: Enum
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: MirrorPoint
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 144
+    startLine: 200
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -57,10 +59,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: None
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 147
+    startLine: 203
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -87,10 +91,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: X
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 148
+    startLine: 204
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -117,10 +123,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Y
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 149
+    startLine: 205
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter
@@ -147,10 +155,12 @@ items:
   type: Field
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: Z
     path: Models/NoodleScripter/WallGenerator.cs
-    startLine: 150
+    startLine: 206
   assemblies:
   - NoodleScripter
   namespace: NoodleScripter.Models.NoodleScripter

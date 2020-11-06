@@ -14,7 +14,9 @@ items:
   type: Class
   source:
     remote:
-      path: C:/Users/magnu/source/repos/NoodleScripter/NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      path: NoodleScripter/Models/NoodleScripter/WallGenerator.cs
+      branch: master
+      repo: git@gitlab.com:WildWolf/noodlescripter.git
     id: WallGenerator
     path: Models/NoodleScripter/WallGenerator.cs
     startLine: 6
@@ -31,12 +33,15 @@ items:
   - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
   derivedClasses:
   - NoodleScripter.Models.NoodleScripter.Curve
+  - NoodleScripter.Models.NoodleScripter.EventGenerator
   - NoodleScripter.Models.NoodleScripter.Noise
+  - NoodleScripter.Models.NoodleScripter.Structure
   inheritedMembers:
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Structures
   - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Random
   - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Bomb
   - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Beat
-  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Color
+  - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ColorMode
   - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.RotationMode
   - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Mirror
   - NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.MirrorType
@@ -128,6 +133,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Structures
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Structures
+  parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Structures
+  name: Structures
+  nameWithType: WallGenerator<WallGenerator>.Structures
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Structures
+  nameWithType.vb: WallGenerator(Of WallGenerator).Structures
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Structures
 - uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Random
   commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Random
   parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
@@ -155,15 +169,15 @@ references:
   fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Beat
   nameWithType.vb: WallGenerator(Of WallGenerator).Beat
   fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Beat
-- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Color
-  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.Color
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ColorMode
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.ColorMode
   parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
-  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
-  name: Color
-  nameWithType: WallGenerator<WallGenerator>.Color
-  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.Color
-  nameWithType.vb: WallGenerator(Of WallGenerator).Color
-  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).Color
+  definition: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ColorMode
+  name: ColorMode
+  nameWithType: WallGenerator<WallGenerator>.ColorMode
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<NoodleScripter.Models.NoodleScripter.WallGenerator>.ColorMode
+  nameWithType.vb: WallGenerator(Of WallGenerator).ColorMode
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of NoodleScripter.Models.NoodleScripter.WallGenerator).ColorMode
 - uid: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.RotationMode
   commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}.RotationMode
   parent: NoodleScripter.Models.NoodleScripter.WallGenerator{NoodleScripter.Models.NoodleScripter.WallGenerator}
@@ -494,6 +508,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Structures
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Structures
+  name: Structures
+  nameWithType: WallGenerator<T>.Structures
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Structures
+  nameWithType.vb: WallGenerator(Of T).Structures
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Structures
 - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
   commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Random
   name: Random
@@ -515,13 +536,13 @@ references:
   fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Beat
   nameWithType.vb: WallGenerator(Of T).Beat
   fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Beat
-- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
-  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.Color
-  name: Color
-  nameWithType: WallGenerator<T>.Color
-  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.Color
-  nameWithType.vb: WallGenerator(Of T).Color
-  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).Color
+- uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.ColorMode
+  commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.ColorMode
+  name: ColorMode
+  nameWithType: WallGenerator<T>.ColorMode
+  fullName: NoodleScripter.Models.NoodleScripter.WallGenerator<T>.ColorMode
+  nameWithType.vb: WallGenerator(Of T).ColorMode
+  fullName.vb: NoodleScripter.Models.NoodleScripter.WallGenerator(Of T).ColorMode
 - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
   commentId: P:NoodleScripter.Models.NoodleScripter.WallGenerator`1.RotationMode
   name: RotationMode

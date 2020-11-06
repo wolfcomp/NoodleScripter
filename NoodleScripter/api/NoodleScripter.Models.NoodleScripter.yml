@@ -5,19 +5,27 @@ items:
   id: NoodleScripter.Models.NoodleScripter
   children:
   - NoodleScripter.Models.NoodleScripter.Color
+  - NoodleScripter.Models.NoodleScripter.ColorManager
   - NoodleScripter.Models.NoodleScripter.ColorType
   - NoodleScripter.Models.NoodleScripter.Curve
   - NoodleScripter.Models.NoodleScripter.CurveType
   - NoodleScripter.Models.NoodleScripter.EaseRotation
   - NoodleScripter.Models.NoodleScripter.Easings
+  - NoodleScripter.Models.NoodleScripter.Event
+  - NoodleScripter.Models.NoodleScripter.EventGenerator
+  - NoodleScripter.Models.NoodleScripter.EventType
+  - NoodleScripter.Models.NoodleScripter.LightType
   - NoodleScripter.Models.NoodleScripter.MirrorPoint
   - NoodleScripter.Models.NoodleScripter.MirrorType
   - NoodleScripter.Models.NoodleScripter.Noise
   - NoodleScripter.Models.NoodleScripter.NoRotation
+  - NoodleScripter.Models.NoodleScripter.Propigator
   - NoodleScripter.Models.NoodleScripter.RandomRotation
   - NoodleScripter.Models.NoodleScripter.Reverse
   - NoodleScripter.Models.NoodleScripter.StaticRotation
+  - NoodleScripter.Models.NoodleScripter.Structure
   - NoodleScripter.Models.NoodleScripter.SwitchRotation
+  - NoodleScripter.Models.NoodleScripter.Toggler
   - NoodleScripter.Models.NoodleScripter.Wall
   - NoodleScripter.Models.NoodleScripter.WallGenerator
   - NoodleScripter.Models.NoodleScripter.WallGenerator`1
@@ -33,10 +41,15 @@ items:
 references:
 - uid: NoodleScripter.Models.NoodleScripter.Color
   commentId: T:NoodleScripter.Models.NoodleScripter.Color
-  parent: NoodleScripter.Models.NoodleScripter
   name: Color
   nameWithType: Color
   fullName: NoodleScripter.Models.NoodleScripter.Color
+- uid: NoodleScripter.Models.NoodleScripter.ColorManager
+  commentId: T:NoodleScripter.Models.NoodleScripter.ColorManager
+  parent: NoodleScripter.Models.NoodleScripter
+  name: ColorManager
+  nameWithType: ColorManager
+  fullName: NoodleScripter.Models.NoodleScripter.ColorManager
 - uid: NoodleScripter.Models.NoodleScripter.ColorType
   commentId: T:NoodleScripter.Models.NoodleScripter.ColorType
   parent: NoodleScripter.Models.NoodleScripter
@@ -54,6 +67,29 @@ references:
   name: CurveType
   nameWithType: CurveType
   fullName: NoodleScripter.Models.NoodleScripter.CurveType
+- uid: NoodleScripter.Models.NoodleScripter.Event
+  commentId: T:NoodleScripter.Models.NoodleScripter.Event
+  name: Event
+  nameWithType: Event
+  fullName: NoodleScripter.Models.NoodleScripter.Event
+- uid: NoodleScripter.Models.NoodleScripter.EventType
+  commentId: T:NoodleScripter.Models.NoodleScripter.EventType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: EventType
+  nameWithType: EventType
+  fullName: NoodleScripter.Models.NoodleScripter.EventType
+- uid: NoodleScripter.Models.NoodleScripter.LightType
+  commentId: T:NoodleScripter.Models.NoodleScripter.LightType
+  parent: NoodleScripter.Models.NoodleScripter
+  name: LightType
+  nameWithType: LightType
+  fullName: NoodleScripter.Models.NoodleScripter.LightType
+- uid: NoodleScripter.Models.NoodleScripter.EventGenerator
+  commentId: T:NoodleScripter.Models.NoodleScripter.EventGenerator
+  parent: NoodleScripter.Models.NoodleScripter
+  name: EventGenerator
+  nameWithType: EventGenerator
+  fullName: NoodleScripter.Models.NoodleScripter.EventGenerator
 - uid: NoodleScripter.Models.NoodleScripter.Noise
   commentId: T:NoodleScripter.Models.NoodleScripter.Noise
   name: Noise
@@ -90,6 +126,16 @@ references:
   name: NoRotation
   nameWithType: NoRotation
   fullName: NoodleScripter.Models.NoodleScripter.NoRotation
+- uid: NoodleScripter.Models.NoodleScripter.Propigator
+  commentId: T:NoodleScripter.Models.NoodleScripter.Propigator
+  name: Propigator
+  nameWithType: Propigator
+  fullName: NoodleScripter.Models.NoodleScripter.Propigator
+- uid: NoodleScripter.Models.NoodleScripter.Toggler
+  commentId: T:NoodleScripter.Models.NoodleScripter.Toggler
+  name: Toggler
+  nameWithType: Toggler
+  fullName: NoodleScripter.Models.NoodleScripter.Toggler
 - uid: NoodleScripter.Models.NoodleScripter.Wall
   commentId: T:NoodleScripter.Models.NoodleScripter.Wall
   name: Wall
@@ -101,6 +147,11 @@ references:
   name: WallGenerator
   nameWithType: WallGenerator
   fullName: NoodleScripter.Models.NoodleScripter.WallGenerator
+- uid: NoodleScripter.Models.NoodleScripter.Structure
+  commentId: T:NoodleScripter.Models.NoodleScripter.Structure
+  name: Structure
+  nameWithType: Structure
+  fullName: NoodleScripter.Models.NoodleScripter.Structure
 - uid: NoodleScripter.Models.NoodleScripter.WallGenerator`1
   commentId: T:NoodleScripter.Models.NoodleScripter.WallGenerator`1
   name: WallGenerator<T>
