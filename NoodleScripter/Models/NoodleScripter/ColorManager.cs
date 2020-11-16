@@ -39,7 +39,7 @@ namespace NoodleScripter.Models.NoodleScripter
         public ColorType Type { get; set; } = ColorType.None;
         public float Repetitions { get; set; }
         public Easings Easing { get; set; } = Easings.Linear;
-        private static EventType[] LaserTypes = { EventType.LightBackTopLasers, EventType.LightBottomBackSideLasers, EventType.LightLeftLasers, EventType.LightRightLasers, EventType.LightTrackRingNeons };
+        private static EventType[] LaserTypes = { EventType.LightBackTopLasers, EventType.LightBottomBackSideLasers, EventType.LightLeftLasers, EventType.LightRightLasers, EventType.LightTrackRingNeons, EventType.Lasers, EventType.BackTopTrackRing };
 
         public Wall[] SetColor(Wall[] walls)
         {

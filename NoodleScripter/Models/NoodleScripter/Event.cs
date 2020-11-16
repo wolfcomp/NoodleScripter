@@ -26,7 +26,7 @@ namespace NoodleScripter.Models.NoodleScripter
         public int? PropID { get; set; }
         public int? LightID { get; set; }
 
-        public EventData GenerateEvent()
+        public EventData[] GenerateEvent()
         {
             EventCustomData customData;
             switch (Type)
@@ -36,6 +36,8 @@ namespace NoodleScripter.Models.NoodleScripter
                 case EventType.LightLeftLasers:
                 case EventType.LightRightLasers:
                 case EventType.LightBottomBackSideLasers:
+                case EventType.Lasers:
+                case EventType.BackTopTrackRing:
                     customData = new EventCustomData
                     {
                         Color = Color,
@@ -61,6 +63,7 @@ namespace NoodleScripter.Models.NoodleScripter
                     break;
                 case EventType.RotatingLeftLasers:
                 case EventType.RotatingRightLasers:
+                case EventType.RotatingLasers:
                     customData = new LaserCustomData
                     {
                         Direction = Direction,
@@ -71,27 +74,50 @@ namespace NoodleScripter.Models.NoodleScripter
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            return new EventData
-            {
-                CustomData = customData,
-                Value = (int)Value,
-                Type = (int)Type,
-                Time = (float)StartTime
-            };
+            if (Type == EventType.Lasers || Type == EventType.RotatingLasers || Type == EventType.BackTopTrackRing)
+                return new[]{
+                    new EventData
+                    {
+                        CustomData = customData,
+                        Value = (int)Value,
+                        Type = Type == EventType.Lasers ? 2 : Type == EventType.RotatingLasers ? 12 : 0,
+                        Time = (float)StartTime
+                    },
+                    new EventData
+                    {
+                        CustomData = customData,
+                        Value = (int)Value,
+                        Type = Type == EventType.Lasers ? 3 :  Type == EventType.RotatingLasers ? 13 : 1,
+                        Time = (float)StartTime
+                    },
+                };
+            else
+                return new[]{
+                    new EventData
+                    {
+                        CustomData = customData,
+                        Value = (int)Value,
+                        Type = (int)Type,
+                        Time = (float)StartTime
+                    }
+                };
         }
     }
 
     public enum EventType
     {
-        LightBackTopLasers=0,
-        LightTrackRingNeons=1,
-        LightLeftLasers=2,
-        LightRightLasers=3,
-        LightBottomBackSideLasers=4,
-        RotationAllTrackRings=8,
-        RotationSmallTrackRings=9,
-        RotatingLeftLasers=12,
-        RotatingRightLasers=13,
+        LightBackTopLasers = 0,
+        LightTrackRingNeons = 1,
+        LightLeftLasers = 2,
+        LightRightLasers = 3,
+        LightBottomBackSideLasers = 4,
+        RotationAllTrackRings = 8,
+        RotationSmallTrackRings = 9,
+        RotatingLeftLasers = 12,
+        RotatingRightLasers = 13,
+        RotatingLasers = 20,
+        Lasers = 21,
+        BackTopTrackRing = 22,
     }
 
     public enum LightType
