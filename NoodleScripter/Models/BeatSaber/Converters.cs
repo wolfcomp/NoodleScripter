@@ -25,10 +25,9 @@ namespace NoodleScripter.Models.BeatSaber
 
         public override Color ReadJson(JsonReader reader, Type objectType, Color existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
-            throw new NotImplementedException();
+            var array = JArray.Load(reader);
+            return Color.FromArgb(array.Count == 4 ? array[3].ToObject<double>() : 1, array[0].ToObject<double>(), array[1].ToObject<double>(), array[2].ToObject<double>());
         }
-
-        public override bool CanRead => false;
     }
 
     public class VectorConverter : JsonConverter<Vector>
@@ -36,8 +35,8 @@ namespace NoodleScripter.Models.BeatSaber
         public override void WriteJson(JsonWriter writer, Vector value, JsonSerializer serializer)
         {
             writer.WriteStartArray();
-            writer.WriteValue(Math.Round(value.X,4));
-            writer.WriteValue(Math.Round(value.Y,4));
+            writer.WriteValue(Math.Round(value.X, 4));
+            writer.WriteValue(Math.Round(value.Y, 4));
             writer.WriteEndArray();
         }
 
@@ -54,9 +53,9 @@ namespace NoodleScripter.Models.BeatSaber
         public override void WriteJson(JsonWriter writer, Vector3D value, JsonSerializer serializer)
         {
             writer.WriteStartArray();
-            writer.WriteValue(Math.Round(value.X,4));
-            writer.WriteValue(Math.Round(value.Y,4));
-            writer.WriteValue(Math.Round(value.Z,4));
+            writer.WriteValue(Math.Round(value.X, 4));
+            writer.WriteValue(Math.Round(value.Y, 4));
+            writer.WriteValue(Math.Round(value.Z, 4));
             writer.WriteEndArray();
         }
 
@@ -72,11 +71,11 @@ namespace NoodleScripter.Models.BeatSaber
     {
         public override void WriteJson(JsonWriter writer, Vector3D? value, JsonSerializer serializer)
         {
-            if(!value.HasValue) return;
+            if (!value.HasValue) return;
             writer.WriteStartArray();
-            writer.WriteValue((float)value.Value.X);
-            writer.WriteValue((float)value.Value.Y);
-            writer.WriteValue((float)value.Value.Z);
+            writer.WriteValue(Math.Round(value.Value.X, 4));
+            writer.WriteValue(Math.Round(value.Value.Y, 4));
+            writer.WriteValue(Math.Round(value.Value.Z, 4));
             writer.WriteEndArray();
         }
 
