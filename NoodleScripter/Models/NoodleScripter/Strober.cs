@@ -18,10 +18,11 @@ namespace NoodleScripter.Models.NoodleScripter
         public int EndLightId { get; set; }
         public double? ToggleDuration { get; set; }
         public int Count { get; set; } = 1;
+        public float? StepTime { get; set; }
 
         public override IEnumerable<Event> GenerateEvents()
         {
-            var stepTime = Duration / Amount;
+            var stepTime = StepTime ?? Duration / Amount;
             var ret = new List<Event>();
             var alter = false;
             var toggle = false;
@@ -30,57 +31,60 @@ namespace NoodleScripter.Models.NoodleScripter
             ToggleDuration -= stepTime - ToggleDuration;
             for (int i = 0; i < Amount; i++)
             {
-                for (var i1 = 0; i1 < Count; i1++)
+                for (var k = 0; k < (Toggle ? 2 : 1); k++)
                 {
-                    var @event = new Event
+                    for (var i1 = 0; i1 < Count; i1++)
                     {
-                        Value = alter && Alternate ? getAlternateType() : Value,
-                        StartTime = StartTime + (Toggle && toggle && ToggleDuration.HasValue ? (stepTime * i + ToggleDuration.Value) : stepTime * i),
-                        Type = Type,
-                        Prop = Prop,
-                        Speed = Speed,
-                        Step = Step,
-                        PropMult = PropMult,
-                        SpeedMult = SpeedMult,
-                        StepMult = StepMult,
-                        Direction = Direction,
-                        CounterLock = CounterLock,
-                        Filter = Filter,
-                        Reset = Reset,
-                        LightID = LightID,
-                        PropID = PropID
-                    };
-                    if (RandomPropId && !(Toggle && toggle))
-                    {
-                        @event.PropID = Random.Next(StartPropId, EndPropId + 1);
-                        while (prevEvents[i1] != null && prevEvents[i1].PropID == @event.PropID && prevStoredEvents.Any(t => t.PropID == @event.PropID))
+                        var @event = new Event
+                        {
+                            Value = alter && Alternate ? getAlternateType() : Value,
+                            StartTime = StartTime + ((Toggle && toggle && ToggleDuration.HasValue) ? (stepTime * i + ToggleDuration.Value) : stepTime * i),
+                            Type = Type,
+                            Prop = Prop,
+                            Speed = Speed,
+                            Step = Step,
+                            PropMult = PropMult,
+                            SpeedMult = SpeedMult,
+                            StepMult = StepMult,
+                            Direction = Direction,
+                            CounterLock = CounterLock,
+                            Filter = Filter,
+                            Reset = Reset,
+                            LightID = LightID,
+                            PropID = PropID
+                        };
+                        if (RandomPropId && !(Toggle && toggle))
+                        {
                             @event.PropID = Random.Next(StartPropId, EndPropId + 1);
-                    }
-                    else if (RandomPropId && Toggle && toggle)
-                    {
-                        @event.PropID = prevEvents[i1].PropID;
-                    }
-                    if (RandomLightId && !(Toggle && toggle))
-                    {
-                        @event.LightID = Random.Next(StartLightId, EndLightId + 1);
-                        while (prevEvents[i1] != null && prevEvents[i1].LightID == @event.LightID && prevStoredEvents.Any(t => t.LightID == @event.LightID))
+                            while (prevEvents[i1] != null && prevEvents[i1].PropID == @event.PropID && prevStoredEvents.Any(t => t.PropID == @event.PropID))
+                                @event.PropID = Random.Next(StartPropId, EndPropId + 1);
+                        }
+                        else if (RandomPropId && Toggle && toggle)
+                        {
+                            @event.PropID = prevEvents[i1].PropID;
+                        }
+                        if (RandomLightId && !(Toggle && toggle))
+                        {
                             @event.LightID = Random.Next(StartLightId, EndLightId + 1);
-                    }
-                    else if (RandomLightId && Toggle && toggle)
-                    {
-                        @event.LightID = prevEvents[i1].LightID;
-                    }
-                    if (Toggle && toggle)
-                    {
-                        @event.Value = LightType.Off;
-                    }
+                            while (prevEvents[i1] != null && prevEvents[i1].LightID == @event.LightID && prevStoredEvents.Any(t => t.LightID == @event.LightID))
+                                @event.LightID = Random.Next(StartLightId, EndLightId + 1);
+                        }
+                        else if (RandomLightId && Toggle && toggle)
+                        {
+                            @event.LightID = prevEvents[i1].LightID;
+                        }
+                        if (Toggle && toggle)
+                        {
+                            @event.Value = LightType.Off;
+                        }
 
-                    prevEvents[i1] = @event;
-                    ret.Add(@event);
+                        prevEvents[i1] = @event;
+                        ret.Add(@event);
+                    }
+                    toggle = !toggle;
                 }
-                prevStoredEvents = prevEvents;
                 alter = !alter;
-                toggle = !toggle;
+                prevStoredEvents = prevEvents.Copy();
             }
             return ret.ToArray();
         }
