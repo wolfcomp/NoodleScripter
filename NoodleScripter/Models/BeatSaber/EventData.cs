@@ -18,6 +18,11 @@ namespace NoodleScripter.Models.BeatSaber
         public int Value { get; set; }
         [JsonProperty("_customData")]
         public EventCustomData CustomData { get; set; }
+
+        public override string ToString()
+        {
+            return $"[time:{Time},type:{Type},value:{Value},custom:{CustomData.GetJsonString()}]";
+        }
     }
 
     public class EventCustomData : ISerializable

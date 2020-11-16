@@ -36,14 +36,86 @@ namespace NoodleScripter
             return JsonConvert.SerializeObject(serializable, Settings);
         }
 
-        public static string GetJsonString(this ISerializable[] serializable)
+        public static string GetJsonString(this IEnumerable<ISerializable> serializable)
         {
             return JsonConvert.SerializeObject(serializable, Settings);
         }
 
-        public static JArray ToJArray(this ISerializable[] serializable)
+        public static JArray ToJArray(this IEnumerable<ISerializable> serializable)
         {
             return JArray.FromObject(serializable, JsonSerializer.Create(Settings));
+        }
+
+        public static bool IsNullOrEmpty(this JToken token)
+        {
+            return (token == null) ||
+                   (token.Type == JTokenType.Array && !token.HasValues) ||
+                   (token.Type == JTokenType.Object && !token.HasValues) ||
+                   (token.Type == JTokenType.String && token.ToString() == String.Empty) ||
+                   (token.Type == JTokenType.Null);
+        }
+
+        public static EventData[] ToEvent(this JToken token)
+        {
+            if (!(token is JArray jArray))
+                return new EventData[0];
+            var eventData = new List<EventData>();
+            foreach (var jToken in jArray)
+            {
+                EventCustomData customData = null;
+                var customJToken = jToken["_customData"];
+                if (!customJToken.IsNullOrEmpty())
+                    switch ((EventType)jToken["_type"].ToObject<int>())
+                    {
+                        case EventType.LightBackTopLasers:
+                        case EventType.LightTrackRingNeons:
+                        case EventType.LightLeftLasers:
+                        case EventType.LightRightLasers:
+                        case EventType.LightBottomBackSideLasers:
+                            customData = new EventCustomData
+                            {
+                                Color = customJToken["_color"].IsNullOrEmpty() ? (ScriptColor?)null : customJToken["_color"].ToObject<ScriptColor>(),
+                                PropID = customJToken["_propID"].IsNullOrEmpty() ? (int?)null : customJToken["_propID"].ToObject<int>(),
+                                LightID = customJToken["_lightID"].IsNullOrEmpty() ? (int?)null : customJToken["_lightID"].ToObject<int>()
+                            };
+                            break;
+                        case EventType.RotationAllTrackRings:
+                        case EventType.RotationSmallTrackRings:
+                            customData = new RingCustomData
+                            {
+                                CounterSpin = customJToken["_counterSpin"].IsNullOrEmpty() ? (bool?)null : customJToken["_counterSpin"].ToObject<bool>(),
+                                Direction = customJToken["_direction"].IsNullOrEmpty() ? (int?)null : customJToken["_direction"].ToObject<int>(),
+                                NameFilter = customJToken["_nameFilter"].IsNullOrEmpty() ? null : customJToken["_nameFilter"].ToObject<string>(),
+                                PropMult = customJToken["_propMult"].IsNullOrEmpty() ? (float?)null : customJToken["_propMult"].ToObject<float>(),
+                                Reset = customJToken["_reset"].IsNullOrEmpty() ? (bool?)null : customJToken["_reset"].ToObject<bool>(),
+                                SpeedMult = customJToken["_speedMult"].IsNullOrEmpty() ? (float?)null : customJToken["_speedMult"].ToObject<float>(),
+                                StepMult = customJToken["_stepMult"].IsNullOrEmpty() ? (float?)null : customJToken["_stepMult"].ToObject<float>(),
+                                Prop = customJToken["_prop"].IsNullOrEmpty() ? (float?)null : customJToken["_prop"].ToObject<float>(),
+                                Speed = customJToken["_speed"].IsNullOrEmpty() ? (float?)null : customJToken["_speed"].ToObject<float>(),
+                                Step = customJToken["_step"].IsNullOrEmpty() ? (float?)null : customJToken["_step"].ToObject<float>()
+                            };
+                            break;
+                        case EventType.RotatingLeftLasers:
+                        case EventType.RotatingRightLasers:
+                            customData = new LaserCustomData
+                            {
+                                Direction = customJToken["_direction"].IsNullOrEmpty() ? (int?)null : customJToken["_direction"].ToObject<int>(),
+                                LockPosition = customJToken["_lockPosition"].IsNullOrEmpty() ? (bool?)null : customJToken["_lockPosition"].ToObject<bool>(),
+                                PreciseSpeed = customJToken["_preciseSpeed"].IsNullOrEmpty() ? (float?)null : customJToken["_preciseSpeed"].ToObject<float>()
+                            };
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                eventData.Add(new EventData
+                {
+                    CustomData = customData,
+                    Value = jToken["_value"].ToObject<int>(),
+                    Type = jToken["_type"].ToObject<int>(),
+                    Time = jToken["_time"].ToObject<float>()
+                });
+            }
+            return eventData.ToArray();
         }
 
         private static JsonSerializerSettings Settings => new JsonSerializerSettings
@@ -256,6 +328,43 @@ namespace NoodleScripter
                 _ => throw new ArgumentOutOfRangeException(nameof(easings), easings, null)
             };
             return (1 - curTime) * one + curTime * two;
+        }
+
+        public static bool Within(this double time, double value, double constraint)
+        {
+            return time >= value && time <= value + constraint;
+        }
+
+        public static bool Within(this float time, float value, float constraint)
+        {
+            return time >= value && time <= value + constraint;
+        }
+
+        public static void CheckZoomCountEven(this EventData[] events)
+        {
+            var tmp = new List<EventData>();
+            for(var i = 0; i < events.Length - 1; i++)
+            {
+                var curEvent = events[i];
+                var nextEvent = events[i+1];
+                if(curEvent.Time.Within(nextEvent.Time, 4f))
+                {
+                    tmp.Add(curEvent);
+                }
+                else
+                {
+                    if(tmp.Where(t => t.Type == (int)EventType.RotationSmallTrackRings).Count() % 2 != 0)
+                        Global.Instance.Logger.Warn($"Found uneven ring zoom count between {tmp.First().Time},{tmp.Last().Time}");
+                    tmp.Clear();
+                }
+                if(i == events.Length - 2)
+                {
+                    tmp.Add(nextEvent);
+                    if(tmp.Where(t => t.Type == (int)EventType.RotationSmallTrackRings).Count() % 2 != 0)
+                        Global.Instance.Logger.Warn($"Found uneven ring zoom count between {tmp.First().Time},{tmp.Last().Time}");
+                }
+            }
+            tmp.Clear();
         }
     }
 

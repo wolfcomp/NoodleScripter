@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using NLog;
 using NoodleScripter.Models.BeatSaber;
 using NoodleScripter.Models.NoodleScripter;
 using Color = NoodleScripter.Models.NoodleScripter.Color;
@@ -24,6 +25,8 @@ namespace NoodleScripter.Commands
         public static string Template;
 
         public static Regex PointRegex = new Regex("^p([0-9])", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+
+        private const float timeConst = 0.0156f;
 
         private static Calculator calculator = new Calculator();
 
@@ -46,21 +49,48 @@ namespace NoodleScripter.Commands
 
                 groupYmlContextLines(readAllLinesFromFile(beatmap.FullPath.Replace(".dat", ".yml")), tuples, beatmap.SongInfo.FullFolderPath);
 
-                var generatorList = new List<WallGenerator>();
+                var walls = new List<ObjectData>();
+                var events = new List<EventData>();
 
-                setGenerators(tuples, generatorList);
+                var firstTuple = tuples.First();
 
-                var wallList = new List<Wall>();
-                var eventList = new List<Event>();
-
-                foreach (var wallGenerator in generatorList)
+                if (firstTuple.Item1.Invariant("default"))
                 {
-                    wallList.AddRange(wallGenerator.GenerateWallsFinalized());
-                    eventList.AddRange(wallGenerator.GenerateEventsFinalized());
+                    var generatorList = new List<WallGenerator>();
+
+                    setGenerators(tuples, generatorList);
+
+                    var wallList = new List<Wall>();
+                    var eventList = new List<Event>();
+
+                    foreach (var wallGenerator in generatorList)
+                    {
+                        wallList.AddRange(wallGenerator.GenerateWallsFinalized());
+                        eventList.AddRange(wallGenerator.GenerateEventsFinalized());
+                    }
+
+                    walls.AddRange(wallList.Select(t => t.GenerateObstacle()).OrderBy(t => t.Time));
+                    events.AddRange(eventList.SelectMany(t => t.GenerateEvent()).OrderBy(t => t.Time));
+                }
+                else if(firstTuple.Item1.Invariant("mergeFiles"))
+                {
+                    var jObjects = new List<JObject>();
+                    foreach(var file in firstTuple.Item3.Find(t => t.Key.Invariant("files")).Value.Split(','))
+                    {
+                        jObjects.Add(JObject.Parse(File.ReadAllText(Path.Combine(beatmap.SongInfo.FullFolderPath, file))));
+                    }
+                    foreach(var fileJObject in jObjects)
+                    {
+                        var eventObjects = fileJObject["_events"].ToEvent();
+                        var eventOverlap = eventObjects.Where(e => events.Any(es => e.Time.Within(es.Time, timeConst))).ToArray();
+                        if(eventOverlap.Length > 0)
+                            foreach(var overlappedEvent in eventOverlap)
+                                Global.Instance.Logger.Log(LogLevel.Warn, $"Found event overlap with constraint of {timeConst} event data:{overlappedEvent}");
+                        eventObjects.CheckZoomCountEven();
+                        events.AddRange(eventObjects);
+                    }
                 }
 
-                var walls = wallList.Select(t => t.GenerateObstacle()).OrderBy(t => t.Time).ToArray();
-                var events = eventList.Select(t => t.GenerateEvent()).OrderBy(t => t.Time).ToArray();
                 var jObject = JObject.Parse(File.ReadAllText(beatmap.FullPath));
                 var oldObstaclesPath = getOldPath(beatmap, "Obstacles");
                 var oldEventsPath = getOldPath(beatmap, "Events");
@@ -476,7 +506,7 @@ namespace NoodleScripter.Commands
                             break;
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Global.Instance.Logger.Error($"Could not process key: {key}");
                     throw e;
