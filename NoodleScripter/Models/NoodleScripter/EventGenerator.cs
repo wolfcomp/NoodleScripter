@@ -55,7 +55,7 @@ namespace NoodleScripter.Models.NoodleScripter
         {
             if (wallGenerator is Structure structure && structure.Override)
             {
-                if(structure.LightID.HasValue)
+                if(structure.PropID.HasValue)
                     PropID = structure.PropID.Value;
                 if(structure.LightID.HasValue)
                     LightID = structure.LightID.Value;
