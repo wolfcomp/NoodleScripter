@@ -53,6 +53,7 @@ namespace NoodleScripter.Models.NoodleScripter
 
         public override WallGenerator GetWallGenerator(WallGenerator wallGenerator)
         {
+            Random = wallGenerator.Random;
             if (wallGenerator is Structure structure && structure.Override)
             {
                 if(structure.PropID.HasValue)
@@ -67,6 +68,8 @@ namespace NoodleScripter.Models.NoodleScripter
                     Speed = structure.Speed.Value;
                 if(structure.Step.HasValue)
                     Step = structure.Step.Value;
+                if(structure.Prop.HasValue)
+                    Step = structure.Prop.Value;
                 if(structure.PropMult.HasValue)
                     PropMult = structure.PropMult.Value;
                 if(structure.SpeedMult.HasValue)

@@ -50,12 +50,13 @@ namespace NoodleScripter.Models.NoodleScripter
         public override WallGenerator GetWallGenerator(WallGenerator wallGenerator)
         {
             Random = wallGenerator.Random;
+            Structures.ForEach(t => t.GetWallGenerator(wallGenerator));
             return this;
         }
 
         public override IEnumerable<Wall> GenerateWalls()
         {
-            return Structures.Where(t => !(t is EventGenerator)).SelectMany(t => t.GetWallGenerator(this).GenerateWallsFinalized());
+            return Structures.Where(t => !(t is EventGenerator) || t is Structure).SelectMany(t => t.GetWallGenerator(this).GenerateWallsFinalized());
         }
 
         public override IEnumerable<Event> GenerateEvents()
@@ -104,6 +105,17 @@ namespace NoodleScripter.Models.NoodleScripter
         public double? FitStartTime { get; set; } = null;
         public double Scale { get; set; } = 1;
         public string Track { get; set; }
+        public bool FlipOuterProps { get; set; }
+        public int HighestProp0 { get; set; }
+        public int HighestProp1 { get; set; }
+        public int HighestProp2 { get; set; }
+        public int HighestProp3 { get; set; }
+        public int HighestProp4 { get; set; }
+        public int LowestProp0 { get; set; }
+        public int LowestProp1 { get; set; }
+        public int LowestProp2 { get; set; }
+        public int LowestProp3 { get; set; }
+        public int LowestProp4 { get; set; }
 
         public abstract T GetWallGenerator(WallGenerator wallGenerator);
 
@@ -128,7 +140,7 @@ namespace NoodleScripter.Models.NoodleScripter
             foreach (var @event in events)
             {
                 @event.StartTime = @event.StartTime * ScaleStartTime + AddStartTime;
-                
+
                 @event.StartTime *= Scale;
 
                 @event.StartTime += Beat;

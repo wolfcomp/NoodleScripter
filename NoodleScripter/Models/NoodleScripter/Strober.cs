@@ -57,7 +57,7 @@ namespace NoodleScripter.Models.NoodleScripter
                         if (RandomPropId && !(Toggle && toggle))
                         {
                             @event.PropID = Random.Next(StartPropId, EndPropId + 1);
-                            while (prevEvents[i1] != null && (prevEvents.Any(t => t.PropID == @event.PropID) || prevStoredEvents.Any(t => t.PropID == @event.PropID) || (CheckAll && ret.Any(t => t.PropID == @event.PropID))))
+                            while (prevEvents.Any(t => t != null && t.PropID == @event.PropID) || prevStoredEvents.Any(t => t != null &&  t.PropID == @event.PropID) || (CheckAll && ret.Any(t => t.PropID == @event.PropID)))
                                 @event.PropID = Random.Next(StartPropId, EndPropId + 1);
                         }
                         else if (RandomPropId && Toggle && toggle)
@@ -67,7 +67,7 @@ namespace NoodleScripter.Models.NoodleScripter
                         if (RandomLightId && !(Toggle && toggle))
                         {
                             @event.LightID = Random.Next(StartLightId, EndLightId + 1);
-                            while (prevEvents[i1] != null && (prevEvents.Any(t => t.LightID == @event.LightID) || prevStoredEvents.Any(t => t.LightID == @event.LightID) || (CheckAll && ret.Any(t => t.LightID == @event.LightID))))
+                            while (prevEvents.Any(t => t.LightID == @event.LightID) || prevStoredEvents.Any(t => t.LightID == @event.LightID) || (CheckAll && ret.Any(t => t.LightID == @event.LightID)))
                                 @event.LightID = Random.Next(StartLightId, EndLightId + 1);
                         }
                         else if (RandomLightId && Toggle && toggle)

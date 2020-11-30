@@ -40,25 +40,25 @@ namespace NoodleScripter.Models.NoodleScripter
                 case EventType.BackTopTrackRing:
                     customData = new EventCustomData
                     {
-                        Color = Color,
-                        PropID = PropID,
-                        LightID = LightID
+                        Color = Color.Copy(),
+                        PropID = PropID.Copy(),
+                        LightID = LightID.Copy()
                     };
                     break;
                 case EventType.RotationAllTrackRings:
                 case EventType.RotationSmallTrackRings:
                     customData = new RingCustomData
                     {
-                        CounterSpin = CounterLock,
-                        Direction = Direction,
-                        NameFilter = Filter,
-                        PropMult = PropMult,
-                        Reset = Reset,
-                        SpeedMult = SpeedMult,
-                        StepMult = StepMult,
-                        Prop = Prop,
-                        Speed = Speed,
-                        Step = Step
+                        CounterSpin = CounterLock.Copy(),
+                        Direction = Direction.Copy(),
+                        NameFilter = Filter.Copy(),
+                        PropMult = PropMult.Copy(),
+                        Reset = Reset.Copy(),
+                        SpeedMult = SpeedMult.Copy(),
+                        StepMult = StepMult.Copy(),
+                        Prop = Prop.Copy(),
+                        Speed = Speed.Copy(),
+                        Step = Step.Copy()
                     };
                     break;
                 case EventType.RotatingLeftLasers:
@@ -66,9 +66,9 @@ namespace NoodleScripter.Models.NoodleScripter
                 case EventType.RotatingLasers:
                     customData = new LaserCustomData
                     {
-                        Direction = Direction,
-                        LockPosition = CounterLock,
-                        PreciseSpeed = Speed
+                        Direction = Direction.Copy(),
+                        LockPosition = CounterLock.Copy(),
+                        PreciseSpeed = Speed.Copy()
                     };
                     break;
                 default:
