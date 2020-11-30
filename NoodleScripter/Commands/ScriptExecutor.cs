@@ -56,35 +56,65 @@ namespace NoodleScripter.Commands
 
                 if (firstTuple.Item1.Invariant("default"))
                 {
+                    var defaultGenerator = new WallGenerator();
                     var generatorList = new List<WallGenerator>();
 
-                    setGenerators(tuples, generatorList);
+                    Global.Instance.Logger.Info("Setting all generators");
+                    setGenerators(tuples, generatorList, defaultGenerator);
 
                     var wallList = new List<Wall>();
                     var eventList = new List<Event>();
 
+                    Global.Instance.Logger.Info("Generating nodes");
                     foreach (var wallGenerator in generatorList)
                     {
                         wallList.AddRange(wallGenerator.GenerateWallsFinalized());
                         eventList.AddRange(wallGenerator.GenerateEventsFinalized());
                     }
 
+                    Global.Instance.Logger.Info("Converting nodes to objects");
                     walls.AddRange(wallList.Select(t => t.GenerateObstacle()).OrderBy(t => t.Time));
                     events.AddRange(eventList.SelectMany(t => t.GenerateEvent()).OrderBy(t => t.Time));
+
+                    if (defaultGenerator.FlipOuterProps)
+                    {
+                        var eventsChanged = new int[5][] { new int[2] { 0, 0 }, new int[2] { 0, 0 }, new int[2] { 0, 0 }, new int[2] { 0, 0 }, new int[2] { 0, 0 } };
+                        for (var i = 0; i <= 4; i++)
+                        {
+                            var highestProp = (int)defaultGenerator.GetType().GetProperties().First(f => f.Name.Invariant($"HighestProp{i}")).GetValue(defaultGenerator);
+                            var lowestProp = (int)defaultGenerator.GetType().GetProperties().First(f => f.Name.Invariant($"LowestProp{i}")).GetValue(defaultGenerator);
+                            var evHigh = events.Where(t => t.Type == i && t.CustomData.PropID == highestProp).ToArray();
+                            var evLow = events.Where(t => t.Type == i && t.CustomData.PropID == lowestProp).ToArray();
+                            foreach (var ev in events)
+                            {
+                                if (ev.Type == i && ev.CustomData.PropID == highestProp)
+                                {
+                                    ev.CustomData.PropID = lowestProp;
+                                    eventsChanged[i][0]++;
+                                }
+                                else if (ev.Type == i && ev.CustomData.PropID == lowestProp)
+                                {
+                                    ev.CustomData.PropID = highestProp;
+                                    eventsChanged[i][1]++;
+                                }
+                            }
+                        }
+                        Global.Instance.Logger.Info($"Changed {eventsChanged.SelectMany(t => t).Sum()} events where:{Environment.NewLine}{string.Join(Environment.NewLine, eventsChanged.Select((t, i) => $"{i} type had {t[0]} highs changed and {t[1]} lows changed."))}");
+                    }
                 }
-                else if(firstTuple.Item1.Invariant("mergeFiles"))
+                else if (firstTuple.Item1.Invariant("mergeFiles"))
                 {
                     var jObjects = new List<JObject>();
-                    foreach(var file in firstTuple.Item3.Find(t => t.Key.Invariant("files")).Value.Split(','))
+                    foreach (var file in firstTuple.Item3.Find(t => t.Key.Invariant("files")).Value.Split(','))
                     {
                         jObjects.Add(JObject.Parse(File.ReadAllText(Path.Combine(beatmap.SongInfo.FullFolderPath, file))));
                     }
-                    foreach(var fileJObject in jObjects)
+                    foreach (var fileJObject in jObjects)
                     {
                         var eventObjects = fileJObject["_events"].ToEvent();
                         var eventOverlap = eventObjects.Where(e => events.Any(es => e.Time.Within(es.Time, timeConst))).ToArray();
-                        if(eventOverlap.Length > 0)
-                            foreach(var overlappedEvent in eventOverlap)
+                        if (eventOverlap.Length > 0)
+                            foreach (var overlappedEvent in eventOverlap)
                                 Global.Instance.Logger.Log(LogLevel.Warn, $"Found event overlap with constraint of {timeConst} event data:{overlappedEvent}");
                         eventObjects.CheckZoomCountEven();
                         events.AddRange(eventObjects);
@@ -97,25 +127,47 @@ namespace NoodleScripter.Commands
 
                 if (walls.Any())
                 {
-                    File.WriteAllText(Path.Combine(oldObstaclesPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.obstacles.json"), jObject["_obstacles"].ToString(Formatting.None));
+                    Global.Instance.Logger.Info("Writing wall objects and storing old objects");
+                    using (var s = File.OpenWrite(Path.Combine(oldObstaclesPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.obstacles.json")))
+                    using (var sw = new StreamWriter(s))
+                    using (var writer = new JsonTextWriter(sw))
+                    {
+                        var serializer = new JsonSerializer { Formatting = Formatting.None };
+                        serializer.Serialize(writer, jObject["_obstacles"]);
+                    }
                     jObject["_obstacles"] = walls.ToJArray();
                 }
 
                 if (events.Any())
                 {
-                    File.WriteAllText(Path.Combine(oldEventsPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.events.json"), jObject["_events"].ToString(Formatting.None));
+                    Global.Instance.Logger.Info("Writing event objects and storing old objects");
+                    using (var s = File.OpenWrite(Path.Combine(oldEventsPath, $"{DateTime.Now:yy-MM-dd hh.mm.ss}.events.json")))
+                    using (var sw = new StreamWriter(s))
+                    using (var writer = new JsonTextWriter(sw))
+                    {
+                        var serializer = new JsonSerializer { Formatting = Formatting.None };
+                        serializer.Serialize(writer, jObject["_events"]);
+                    }
                     jObject["_events"] = events.ToJArray();
                 }
                 beatmap.EventCount = jObject["_events"].Children().Count();
                 beatmap.ObstacleCount = jObject["_obstacles"].Children().Count();
                 beatmap.NoteCount = jObject["_notes"].Children().Count();
 
-                File.WriteAllText(beatmap.FullPath, jObject.ToString(Formatting.None));
+                Global.Instance.Logger.Info("Writing finalized file");
+                using (var s = File.OpenWrite(beatmap.FullPath))
+                using (var sw = new StreamWriter(s))
+                using (var writer = new JsonTextWriter(sw))
+                {
+                    var serializer = new JsonSerializer { Formatting = Formatting.None };
+                    serializer.Serialize(writer, jObject);
+                }
             }
             catch (Exception e)
             {
                 Global.Instance.Logger.Error(e, e.Message);
             }
+            Global.Instance.Logger.Info($"Compleated Run {++beatmap.GenCount} of  {beatmap.SongInfo.SongName}, {beatmap.Difficulty}{beatmap.BeatmapSet.CharacteristicString}");
         }
 
         private static string getOldPath(Beatmap beatmap, string type)
@@ -138,9 +190,8 @@ namespace NoodleScripter.Commands
             }
         }
 
-        private static void setGenerators(List<Tuple<string, string, List<KeyValuePair<string, string>>>> tuples, List<WallGenerator> generatorList)
+        private static void setGenerators(List<Tuple<string, string, List<KeyValuePair<string, string>>>> tuples, List<WallGenerator> generatorList, WallGenerator defaultGenerator)
         {
-            var defaultGenerator = new WallGenerator();
             var structures = new Dictionary<string, WallGenerator>();
             var rotationModes = new Dictionary<string, IRotationMode>();
             var colorModes = new Dictionary<string, ColorManager>();
@@ -150,6 +201,11 @@ namespace NoodleScripter.Commands
                 {
                     var seed = Convert.ToInt32(list.First(t => t.Key.Invariant("seed")).Value);
                     defaultGenerator.Random = new Random(seed);
+                    foreach (var (key, value) in list)
+                    {
+                        if (!key.Invariant("seed"))
+                            setFieldValue(defaultGenerator, key, value, null, null, null, null);
+                    }
                 }
                 else if (identifier.Invariant("rotationMode"))
                 {
@@ -302,7 +358,7 @@ namespace NoodleScripter.Commands
 
         private static void setColorMode(Dictionary<string, ColorManager> colorModes, string type, List<KeyValuePair<string, string>> list)
         {
-            var color = new ColorManager();
+            var color = new ColorManager { Name = type };
             var colorList = new List<Tuple<Color, double>>();
             foreach (var (key, value) in list)
             {
@@ -416,7 +472,7 @@ namespace NoodleScripter.Commands
 
         private static void setFieldValue(WallGenerator generator, string key, string value, List<Vector3D> points, Dictionary<string, IRotationMode> rotationModes, Dictionary<string, ColorManager> colorModes, Dictionary<string, WallGenerator> structures)
         {
-            if (PointRegex.IsMatch(key))
+            if (PointRegex.IsMatch(key) && points != null)
             {
                 points.Add(Vector3D.Parse(value));
                 generator.GetType().GetProperty("Points").SetValue(generator, points.ToArray());

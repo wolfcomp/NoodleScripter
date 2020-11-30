@@ -56,6 +56,18 @@ namespace NoodleScripter
             }
         }
 
+        private string _logBoxString = "";
+
+        public string LogBoxString
+        {
+            get => _logBoxString;
+            set
+            {
+                _logBoxString = value;
+                OnPropertyChanged(nameof(LogBoxString));
+            }
+        }
+
         private FileSystemWatcher watcher;
 
         public Logger Logger;
@@ -92,6 +104,7 @@ namespace NoodleScripter
                 var file = new FileInfo(e.FullPath);
                 foreach (var beatmap in SongInfos.SelectMany(song => song.BeatmapSets.SelectMany(bs => bs.Beatmaps.Where(bm => bm.YmlFiles.Any(t => t.Invariant(file.Name))))))
                 {
+                    Logger.Info($"Generating {beatmap.SongInfo.SongName}, {beatmap.Difficulty}, {beatmap.BeatmapSet.CharacteristicString}");
                     ScriptExecutor.Execute(beatmap);
                 }
                 GC.Collect();

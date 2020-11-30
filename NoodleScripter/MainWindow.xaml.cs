@@ -17,6 +17,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using NLog;
+using NLog.Targets;
 using NoodleScripter.Commands;
 using NoodleScripter.Models;
 using NoodleScripter.Models.BeatSaber;
@@ -35,6 +37,7 @@ namespace NoodleScripter
         public MainWindow()
         {
             InitializeComponent();
+            var target = LogManager.Configuration.FindTargetByName<MemoryTarget>("logmem");
             using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("NoodleScripter.Models.NoodleScripter.template.yml"))
             {
                 using (StreamReader streamReader = new StreamReader(stream))
@@ -42,6 +45,15 @@ namespace NoodleScripter
                     ScriptExecutor.Template = streamReader.ReadToEnd();
                 }
             }
+            Task.Run(async () =>
+            {
+                while (true)
+                {
+                    var logs = target.Logs.Count > 4 ? target.Logs.Skip(target.Logs.Count - 4) : target.Logs;
+                    Global.Instance.LogBoxString = string.Join(Environment.NewLine, logs);
+                    await Task.Delay(TimeSpan.FromMilliseconds(100));
+                }
+            });
         }
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -55,23 +67,33 @@ namespace NoodleScripter
 
         private void Button_Refresh(object sender, RoutedEventArgs e)
         {
+            Global.Instance.Logger.Info("Getting all beatmaps");
             Global.Instance.SongInfos.Clear();
-            foreach (var directoryInfo in Global.Instance.InstallFolder.GetDirectories())
+            Task.Run(() =>
             {
-                foreach (var fileInfo in directoryInfo.GetFiles("*.dat"))
+                foreach (var directoryInfo in Global.Instance.InstallFolder.GetDirectories())
                 {
-                    if (fileInfo.Name.ToLowerInvariant().Contains("info"))
+                    foreach (var fileInfo in directoryInfo.GetFiles("*.dat"))
                     {
-                        Global.Instance.SongInfos.Add(Global.CheckScriptFileInitialized(SongInfo.GetInfo(fileInfo)));
+                        if (fileInfo.Name.ToLowerInvariant().Contains("info"))
+                        {
+                            var map = Global.CheckScriptFileInitialized(SongInfo.GetInfo(fileInfo));
+                            Dispatcher.Invoke(() =>
+                            {
+                                Global.Instance.SongInfos.Add(map);
+                            });
+                        }
                     }
                 }
-            }
+                Global.Instance.Logger.Info("Got all beatmaps");
+            });
         }
 
         private void Button_Initialize(object sender, RoutedEventArgs e)
         {
             var button = sender as Button;
             var beatmap = button.DataContext as Beatmap;
+            Global.Instance.Logger.Info($"Initializing {beatmap.SongInfo.SongName}, {beatmap.Difficulty}{beatmap.BeatmapSet.CharacteristicString}");
             ScriptExecutor.Initialize(beatmap);
             GC.Collect();
             GC.WaitForFullGCComplete();
@@ -81,9 +103,13 @@ namespace NoodleScripter
         {
             var button = sender as Button;
             var beatmap = button.DataContext as Beatmap;
-            ScriptExecutor.Execute(beatmap);
-            GC.Collect();
-            GC.WaitForFullGCComplete();
+            Global.Instance.Logger.Info($"Generating {beatmap.SongInfo.SongName}, {beatmap.Difficulty}{beatmap.BeatmapSet.CharacteristicString}");
+            Task.Run(() =>
+            {
+                ScriptExecutor.Execute(beatmap);
+                GC.Collect();
+                GC.WaitForFullGCComplete();
+            });
         }
     }
 }

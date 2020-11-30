@@ -160,6 +160,7 @@ namespace NoodleScripter.Models.BeatSaber
 
         public BeatmapSet BeatmapSet { get; set; }
         public SongInfo SongInfo => BeatmapSet.SongInfo;
+        public uint GenCount { get; set; }
 
         public Beatmap(string fileName, int njs, double offset, BeatmapDifficulty difficulty, string folderPath)
         {
